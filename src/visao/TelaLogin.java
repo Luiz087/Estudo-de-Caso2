@@ -5,8 +5,13 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import controle.UsuarioDAO;
+import modelo.Usuario;
+
 import javax.swing.JComboBox;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JLabel;
 import javax.swing.JButton;
@@ -19,9 +24,11 @@ import java.awt.Font;
 
 public class TelaLogin extends JFrame {
 
+	protected static final String Usuario = null;
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField textLoginSenha;
+	private JTextField textLoginUsu;
+	private UsuarioDAO usuarioDao = UsuarioDAO.getInstancia();
 
 	/**
 	 * Launch the application.
@@ -55,46 +62,76 @@ public class TelaLogin extends JFrame {
 		contentPane.setLayout(null);
 
 		JButton btnNewButton_1 = new JButton("CRIAR CONTA");
+		btnNewButton_1.setBackground(new Color(128, 255, 128));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaCadastroUsuario telaCadUsu = new TelaCadastroUsuario();
+				dispose();
 				telaCadUsu.setExtendedState(JFrame.MAXIMIZED_BOTH);
 				telaCadUsu.setVisible(true);
 			}
 		});
 		btnNewButton_1.setBounds(230, 296, 137, 23);
 		contentPane.add(btnNewButton_1);
-		
+
 		JLabel lblNewLabel = new JLabel("Não possui conta?");
 		lblNewLabel.setForeground(new Color(255, 0, 0));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(230, 281, 137, 14);
 		contentPane.add(lblNewLabel);
-		
-		textField = new JTextField();
-		textField.setColumns(10);
-		textField.setBounds(219, 117, 160, 43);
-		contentPane.add(textField);
-		
+
+		textLoginSenha = new JTextField();
+		textLoginSenha.setColumns(10);
+		textLoginSenha.setBounds(219, 117, 160, 43);
+		contentPane.add(textLoginSenha);
+
 		JLabel lblSenha = new JLabel("Senha");
 		lblSenha.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lblSenha.setBounds(119, 117, 105, 43);
 		contentPane.add(lblSenha);
-		
+
 		JLabel lblNewLabel_1 = new JLabel("Usuário");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lblNewLabel_1.setBounds(119, 26, 105, 43);
 		contentPane.add(lblNewLabel_1);
-		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(219, 26, 160, 43);
-		contentPane.add(textField_1);
-		
-		JButton btnCadUsuario = new JButton("ENTRAR");
-		btnCadUsuario.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnCadUsuario.setBounds(205, 206, 189, 52);
-		contentPane.add(btnCadUsuario);
+
+		textLoginUsu = new JTextField();
+		textLoginUsu.setColumns(10);
+		textLoginUsu.setBounds(219, 26, 160, 43);
+		contentPane.add(textLoginUsu);
+
+		JButton btnLoginUsuario = new JButton("ENTRAR");
+		btnLoginUsuario.setBackground(new Color(128, 255, 128));
+		btnLoginUsuario.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				String usuarioLogin = textLoginUsu.getText();
+				String usuarioSenha = textLoginSenha.getText();
+
+				
+				if (usuarioDao.listarUsuarios().isEmpty()){
+					TelaCadastroUsuario telaCadUsu = new TelaCadastroUsuario();
+					dispose();
+					telaCadUsu.setExtendedState(JFrame.MAXIMIZED_BOTH);
+					telaCadUsu.setVisible(true);
+					return;
+				}
+				
+				for (Usuario user : usuarioDao.listarUsuarios()) {
+					if (user.getUsuarioCliente().equals(usuarioLogin) && user.getSenhaCliente().equals(usuarioSenha)) {
+						TelaCarrosUsuario telaCarrosUsu = new TelaCarrosUsuario();
+						dispose();
+						telaCarrosUsu.setExtendedState(JFrame.MAXIMIZED_BOTH);
+						telaCarrosUsu.setVisible(true);
+					} else {
+						JOptionPane.showMessageDialog(null, "Usuário não encontrado!");
+					}
+				}
+			}
+		});
+		btnLoginUsuario.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnLoginUsuario.setBounds(205, 206, 189, 52);
+		contentPane.add(btnLoginUsuario);
 
 	}
 }

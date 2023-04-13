@@ -20,5 +20,9 @@ public class Usuario extends Pessoa {
 	public void setSenhaCliente(String senhaCliente) {
 		this.senhaCliente = senhaCliente;
 	}
+	
+	public String toString() {
+		return "\nNome: " + super.getNome() + "\nCPF: " + super.getCpf() + "\nCEP: " + super.getCep() + "\nUsuario: " + this.usuarioCliente + "\n";
+	}
 
 }
