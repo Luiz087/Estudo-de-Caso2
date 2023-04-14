@@ -22,6 +22,7 @@ import javax.swing.SwingConstants;
 import java.awt.Color;
 import javax.swing.JTextField;
 import java.awt.Font;
+import java.awt.SystemColor;
 
 public class TelaLogin extends JFrame {
 
@@ -54,7 +55,7 @@ public class TelaLogin extends JFrame {
 	public TelaLogin() {
 		setTitle("Menu Principal");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 644, 413);
+		setBounds(100, 100, 1920, 1080);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(192, 192, 192));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -63,7 +64,7 @@ public class TelaLogin extends JFrame {
 		contentPane.setLayout(null);
 
 		JButton btnNewButton_1 = new JButton("CRIAR CONTA");
-		btnNewButton_1.setBackground(new Color(128, 255, 128));
+		btnNewButton_1.setBackground(SystemColor.info);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaCadastroUsuario telaCadUsu = new TelaCadastroUsuario();
@@ -72,37 +73,37 @@ public class TelaLogin extends JFrame {
 				telaCadUsu.setVisible(true);
 			}
 		});
-		btnNewButton_1.setBounds(230, 296, 137, 23);
+		btnNewButton_1.setBounds(857, 534, 206, 43);
 		contentPane.add(btnNewButton_1);
 
 		JLabel lblNewLabel = new JLabel("Não possui conta?");
 		lblNewLabel.setForeground(new Color(255, 0, 0));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(230, 281, 137, 14);
+		lblNewLabel.setBounds(880, 510, 169, 14);
 		contentPane.add(lblNewLabel);
 
 		textLoginSenha = new JTextField();
 		textLoginSenha.setColumns(10);
-		textLoginSenha.setBounds(219, 117, 160, 43);
+		textLoginSenha.setBounds(857, 217, 215, 43);
 		contentPane.add(textLoginSenha);
 
 		JLabel lblSenha = new JLabel("Senha");
 		lblSenha.setFont(new Font("Tahoma", Font.PLAIN, 26));
-		lblSenha.setBounds(119, 117, 105, 43);
+		lblSenha.setBounds(740, 217, 105, 43);
 		contentPane.add(lblSenha);
 
 		JLabel lblNewLabel_1 = new JLabel("Usuário");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 26));
-		lblNewLabel_1.setBounds(119, 26, 105, 43);
+		lblNewLabel_1.setBounds(740, 119, 105, 43);
 		contentPane.add(lblNewLabel_1);
 
 		textLoginUsu = new JTextField();
 		textLoginUsu.setColumns(10);
-		textLoginUsu.setBounds(219, 26, 160, 43);
+		textLoginUsu.setBounds(857, 119, 215, 43);
 		contentPane.add(textLoginUsu);
 
 		JButton btnLoginUsuario = new JButton("ENTRAR");
-		btnLoginUsuario.setBackground(new Color(128, 255, 128));
+		btnLoginUsuario.setBackground(SystemColor.info);
 		btnLoginUsuario.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Admin adm = new Admin();
@@ -124,7 +125,7 @@ public class TelaLogin extends JFrame {
 			}
 		});
 		btnLoginUsuario.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnLoginUsuario.setBounds(205, 206, 189, 52);
+		btnLoginUsuario.setBounds(857, 393, 206, 43);
 		contentPane.add(btnLoginUsuario);
 
 	}
