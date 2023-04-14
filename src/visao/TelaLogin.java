@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import controle.UsuarioDAO;
+import modelo.Admin;
 import modelo.Usuario;
 
 import javax.swing.JComboBox;
@@ -104,18 +105,11 @@ public class TelaLogin extends JFrame {
 		btnLoginUsuario.setBackground(new Color(128, 255, 128));
 		btnLoginUsuario.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
+				Admin adm = new Admin();
 				String usuarioLogin = textLoginUsu.getText();
 				String usuarioSenha = textLoginSenha.getText();
-
-				
-				if (usuarioDao.listarUsuarios().isEmpty()){
-					TelaCadastroUsuario telaCadUsu = new TelaCadastroUsuario();
-					dispose();
-					telaCadUsu.setExtendedState(JFrame.MAXIMIZED_BOTH);
-					telaCadUsu.setVisible(true);
-					return;
-				}
+				String usuAdm = adm.getUsuarioAdmin();
+				String senhaAdm = adm.getUsuarioAdmin();
 				
 				for (Usuario user : usuarioDao.listarUsuarios()) {
 					if (user.getUsuarioCliente().equals(usuarioLogin) && user.getSenhaCliente().equals(usuarioSenha)) {
