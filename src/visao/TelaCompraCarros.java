@@ -48,6 +48,7 @@ public class TelaCompraCarros extends JFrame {
 	 * Create the frame.
 	 */
 	public TelaCompraCarros() {
+		setTitle("TELA DE COMPRAS");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1920, 1080);
 		contentPane = new JPanel();
