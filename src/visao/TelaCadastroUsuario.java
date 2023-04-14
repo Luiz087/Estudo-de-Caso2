@@ -22,6 +22,8 @@ import java.awt.event.ActionEvent;
 import javax.swing.JTable;
 import javax.swing.JScrollPane;
 import java.awt.Color;
+import java.awt.SystemColor;
+import java.awt.Window.Type;
 
 public class TelaCadastroUsuario extends JFrame {
 
@@ -40,8 +42,9 @@ public class TelaCadastroUsuario extends JFrame {
 	 * Create the frame.
 	 */
 	public TelaCadastroUsuario() {
+		setTitle("Cadastro");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 945, 728);
+		setBounds(100, 100, 1920, 1080);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(192, 192, 192));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -51,26 +54,26 @@ public class TelaCadastroUsuario extends JFrame {
 
 		JLabel lblNewLabel = new JLabel("Usuário");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 26));
-		lblNewLabel.setBounds(223, 11, 105, 43);
+		lblNewLabel.setBounds(743, 47, 105, 43);
 		contentPane.add(lblNewLabel);
 
 		JLabel lblSenha = new JLabel("Senha");
 		lblSenha.setFont(new Font("Tahoma", Font.PLAIN, 26));
-		lblSenha.setBounds(223, 65, 105, 43);
+		lblSenha.setBounds(743, 120, 105, 43);
 		contentPane.add(lblSenha);
 
 		textCadUsu = new JTextField();
-		textCadUsu.setBounds(339, 11, 160, 43);
+		textCadUsu.setBounds(858, 47, 195, 43);
 		contentPane.add(textCadUsu);
 		textCadUsu.setColumns(10);
 
 		textCadSenha = new JTextField();
 		textCadSenha.setColumns(10);
-		textCadSenha.setBounds(339, 65, 160, 43);
+		textCadSenha.setBounds(858, 120, 195, 43);
 		contentPane.add(textCadSenha);
 
 		JButton btnCadUsuario = new JButton("CADASTRAR");
-		btnCadUsuario.setBackground(new Color(128, 255, 128));
+		btnCadUsuario.setBackground(SystemColor.info);
 		btnCadUsuario.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Usuario user = new Usuario();
@@ -113,51 +116,51 @@ public class TelaCadastroUsuario extends JFrame {
 			}
 		});
 		btnCadUsuario.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnCadUsuario.setBounds(328, 362, 189, 52);
+		btnCadUsuario.setBounds(858, 561, 239, 58);
 		contentPane.add(btnCadUsuario);
 
 		JLabel lblCpf = new JLabel("CPF");
 		lblCpf.setFont(new Font("Tahoma", Font.PLAIN, 26));
-		lblCpf.setBounds(223, 173, 105, 43);
+		lblCpf.setBounds(743, 254, 105, 43);
 		contentPane.add(lblCpf);
 
 		textCadCpf = new JTextField();
 		textCadCpf.setColumns(10);
-		textCadCpf.setBounds(339, 173, 160, 43);
+		textCadCpf.setBounds(858, 254, 195, 43);
 		contentPane.add(textCadCpf);
 
 		JLabel lblNome = new JLabel("Nome");
 		lblNome.setFont(new Font("Tahoma", Font.PLAIN, 26));
-		lblNome.setBounds(223, 119, 105, 43);
+		lblNome.setBounds(743, 187, 105, 43);
 		contentPane.add(lblNome);
 
 		textCadNome = new JTextField();
 		textCadNome.setColumns(10);
-		textCadNome.setBounds(339, 119, 160, 43);
+		textCadNome.setBounds(858, 187, 195, 43);
 		contentPane.add(textCadNome);
 
 		JLabel lblCep = new JLabel("CEP");
 		lblCep.setFont(new Font("Tahoma", Font.PLAIN, 26));
-		lblCep.setBounds(223, 227, 105, 43);
+		lblCep.setBounds(743, 328, 105, 43);
 		contentPane.add(lblCep);
 
 		textCadCep = new JTextField();
 		textCadCep.setColumns(10);
-		textCadCep.setBounds(339, 227, 160, 43);
+		textCadCep.setBounds(858, 328, 195, 43);
 		contentPane.add(textCadCep);
 
 		textCadTel = new JTextField();
 		textCadTel.setColumns(10);
-		textCadTel.setBounds(339, 281, 160, 43);
+		textCadTel.setBounds(858, 408, 195, 43);
 		contentPane.add(textCadTel);
 
 		JLabel lblTelefone = new JLabel("Telefone");
 		lblTelefone.setFont(new Font("Tahoma", Font.PLAIN, 26));
-		lblTelefone.setBounds(223, 281, 105, 43);
+		lblTelefone.setBounds(743, 408, 105, 43);
 		contentPane.add(lblTelefone);
 
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(111, 484, 642, 158);
+		scrollPane.setBounds(601, 759, 744, 158);
 		contentPane.add(scrollPane);
 
 		table = new JTable();
@@ -175,7 +178,7 @@ public class TelaCadastroUsuario extends JFrame {
 		table.setModel(model);
 
 		JButton btnVoltarTelaLogin = new JButton("Voltar");
-		btnVoltarTelaLogin.setBackground(new Color(128, 255, 128));
+		btnVoltarTelaLogin.setBackground(SystemColor.info);
 		btnVoltarTelaLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaLogin telaLoginUsu = new TelaLogin();
@@ -184,7 +187,7 @@ public class TelaCadastroUsuario extends JFrame {
 				telaLoginUsu.setVisible(true);
 			}
 		});
-		btnVoltarTelaLogin.setBounds(10, 11, 89, 23);
+		btnVoltarTelaLogin.setBounds(10, 11, 131, 30);
 		contentPane.add(btnVoltarTelaLogin);
 	}
 }
