@@ -140,7 +140,7 @@ public class TelaCarrosUsuario extends JFrame {
 		panel.add(textField_3);
 		
 		JButton btnNewButton = new JButton("Visualizar");
-		btnNewButton.setBounds(632, 32, 89, 23);
+		btnNewButton.setBounds(611, 32, 110, 23);
 		panel.add(btnNewButton);
 		
 		JPanel panel_1 = new JPanel();
@@ -197,7 +197,7 @@ public class TelaCarrosUsuario extends JFrame {
 		panel_1.add(textField_7);
 		
 		btnNewButton_1 = new JButton("Visualizar");
-		btnNewButton_1.setBounds(631, 34, 89, 23);
+		btnNewButton_1.setBounds(610, 34, 110, 23);
 		panel_1.add(btnNewButton_1);
 		
 		JPanel panel_1_1 = new JPanel();
@@ -254,7 +254,7 @@ public class TelaCarrosUsuario extends JFrame {
 		panel_1_1.add(textField_11);
 		
 		btnNewButton_2 = new JButton("Visualizar");
-		btnNewButton_2.setBounds(629, 35, 89, 23);
+		btnNewButton_2.setBounds(607, 35, 111, 23);
 		panel_1_1.add(btnNewButton_2);
 		
 		JPanel panel_1_1_1 = new JPanel();
@@ -311,7 +311,7 @@ public class TelaCarrosUsuario extends JFrame {
 		panel_1_1_1.add(textField_15);
 		
 		btnNewButton_3 = new JButton("Visualizar");
-		btnNewButton_3.setBounds(625, 34, 89, 23);
+		btnNewButton_3.setBounds(604, 34, 110, 23);
 		panel_1_1_1.add(btnNewButton_3);
 		
 		JPanel panel_1_1_1_1 = new JPanel();
@@ -368,7 +368,7 @@ public class TelaCarrosUsuario extends JFrame {
 		panel_1_1_1_1.add(textField_19);
 		
 		btnNewButton_4 = new JButton("Visualizar");
-		btnNewButton_4.setBounds(623, 33, 89, 23);
+		btnNewButton_4.setBounds(602, 33, 110, 23);
 		panel_1_1_1_1.add(btnNewButton_4);
 		
 		JPanel panel_1_1_1_1_1 = new JPanel();
@@ -425,7 +425,7 @@ public class TelaCarrosUsuario extends JFrame {
 		panel_1_1_1_1_1.add(textField_23);
 		
 		JButton btnNewButton_4_1 = new JButton("Visualizar");
-		btnNewButton_4_1.setBounds(623, 33, 89, 23);
+		btnNewButton_4_1.setBounds(602, 33, 110, 23);
 		panel_1_1_1_1_1.add(btnNewButton_4_1);
 		
 		JPanel panel_1_1_1_1_1_1 = new JPanel();
@@ -482,7 +482,7 @@ public class TelaCarrosUsuario extends JFrame {
 		panel_1_1_1_1_1_1.add(textField_27);
 		
 		JButton btnNewButton_4_1_1 = new JButton("Visualizar");
-		btnNewButton_4_1_1.setBounds(623, 33, 89, 23);
+		btnNewButton_4_1_1.setBounds(602, 33, 110, 23);
 		panel_1_1_1_1_1_1.add(btnNewButton_4_1_1);
 		
 		JPanel panel_1_1_1_1_1_1_1 = new JPanel();
@@ -539,7 +539,7 @@ public class TelaCarrosUsuario extends JFrame {
 		panel_1_1_1_1_1_1_1.add(textField_31);
 		
 		JButton btnNewButton_4_1_1_1 = new JButton("Visualizar");
-		btnNewButton_4_1_1_1.setBounds(623, 33, 89, 23);
+		btnNewButton_4_1_1_1.setBounds(603, 33, 109, 23);
 		panel_1_1_1_1_1_1_1.add(btnNewButton_4_1_1_1);
 		
 		JPanel panel_1_1_1_1_1_1_1_1 = new JPanel();
@@ -596,7 +596,7 @@ public class TelaCarrosUsuario extends JFrame {
 		panel_1_1_1_1_1_1_1_1.add(textField_35);
 		
 		JButton btnNewButton_4_1_1_1_1 = new JButton("Visualizar");
-		btnNewButton_4_1_1_1_1.setBounds(623, 33, 89, 23);
+		btnNewButton_4_1_1_1_1.setBounds(602, 33, 110, 23);
 		panel_1_1_1_1_1_1_1_1.add(btnNewButton_4_1_1_1_1);
 		
 		JScrollPane scrollPane = new JScrollPane();
