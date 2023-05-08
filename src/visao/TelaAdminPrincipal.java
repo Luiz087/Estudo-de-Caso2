@@ -10,6 +10,8 @@ import javax.swing.JButton;
 import java.awt.Font;
 import javax.swing.JLabel;
 import java.awt.ScrollPane;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class TelaAdminPrincipal extends JFrame {
 
@@ -44,19 +46,20 @@ public class TelaAdminPrincipal extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnNewButton_1_1_1 = new JButton("Adicionar Funcionário");
+		btnNewButton_1_1_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnNewButton_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnNewButton_1_1_1.setBounds(230, 55, 233, 71);
 		contentPane.add(btnNewButton_1_1_1);
 		
 		JLabel lblNewLabel = new JLabel("Funções de Administrador");
+		lblNewLabel.setForeground(new Color(255, 255, 255));
+		lblNewLabel.setBackground(new Color(255, 255, 255));
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblNewLabel.setBounds(241, 11, 217, 33);
 		contentPane.add(lblNewLabel);
-		
-		JLabel lblFunesDeFuncionrio = new JLabel("Funções de Funcionário");
-		lblFunesDeFuncionrio.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblFunesDeFuncionrio.setBounds(601, 11, 217, 33);
-		contentPane.add(lblFunesDeFuncionrio);
 		
 		JButton btnNewButton_1_1_1_1 = new JButton("Adicionar Funcionário");
 		btnNewButton_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
@@ -77,5 +80,15 @@ public class TelaAdminPrincipal extends JFrame {
 		btnNewButton_1_1_1_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnNewButton_1_1_1_2_1_1.setBounds(230, 375, 233, 71);
 		contentPane.add(btnNewButton_1_1_1_2_1_1);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(0, 0, 160));
+		panel.setBounds(0, 0, 1370, 749);
+		contentPane.add(panel);
+		
+		JLabel lblFunesDeFuncionrio = new JLabel("Funções de Funcionário");
+		panel.add(lblFunesDeFuncionrio);
+		lblFunesDeFuncionrio.setForeground(new Color(255, 255, 255));
+		lblFunesDeFuncionrio.setFont(new Font("Tahoma", Font.PLAIN, 18));
 	}
 }

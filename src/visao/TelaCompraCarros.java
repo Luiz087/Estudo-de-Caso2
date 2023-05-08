@@ -60,8 +60,8 @@ public class TelaCompraCarros extends JFrame {
 		contentPane.setLayout(null);
 		
 		JPanel panel_1 = new JPanel();
-		panel_1.setBackground(new Color(0, 0, 255));
-		panel_1.setBounds(41, 11, 1397, 787);
+		panel_1.setBackground(new Color(0, 0, 160));
+		panel_1.setBounds(0, 0, 1438, 798);
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
 		

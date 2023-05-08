@@ -646,7 +646,7 @@ public class TelaCarrosUsuario extends JFrame {
 		contentPane.add(scrollPane);
 		
 		JPanel panel_2 = new JPanel();
-		panel_2.setBackground(new Color(0, 0, 255));
+		panel_2.setBackground(new Color(0, 0, 160));
 		panel_2.setBounds(0, 0, 1382, 749);
 		contentPane.add(panel_2);
 	}
