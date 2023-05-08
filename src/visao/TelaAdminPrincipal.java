@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import java.awt.Color;
 
 public class TelaAdminPrincipal extends JFrame {
 
@@ -36,6 +37,12 @@ public class TelaAdminPrincipal extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(0, 0, 255));
+		panel.setBounds(0, 0, 434, 261);
+		contentPane.add(panel);
 	}
 
 }

@@ -23,6 +23,7 @@ import java.awt.Color;
 import javax.swing.JTextField;
 import java.awt.Font;
 import java.awt.SystemColor;
+import javax.swing.ImageIcon;
 
 public class TelaLogin extends JFrame {
 
@@ -62,71 +63,84 @@ public class TelaLogin extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-
-		JButton btnNewButton_1 = new JButton("CRIAR CONTA");
-		btnNewButton_1.setBackground(SystemColor.info);
-		btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				TelaCadastroUsuario telaCadUsu = new TelaCadastroUsuario();
-				dispose();
-				telaCadUsu.setExtendedState(JFrame.MAXIMIZED_BOTH);
-				telaCadUsu.setVisible(true);
-			}
-		});
-		btnNewButton_1.setBounds(857, 534, 206, 43);
-		contentPane.add(btnNewButton_1);
-
-		JLabel lblNewLabel = new JLabel("Não possui conta?");
-		lblNewLabel.setForeground(new Color(255, 0, 0));
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(880, 510, 169, 14);
-		contentPane.add(lblNewLabel);
-
-		textLoginSenha = new JTextField();
-		textLoginSenha.setColumns(10);
-		textLoginSenha.setBounds(857, 217, 215, 43);
-		contentPane.add(textLoginSenha);
-
-		JLabel lblSenha = new JLabel("Senha");
-		lblSenha.setFont(new Font("Tahoma", Font.PLAIN, 26));
-		lblSenha.setBounds(740, 217, 105, 43);
-		contentPane.add(lblSenha);
-
-		JLabel lblNewLabel_1 = new JLabel("Usuário");
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 26));
-		lblNewLabel_1.setBounds(740, 119, 105, 43);
-		contentPane.add(lblNewLabel_1);
-
-		textLoginUsu = new JTextField();
-		textLoginUsu.setColumns(10);
-		textLoginUsu.setBounds(857, 119, 215, 43);
-		contentPane.add(textLoginUsu);
-
-		JButton btnLoginUsuario = new JButton("ENTRAR");
-		btnLoginUsuario.setBackground(SystemColor.info);
-		btnLoginUsuario.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Admin adm = new Admin();
-				String usuarioLogin = textLoginUsu.getText();
-				String usuarioSenha = textLoginSenha.getText();
-				String usuAdm = adm.getUsuarioAdmin();
-				String senhaAdm = adm.getUsuarioAdmin();
+		
+		JPanel fundologin = new JPanel();
+		fundologin.setBackground(new Color(0, 0, 160));
+		fundologin.setBounds(-195, -198, 1582, 963);
+		contentPane.add(fundologin);
+		fundologin.setLayout(null);
+		
+				JLabel lblNewLabel_1 = new JLabel("Usuário: ");
+				lblNewLabel_1.setBounds(454, 396, 105, 92);
+				fundologin.add(lblNewLabel_1);
+				lblNewLabel_1.setForeground(new Color(255, 255, 255));
+				lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 26));
 				
-				for (Usuario user : usuarioDao.listarUsuarios()) {
-					if (user.getUsuarioCliente().equals(usuarioLogin) && user.getSenhaCliente().equals(usuarioSenha)) {
-						TelaCarrosUsuario telaCarrosUsu = new TelaCarrosUsuario();
-						dispose();
-						telaCarrosUsu.setExtendedState(JFrame.MAXIMIZED_BOTH);
-						telaCarrosUsu.setVisible(true);
-					} else {
-						JOptionPane.showMessageDialog(null, "Usuário não encontrado!");
-					}
-				}
-			}
-		});
-		btnLoginUsuario.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnLoginUsuario.setBounds(857, 393, 206, 43);
-		contentPane.add(btnLoginUsuario);
+						JLabel lblSenha = new JLabel("Senha:");
+						lblSenha.setBounds(454, 528, 105, 43);
+						fundologin.add(lblSenha);
+						lblSenha.setForeground(new Color(255, 255, 255));
+						lblSenha.setFont(new Font("Tahoma", Font.PLAIN, 26));
+						
+								textLoginUsu = new JTextField();
+								textLoginUsu.setBounds(569, 427, 215, 43);
+								fundologin.add(textLoginUsu);
+								textLoginUsu.setColumns(10);
+								
+										textLoginSenha = new JTextField();
+										textLoginSenha.setBounds(569, 528, 215, 43);
+										fundologin.add(textLoginSenha);
+										textLoginSenha.setColumns(10);
+										
+												JButton btnLoginUsuario = new JButton("ENTRAR");
+												btnLoginUsuario.setBounds(569, 715, 215, 43);
+												fundologin.add(btnLoginUsuario);
+												btnLoginUsuario.setBackground(SystemColor.info);
+												btnLoginUsuario.addActionListener(new ActionListener() {
+													public void actionPerformed(ActionEvent e) {
+														Admin adm = new Admin();
+														String usuarioLogin = textLoginUsu.getText();
+														String usuarioSenha = textLoginSenha.getText();
+														String usuAdm = adm.getUsuarioAdmin();
+														String senhaAdm = adm.getUsuarioAdmin();
+														
+														for (Usuario user : usuarioDao.listarUsuarios()) {
+															if (user.getUsuarioCliente().equals(usuarioLogin) && user.getSenhaCliente().equals(usuarioSenha)) {
+																TelaCarrosUsuario telaCarrosUsu = new TelaCarrosUsuario();
+																dispose();
+																telaCarrosUsu.setExtendedState(JFrame.MAXIMIZED_BOTH);
+																telaCarrosUsu.setVisible(true);
+															} else {
+																JOptionPane.showMessageDialog(null, "Usuário não encontrado!");
+															}
+														}
+													}
+												});
+												btnLoginUsuario.setFont(new Font("Tahoma", Font.PLAIN, 18));
+												
+														JLabel lblNewLabel = new JLabel("Não possui conta?");
+														lblNewLabel.setBounds(1281, 564, 169, 14);
+														fundologin.add(lblNewLabel);
+														lblNewLabel.setForeground(new Color(255, 0, 0));
+														lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+														
+																JButton btnNewButton_1 = new JButton("CRIAR CONTA");
+																btnNewButton_1.setBounds(1262, 589, 215, 43);
+																fundologin.add(btnNewButton_1);
+																btnNewButton_1.setBackground(SystemColor.info);
+																
+																JLabel fundopretologin = new JLabel("");
+																fundopretologin.setIcon(new ImageIcon("C:\\Users\\bruna\\Downloads\\Minimalist Login Page Mobile Prototype.png"));
+																fundopretologin.setBounds(1161, 190, 432, 762);
+																fundologin.add(fundopretologin);
+																btnNewButton_1.addActionListener(new ActionListener() {
+																	public void actionPerformed(ActionEvent e) {
+																		TelaCadastroUsuario telaCadUsu = new TelaCadastroUsuario();
+																		dispose();
+																		telaCadUsu.setExtendedState(JFrame.MAXIMIZED_BOTH);
+																		telaCadUsu.setVisible(true);
+																	}
+																});
 
 	}
 }

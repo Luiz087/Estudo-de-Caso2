@@ -11,6 +11,8 @@ import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class TelaCompraCarros extends JFrame {
 
@@ -57,148 +59,171 @@ public class TelaCompraCarros extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel_2 = new JLabel("TELA DE COMPRA");
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 38));
-		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2.setForeground(new Color(255, 0, 0));
-		lblNewLabel_2.setBounds(668, 11, 479, 72);
-		contentPane.add(lblNewLabel_2);
-		
-		JPanel panel = new JPanel();
-		panel.setBackground(new Color(128, 128, 128));
-		panel.setBounds(942, 86, 952, 606);
-		contentPane.add(panel);
-		panel.setLayout(null);
-		
-		JLabel lblNewLabel_1_1_2_1 = new JLabel("Bairro");
-		lblNewLabel_1_1_2_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1.setBounds(10, 512, 169, 67);
-		panel.add(lblNewLabel_1_1_2_1);
-		
-		textField_10 = new JTextField();
-		textField_10.setEditable(false);
-		textField_10.setColumns(10);
-		textField_10.setBounds(189, 515, 495, 70);
-		panel.add(textField_10);
-		
-		JLabel lblNewLabel_1_1_2_1_1 = new JLabel("Rua");
-		lblNewLabel_1_1_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1.setBounds(10, 417, 169, 67);
-		panel.add(lblNewLabel_1_1_2_1_1);
-		
-		textField_11 = new JTextField();
-		textField_11.setEditable(false);
-		textField_11.setColumns(10);
-		textField_11.setBounds(189, 420, 495, 70);
-		panel.add(textField_11);
-		
-		JLabel lblNewLabel_1_1_2_1_1_1 = new JLabel("Telefone");
-		lblNewLabel_1_1_2_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_1.setBounds(10, 319, 169, 67);
-		panel.add(lblNewLabel_1_1_2_1_1_1);
-		
-		textField_12 = new JTextField();
-		textField_12.setEditable(false);
-		textField_12.setColumns(10);
-		textField_12.setBounds(189, 322, 495, 70);
-		panel.add(textField_12);
-		
-		JLabel lblNewLabel_1_1_2_1_1_2 = new JLabel("CEP");
-		lblNewLabel_1_1_2_1_1_2.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_2.setBounds(10, 215, 169, 67);
-		panel.add(lblNewLabel_1_1_2_1_1_2);
-		
-		textField_13 = new JTextField();
-		textField_13.setEditable(false);
-		textField_13.setColumns(10);
-		textField_13.setBounds(189, 218, 495, 70);
-		panel.add(textField_13);
-		
-		JLabel lblNewLabel_1_1_2_1_1_2_1 = new JLabel("CPF");
-		lblNewLabel_1_1_2_1_1_2_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_2_1.setBounds(10, 118, 169, 67);
-		panel.add(lblNewLabel_1_1_2_1_1_2_1);
-		
-		textField_8 = new JTextField();
-		textField_8.setEditable(false);
-		textField_8.setColumns(10);
-		textField_8.setBounds(189, 121, 495, 70);
-		panel.add(textField_8);
-		
-		JLabel lblNewLabel_1_1_2_1_1_2_1_1 = new JLabel("Nome");
-		lblNewLabel_1_1_2_1_1_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_2_1_1.setBounds(10, 23, 169, 67);
-		panel.add(lblNewLabel_1_1_2_1_1_2_1_1);
-		
-		textField_5 = new JTextField();
-		textField_5.setEditable(false);
-		textField_5.setColumns(10);
-		textField_5.setBounds(189, 26, 495, 70);
-		panel.add(textField_5);
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(new Color(0, 0, 255));
+		panel_1.setBounds(41, 11, 1397, 787);
+		contentPane.add(panel_1);
+		panel_1.setLayout(null);
 		
 		JPanel panel_3 = new JPanel();
-		panel_3.setBounds(25, 86, 868, 606);
-		contentPane.add(panel_3);
-		panel_3.setBackground(Color.GRAY);
+		panel_3.setBounds(32, 80, 522, 459);
+		panel_1.add(panel_3);
+		panel_3.setBackground(new Color(39, 39, 39));
 		panel_3.setLayout(null);
 		
-		JLabel lblNewLabel_1_1_2_1_1_2_1_1_1 = new JLabel("Modelo");
+		JLabel lblNewLabel_1_1_2_1_1_2_1_1_1 = new JLabel("Modelo:");
+		lblNewLabel_1_1_2_1_1_2_1_1_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_1_1_2_1_1_2_1_1_1.setBackground(new Color(255, 255, 255));
 		lblNewLabel_1_1_2_1_1_2_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_2_1_1_1.setBounds(54, 11, 169, 67);
+		lblNewLabel_1_1_2_1_1_2_1_1_1.setBounds(0, -2, 86, 60);
 		panel_3.add(lblNewLabel_1_1_2_1_1_2_1_1_1);
 		
-		textField_6 = new JTextField();
-		textField_6.setEditable(false);
-		textField_6.setColumns(10);
-		textField_6.setBounds(233, 14, 495, 70);
-		panel_3.add(textField_6);
-		
-		JLabel lblNewLabel_1_1_2_1_1_2_1_2 = new JLabel("Ano");
+		JLabel lblNewLabel_1_1_2_1_1_2_1_2 = new JLabel("Ano:");
+		lblNewLabel_1_1_2_1_1_2_1_2.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1_1_2_1_1_2_1_2.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_2_1_2.setBounds(54, 106, 169, 67);
+		lblNewLabel_1_1_2_1_1_2_1_2.setBounds(10, 77, 76, 46);
 		panel_3.add(lblNewLabel_1_1_2_1_1_2_1_2);
 		
-		textField_7 = new JTextField();
-		textField_7.setEditable(false);
-		textField_7.setColumns(10);
-		textField_7.setBounds(233, 109, 495, 70);
-		panel_3.add(textField_7);
-		
-		JLabel lblNewLabel_1_1_2_1_1_2_2 = new JLabel("Cor");
+		JLabel lblNewLabel_1_1_2_1_1_2_2 = new JLabel("Cor:");
+		lblNewLabel_1_1_2_1_1_2_2.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1_1_2_1_1_2_2.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_2_2.setBounds(54, 203, 169, 67);
+		lblNewLabel_1_1_2_1_1_2_2.setBounds(12, 147, 62, 43);
 		panel_3.add(lblNewLabel_1_1_2_1_1_2_2);
 		
 		textField_9 = new JTextField();
 		textField_9.setEditable(false);
 		textField_9.setColumns(10);
-		textField_9.setBounds(233, 206, 495, 70);
+		textField_9.setBounds(75, 77, 396, 43);
 		panel_3.add(textField_9);
 		
-		JLabel lblNewLabel_1_1_2_1_1_1_1 = new JLabel("Marca");
+		JLabel lblNewLabel_1_1_2_1_1_1_1 = new JLabel("Marca:");
+		lblNewLabel_1_1_2_1_1_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1_1_2_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_1_1.setBounds(54, 307, 169, 67);
+		lblNewLabel_1_1_2_1_1_1_1.setBounds(0, 223, 74, 43);
 		panel_3.add(lblNewLabel_1_1_2_1_1_1_1);
 		
 		textField_14 = new JTextField();
 		textField_14.setEditable(false);
 		textField_14.setColumns(10);
-		textField_14.setBounds(233, 310, 495, 70);
+		textField_14.setBounds(75, 152, 396, 43);
 		panel_3.add(textField_14);
 		
-		JLabel lblNewLabel_1_1_2_1_1_3 = new JLabel("Preço");
+		JLabel lblNewLabel_1_1_2_1_1_3 = new JLabel("Preço:");
+		lblNewLabel_1_1_2_1_1_3.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1_1_2_1_1_3.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_3.setBounds(54, 405, 169, 67);
+		lblNewLabel_1_1_2_1_1_3.setBounds(0, 294, 74, 46);
 		panel_3.add(lblNewLabel_1_1_2_1_1_3);
 		
+		textField_5 = new JTextField();
+		textField_5.setBounds(82, 11, 389, 44);
+		panel_3.add(textField_5);
+		textField_5.setEditable(false);
+		textField_5.setColumns(10);
+		
+		textField_7 = new JTextField();
+		textField_7.setBounds(75, 297, 396, 43);
+		panel_3.add(textField_7);
+		textField_7.setEditable(false);
+		textField_7.setColumns(10);
+		
+		textField_10 = new JTextField();
+		textField_10.setBounds(75, 223, 396, 43);
+		panel_3.add(textField_10);
+		textField_10.setEditable(false);
+		textField_10.setColumns(10);
+		
+		JButton btnNewButton = new JButton("COMPRAR");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton.setBounds(539, 569, 248, 72);
+		panel_1.add(btnNewButton);
+		btnNewButton.setFont(new Font("Sitka Text", Font.PLAIN, 19));
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(744, 80, 499, 459);
+		panel_1.add(panel);
+		panel.setBackground(new Color(39, 39, 39));
+		panel.setLayout(null);
+		
+		JLabel lblNewLabel_1_1_2_1 = new JLabel("Bairro:");
+		lblNewLabel_1_1_2_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_1_1_2_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		lblNewLabel_1_1_2_1.setBounds(0, 364, 70, 42);
+		panel.add(lblNewLabel_1_1_2_1);
+		
+		JLabel lblNewLabel_1_1_2_1_1 = new JLabel("Rua:");
+		lblNewLabel_1_1_2_1_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_1_1_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		lblNewLabel_1_1_2_1_1.setBounds(10, 293, 58, 43);
+		panel.add(lblNewLabel_1_1_2_1_1);
+		
+		textField_11 = new JTextField();
+		textField_11.setEditable(false);
+		textField_11.setColumns(10);
+		textField_11.setBounds(73, 293, 373, 43);
+		panel.add(textField_11);
+		
+		JLabel lblNewLabel_1_1_2_1_1_1 = new JLabel("Tel:");
+		lblNewLabel_1_1_2_1_1_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_1_1_2_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		lblNewLabel_1_1_2_1_1_1.setBounds(10, 224, 169, 43);
+		panel.add(lblNewLabel_1_1_2_1_1_1);
+		
+		textField_12 = new JTextField();
+		textField_12.setEditable(false);
+		textField_12.setColumns(10);
+		textField_12.setBounds(73, 224, 373, 43);
+		panel.add(textField_12);
+		
+		JLabel lblNewLabel_1_1_2_1_1_2 = new JLabel("CEP:");
+		lblNewLabel_1_1_2_1_1_2.setForeground(new Color(255, 255, 255));
+		lblNewLabel_1_1_2_1_1_2.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		lblNewLabel_1_1_2_1_1_2.setBounds(10, 154, 70, 42);
+		panel.add(lblNewLabel_1_1_2_1_1_2);
+		
+		textField_13 = new JTextField();
+		textField_13.setEditable(false);
+		textField_13.setColumns(10);
+		textField_13.setBounds(73, 154, 373, 43);
+		panel.add(textField_13);
+		
+		JLabel lblNewLabel_1_1_2_1_1_2_1 = new JLabel("CPF:");
+		lblNewLabel_1_1_2_1_1_2_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_1_1_2_1_1_2_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		lblNewLabel_1_1_2_1_1_2_1.setBounds(10, 83, 70, 43);
+		panel.add(lblNewLabel_1_1_2_1_1_2_1);
+		
+		textField_8 = new JTextField();
+		textField_8.setEditable(false);
+		textField_8.setColumns(10);
+		textField_8.setBounds(73, 84, 373, 44);
+		panel.add(textField_8);
+		
+		JLabel lblNewLabel_1_1_2_1_1_2_1_1 = new JLabel("Nome:");
+		lblNewLabel_1_1_2_1_1_2_1_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_1_1_2_1_1_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		lblNewLabel_1_1_2_1_1_2_1_1.setBounds(0, 11, 70, 43);
+		panel.add(lblNewLabel_1_1_2_1_1_2_1_1);
+		
 		textField_15 = new JTextField();
+		textField_15.setBounds(73, 364, 373, 42);
+		panel.add(textField_15);
 		textField_15.setEditable(false);
 		textField_15.setColumns(10);
-		textField_15.setBounds(233, 408, 495, 70);
-		panel_3.add(textField_15);
 		
-		JButton btnNewButton = new JButton("Comprar");
-		btnNewButton.setBounds(645, 719, 553, 232);
-		contentPane.add(btnNewButton);
+		textField_6 = new JTextField();
+		textField_6.setBounds(73, 11, 373, 44);
+		panel.add(textField_6);
+		textField_6.setEditable(false);
+		textField_6.setColumns(10);
+		
+		JLabel lblNewLabel_2 = new JLabel("TELA DE COMPRA");
+		lblNewLabel_2.setBounds(434, 11, 479, 72);
+		panel_1.add(lblNewLabel_2);
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 38));
+		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_2.setForeground(new Color(255, 0, 0));
 	}
 }

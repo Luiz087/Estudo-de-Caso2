@@ -87,27 +87,33 @@ public class TelaCarrosUsuario extends JFrame {
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(514, 24, 743, 86);
+		panel.setBackground(new Color(39, 39, 39));
+		panel.setBounds(328, 22, 743, 86);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Modelo");
-		lblNewLabel.setBounds(31, 61, 46, 14);
+		JLabel lblNewLabel = new JLabel("Modelo:\r\n");
+		lblNewLabel.setForeground(new Color(255, 255, 255));
+		lblNewLabel.setBounds(27, 36, 46, 14);
 		panel.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Ano");
+		JLabel lblNewLabel_1 = new JLabel("Ano:");
+		lblNewLabel_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1.setBounds(155, 61, 46, 14);
 		panel.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_2 = new JLabel("Cor");
+		JLabel lblNewLabel_2 = new JLabel("Cor:");
+		lblNewLabel_2.setForeground(new Color(255, 255, 255));
 		lblNewLabel_2.setBounds(389, 17, 46, 14);
 		panel.add(lblNewLabel_2);
 		
-		JLabel lblNewLabel_3 = new JLabel("Marca");
+		JLabel lblNewLabel_3 = new JLabel("Marca:");
+		lblNewLabel_3.setForeground(new Color(255, 255, 255));
 		lblNewLabel_3.setBounds(155, 17, 46, 14);
 		panel.add(lblNewLabel_3);
 		
-		JLabel lblNewLabel_4 = new JLabel("Preço");
+		JLabel lblNewLabel_4 = new JLabel("Preço:");
+		lblNewLabel_4.setForeground(new Color(255, 255, 255));
 		lblNewLabel_4.setBounds(389, 61, 46, 14);
 		panel.add(lblNewLabel_4);
 		
@@ -144,27 +150,33 @@ public class TelaCarrosUsuario extends JFrame {
 		panel.add(btnNewButton);
 		
 		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(new Color(39, 39, 39));
 		panel_1.setLayout(null);
-		panel_1.setBounds(514, 132, 743, 86);
+		panel_1.setBounds(328, 119, 743, 86);
 		contentPane.add(panel_1);
 		
-		JLabel lblNewLabel_5 = new JLabel("Modelo");
-		lblNewLabel_5.setBounds(31, 61, 46, 14);
+		JLabel lblNewLabel_5 = new JLabel("Modelo:");
+		lblNewLabel_5.setForeground(new Color(255, 255, 255));
+		lblNewLabel_5.setBounds(31, 38, 46, 14);
 		panel_1.add(lblNewLabel_5);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("Ano");
+		JLabel lblNewLabel_1_1 = new JLabel("Ano:");
+		lblNewLabel_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1_1.setBounds(155, 61, 46, 14);
 		panel_1.add(lblNewLabel_1_1);
 		
-		JLabel lblNewLabel_2_1 = new JLabel("Cor");
+		JLabel lblNewLabel_2_1 = new JLabel("Cor:");
+		lblNewLabel_2_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_2_1.setBounds(389, 17, 46, 14);
 		panel_1.add(lblNewLabel_2_1);
 		
-		JLabel lblNewLabel_3_1 = new JLabel("Marca");
+		JLabel lblNewLabel_3_1 = new JLabel("Marca:");
+		lblNewLabel_3_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_3_1.setBounds(155, 17, 46, 14);
 		panel_1.add(lblNewLabel_3_1);
 		
-		JLabel lblNewLabel_4_1 = new JLabel("Preço");
+		JLabel lblNewLabel_4_1 = new JLabel("Preço:");
+		lblNewLabel_4_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_4_1.setBounds(389, 61, 46, 14);
 		panel_1.add(lblNewLabel_4_1);
 		
@@ -201,27 +213,33 @@ public class TelaCarrosUsuario extends JFrame {
 		panel_1.add(btnNewButton_1);
 		
 		JPanel panel_1_1 = new JPanel();
+		panel_1_1.setBackground(new Color(39, 39, 39));
 		panel_1_1.setLayout(null);
-		panel_1_1.setBounds(514, 241, 743, 86);
+		panel_1_1.setBounds(328, 216, 743, 86);
 		contentPane.add(panel_1_1);
 		
-		JLabel lblNewLabel_5_1 = new JLabel("Modelo");
-		lblNewLabel_5_1.setBounds(31, 61, 46, 14);
+		JLabel lblNewLabel_5_1 = new JLabel("Modelo:");
+		lblNewLabel_5_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_5_1.setBounds(29, 39, 46, 14);
 		panel_1_1.add(lblNewLabel_5_1);
 		
-		JLabel lblNewLabel_1_1_1 = new JLabel("Ano");
+		JLabel lblNewLabel_1_1_1 = new JLabel("Ano:");
+		lblNewLabel_1_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1_1_1.setBounds(155, 61, 46, 14);
 		panel_1_1.add(lblNewLabel_1_1_1);
 		
-		JLabel lblNewLabel_2_1_1 = new JLabel("Cor");
+		JLabel lblNewLabel_2_1_1 = new JLabel("Cor:");
+		lblNewLabel_2_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_2_1_1.setBounds(389, 17, 46, 14);
 		panel_1_1.add(lblNewLabel_2_1_1);
 		
-		JLabel lblNewLabel_3_1_1 = new JLabel("Marca");
+		JLabel lblNewLabel_3_1_1 = new JLabel("Marca:");
+		lblNewLabel_3_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_3_1_1.setBounds(155, 17, 46, 14);
 		panel_1_1.add(lblNewLabel_3_1_1);
 		
-		JLabel lblNewLabel_4_1_1 = new JLabel("Preço");
+		JLabel lblNewLabel_4_1_1 = new JLabel("Preço:");
+		lblNewLabel_4_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_4_1_1.setBounds(389, 61, 46, 14);
 		panel_1_1.add(lblNewLabel_4_1_1);
 		
@@ -258,27 +276,33 @@ public class TelaCarrosUsuario extends JFrame {
 		panel_1_1.add(btnNewButton_2);
 		
 		JPanel panel_1_1_1 = new JPanel();
+		panel_1_1_1.setBackground(new Color(39, 39, 39));
 		panel_1_1_1.setLayout(null);
-		panel_1_1_1.setBounds(514, 349, 743, 86);
+		panel_1_1_1.setBounds(328, 313, 743, 86);
 		contentPane.add(panel_1_1_1);
 		
-		JLabel lblNewLabel_5_1_1 = new JLabel("Modelo");
-		lblNewLabel_5_1_1.setBounds(31, 61, 46, 14);
+		JLabel lblNewLabel_5_1_1 = new JLabel("Modelo:");
+		lblNewLabel_5_1_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_5_1_1.setBounds(28, 38, 46, 14);
 		panel_1_1_1.add(lblNewLabel_5_1_1);
 		
-		JLabel lblNewLabel_1_1_1_1 = new JLabel("Ano");
+		JLabel lblNewLabel_1_1_1_1 = new JLabel("Ano:");
+		lblNewLabel_1_1_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1_1_1_1.setBounds(155, 61, 46, 14);
 		panel_1_1_1.add(lblNewLabel_1_1_1_1);
 		
-		JLabel lblNewLabel_2_1_1_1 = new JLabel("Cor");
+		JLabel lblNewLabel_2_1_1_1 = new JLabel("Cor:");
+		lblNewLabel_2_1_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_2_1_1_1.setBounds(389, 17, 46, 14);
 		panel_1_1_1.add(lblNewLabel_2_1_1_1);
 		
-		JLabel lblNewLabel_3_1_1_1 = new JLabel("Marca");
+		JLabel lblNewLabel_3_1_1_1 = new JLabel("Marca:");
+		lblNewLabel_3_1_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_3_1_1_1.setBounds(155, 17, 46, 14);
 		panel_1_1_1.add(lblNewLabel_3_1_1_1);
 		
-		JLabel lblNewLabel_4_1_1_1 = new JLabel("Preço");
+		JLabel lblNewLabel_4_1_1_1 = new JLabel("Preço:");
+		lblNewLabel_4_1_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_4_1_1_1.setBounds(389, 61, 46, 14);
 		panel_1_1_1.add(lblNewLabel_4_1_1_1);
 		
@@ -315,27 +339,33 @@ public class TelaCarrosUsuario extends JFrame {
 		panel_1_1_1.add(btnNewButton_3);
 		
 		JPanel panel_1_1_1_1 = new JPanel();
+		panel_1_1_1_1.setBackground(new Color(39, 39, 39));
 		panel_1_1_1_1.setLayout(null);
-		panel_1_1_1_1.setBounds(514, 463, 743, 86);
+		panel_1_1_1_1.setBounds(328, 410, 743, 86);
 		contentPane.add(panel_1_1_1_1);
 		
-		JLabel lblNewLabel_5_1_1_1 = new JLabel("Modelo");
-		lblNewLabel_5_1_1_1.setBounds(31, 61, 46, 14);
+		JLabel lblNewLabel_5_1_1_1 = new JLabel("Modelo:");
+		lblNewLabel_5_1_1_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_5_1_1_1.setBounds(31, 37, 46, 14);
 		panel_1_1_1_1.add(lblNewLabel_5_1_1_1);
 		
-		JLabel lblNewLabel_1_1_1_1_1 = new JLabel("Ano");
+		JLabel lblNewLabel_1_1_1_1_1 = new JLabel("Ano:");
+		lblNewLabel_1_1_1_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1_1_1_1_1.setBounds(155, 61, 46, 14);
 		panel_1_1_1_1.add(lblNewLabel_1_1_1_1_1);
 		
-		JLabel lblNewLabel_2_1_1_1_1 = new JLabel("Cor");
+		JLabel lblNewLabel_2_1_1_1_1 = new JLabel("Cor:");
+		lblNewLabel_2_1_1_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_2_1_1_1_1.setBounds(389, 17, 46, 14);
 		panel_1_1_1_1.add(lblNewLabel_2_1_1_1_1);
 		
-		JLabel lblNewLabel_3_1_1_1_1 = new JLabel("Marca");
+		JLabel lblNewLabel_3_1_1_1_1 = new JLabel("Marca:");
+		lblNewLabel_3_1_1_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_3_1_1_1_1.setBounds(155, 17, 46, 14);
 		panel_1_1_1_1.add(lblNewLabel_3_1_1_1_1);
 		
-		JLabel lblNewLabel_4_1_1_1_1 = new JLabel("Preço");
+		JLabel lblNewLabel_4_1_1_1_1 = new JLabel("Preço:");
+		lblNewLabel_4_1_1_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_4_1_1_1_1.setBounds(389, 61, 46, 14);
 		panel_1_1_1_1.add(lblNewLabel_4_1_1_1_1);
 		
@@ -372,27 +402,33 @@ public class TelaCarrosUsuario extends JFrame {
 		panel_1_1_1_1.add(btnNewButton_4);
 		
 		JPanel panel_1_1_1_1_1 = new JPanel();
+		panel_1_1_1_1_1.setBackground(new Color(39, 39, 39));
 		panel_1_1_1_1_1.setLayout(null);
-		panel_1_1_1_1_1.setBounds(514, 573, 743, 86);
+		panel_1_1_1_1_1.setBounds(328, 507, 743, 86);
 		contentPane.add(panel_1_1_1_1_1);
 		
-		JLabel lblNewLabel_5_1_1_1_1 = new JLabel("Modelo");
-		lblNewLabel_5_1_1_1_1.setBounds(31, 61, 46, 14);
+		JLabel lblNewLabel_5_1_1_1_1 = new JLabel("Modelo:");
+		lblNewLabel_5_1_1_1_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_5_1_1_1_1.setBounds(26, 37, 46, 14);
 		panel_1_1_1_1_1.add(lblNewLabel_5_1_1_1_1);
 		
-		JLabel lblNewLabel_1_1_1_1_1_1 = new JLabel("Ano");
+		JLabel lblNewLabel_1_1_1_1_1_1 = new JLabel("Ano:");
+		lblNewLabel_1_1_1_1_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1_1_1_1_1_1.setBounds(155, 61, 46, 14);
 		panel_1_1_1_1_1.add(lblNewLabel_1_1_1_1_1_1);
 		
-		JLabel lblNewLabel_2_1_1_1_1_1 = new JLabel("Cor");
+		JLabel lblNewLabel_2_1_1_1_1_1 = new JLabel("Cor:");
+		lblNewLabel_2_1_1_1_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_2_1_1_1_1_1.setBounds(389, 17, 46, 14);
 		panel_1_1_1_1_1.add(lblNewLabel_2_1_1_1_1_1);
 		
-		JLabel lblNewLabel_3_1_1_1_1_1 = new JLabel("Marca");
+		JLabel lblNewLabel_3_1_1_1_1_1 = new JLabel("Marca:");
+		lblNewLabel_3_1_1_1_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_3_1_1_1_1_1.setBounds(155, 17, 46, 14);
 		panel_1_1_1_1_1.add(lblNewLabel_3_1_1_1_1_1);
 		
-		JLabel lblNewLabel_4_1_1_1_1_1 = new JLabel("Preço");
+		JLabel lblNewLabel_4_1_1_1_1_1 = new JLabel("Preço:");
+		lblNewLabel_4_1_1_1_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_4_1_1_1_1_1.setBounds(389, 61, 46, 14);
 		panel_1_1_1_1_1.add(lblNewLabel_4_1_1_1_1_1);
 		
@@ -400,7 +436,7 @@ public class TelaCarrosUsuario extends JFrame {
 		textField_20.setEnabled(false);
 		textField_20.setEditable(false);
 		textField_20.setColumns(10);
-		textField_20.setBounds(196, 6, 154, 29);
+		textField_20.setBounds(196, 10, 154, 29);
 		panel_1_1_1_1_1.add(textField_20);
 		
 		textField_21 = new JTextField();
@@ -429,27 +465,33 @@ public class TelaCarrosUsuario extends JFrame {
 		panel_1_1_1_1_1.add(btnNewButton_4_1);
 		
 		JPanel panel_1_1_1_1_1_1 = new JPanel();
+		panel_1_1_1_1_1_1.setBackground(new Color(39, 39, 39));
 		panel_1_1_1_1_1_1.setLayout(null);
-		panel_1_1_1_1_1_1.setBounds(514, 682, 743, 86);
+		panel_1_1_1_1_1_1.setBounds(328, 604, 743, 86);
 		contentPane.add(panel_1_1_1_1_1_1);
 		
-		JLabel lblNewLabel_5_1_1_1_1_1 = new JLabel("Modelo");
-		lblNewLabel_5_1_1_1_1_1.setBounds(31, 61, 46, 14);
+		JLabel lblNewLabel_5_1_1_1_1_1 = new JLabel("Modelo:");
+		lblNewLabel_5_1_1_1_1_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_5_1_1_1_1_1.setBounds(26, 37, 46, 14);
 		panel_1_1_1_1_1_1.add(lblNewLabel_5_1_1_1_1_1);
 		
-		JLabel lblNewLabel_1_1_1_1_1_1_1 = new JLabel("Ano");
+		JLabel lblNewLabel_1_1_1_1_1_1_1 = new JLabel("Ano:");
+		lblNewLabel_1_1_1_1_1_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1_1_1_1_1_1_1.setBounds(155, 61, 46, 14);
 		panel_1_1_1_1_1_1.add(lblNewLabel_1_1_1_1_1_1_1);
 		
-		JLabel lblNewLabel_2_1_1_1_1_1_1 = new JLabel("Cor");
+		JLabel lblNewLabel_2_1_1_1_1_1_1 = new JLabel("Cor:");
+		lblNewLabel_2_1_1_1_1_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_2_1_1_1_1_1_1.setBounds(389, 17, 46, 14);
 		panel_1_1_1_1_1_1.add(lblNewLabel_2_1_1_1_1_1_1);
 		
-		JLabel lblNewLabel_3_1_1_1_1_1_1 = new JLabel("Marca");
+		JLabel lblNewLabel_3_1_1_1_1_1_1 = new JLabel("Marca:");
+		lblNewLabel_3_1_1_1_1_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_3_1_1_1_1_1_1.setBounds(155, 17, 46, 14);
 		panel_1_1_1_1_1_1.add(lblNewLabel_3_1_1_1_1_1_1);
 		
-		JLabel lblNewLabel_4_1_1_1_1_1_1 = new JLabel("Preço");
+		JLabel lblNewLabel_4_1_1_1_1_1_1 = new JLabel("Preço:");
+		lblNewLabel_4_1_1_1_1_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_4_1_1_1_1_1_1.setBounds(389, 61, 46, 14);
 		panel_1_1_1_1_1_1.add(lblNewLabel_4_1_1_1_1_1_1);
 		
@@ -602,5 +644,10 @@ public class TelaCarrosUsuario extends JFrame {
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(1894, 0, 10, 1041);
 		contentPane.add(scrollPane);
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setBackground(new Color(0, 0, 255));
+		panel_2.setBounds(0, 0, 1382, 749);
+		contentPane.add(panel_2);
 	}
 }
