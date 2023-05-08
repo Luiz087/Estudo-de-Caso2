@@ -60,13 +60,13 @@ public class TelaCompraCarros extends JFrame {
 		contentPane.setLayout(null);
 		
 		JPanel panel_1 = new JPanel();
-		panel_1.setBackground(new Color(0, 0, 255));
-		panel_1.setBounds(41, 11, 1397, 787);
+		panel_1.setBackground(new Color(153, 204, 255));
+		panel_1.setBounds(0, 0, 1904, 1041);
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
 		
 		JPanel panel_3 = new JPanel();
-		panel_3.setBounds(32, 80, 522, 459);
+		panel_3.setBounds(449, 125, 522, 459);
 		panel_1.add(panel_3);
 		panel_3.setBackground(new Color(39, 39, 39));
 		panel_3.setLayout(null);
@@ -75,59 +75,59 @@ public class TelaCompraCarros extends JFrame {
 		lblNewLabel_1_1_2_1_1_2_1_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1_1_2_1_1_2_1_1_1.setBackground(new Color(255, 255, 255));
 		lblNewLabel_1_1_2_1_1_2_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_2_1_1_1.setBounds(0, -2, 86, 60);
+		lblNewLabel_1_1_2_1_1_2_1_1_1.setBounds(26, 0, 86, 60);
 		panel_3.add(lblNewLabel_1_1_2_1_1_2_1_1_1);
 		
 		JLabel lblNewLabel_1_1_2_1_1_2_1_2 = new JLabel("Ano:");
 		lblNewLabel_1_1_2_1_1_2_1_2.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1_1_2_1_1_2_1_2.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_2_1_2.setBounds(10, 77, 76, 46);
+		lblNewLabel_1_1_2_1_1_2_1_2.setBounds(36, 79, 76, 46);
 		panel_3.add(lblNewLabel_1_1_2_1_1_2_1_2);
 		
 		JLabel lblNewLabel_1_1_2_1_1_2_2 = new JLabel("Cor:");
 		lblNewLabel_1_1_2_1_1_2_2.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1_1_2_1_1_2_2.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_2_2.setBounds(12, 147, 62, 43);
+		lblNewLabel_1_1_2_1_1_2_2.setBounds(38, 149, 62, 43);
 		panel_3.add(lblNewLabel_1_1_2_1_1_2_2);
 		
 		textField_9 = new JTextField();
 		textField_9.setEditable(false);
 		textField_9.setColumns(10);
-		textField_9.setBounds(75, 77, 396, 43);
+		textField_9.setBounds(108, 79, 389, 43);
 		panel_3.add(textField_9);
 		
 		JLabel lblNewLabel_1_1_2_1_1_1_1 = new JLabel("Marca:");
 		lblNewLabel_1_1_2_1_1_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1_1_2_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_1_1.setBounds(0, 223, 74, 43);
+		lblNewLabel_1_1_2_1_1_1_1.setBounds(26, 225, 74, 43);
 		panel_3.add(lblNewLabel_1_1_2_1_1_1_1);
 		
 		textField_14 = new JTextField();
 		textField_14.setEditable(false);
 		textField_14.setColumns(10);
-		textField_14.setBounds(75, 152, 396, 43);
+		textField_14.setBounds(108, 154, 389, 43);
 		panel_3.add(textField_14);
 		
 		JLabel lblNewLabel_1_1_2_1_1_3 = new JLabel("Preço:");
 		lblNewLabel_1_1_2_1_1_3.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1_1_2_1_1_3.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_3.setBounds(0, 294, 74, 46);
+		lblNewLabel_1_1_2_1_1_3.setBounds(26, 296, 74, 46);
 		panel_3.add(lblNewLabel_1_1_2_1_1_3);
 		
 		textField_5 = new JTextField();
-		textField_5.setBounds(82, 11, 389, 44);
+		textField_5.setBounds(108, 13, 389, 44);
 		panel_3.add(textField_5);
 		textField_5.setEditable(false);
 		textField_5.setColumns(10);
 		
 		textField_7 = new JTextField();
-		textField_7.setBounds(75, 297, 396, 43);
+		textField_7.setBounds(108, 299, 389, 43);
 		panel_3.add(textField_7);
 		textField_7.setEditable(false);
 		textField_7.setColumns(10);
 		
 		textField_10 = new JTextField();
-		textField_10.setBounds(75, 223, 396, 43);
+		textField_10.setBounds(108, 225, 389, 43);
 		panel_3.add(textField_10);
 		textField_10.setEditable(false);
 		textField_10.setColumns(10);
@@ -137,12 +137,12 @@ public class TelaCompraCarros extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnNewButton.setBounds(539, 569, 248, 72);
+		btnNewButton.setBounds(909, 614, 248, 72);
 		panel_1.add(btnNewButton);
 		btnNewButton.setFont(new Font("Sitka Text", Font.PLAIN, 19));
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(734, 80, 509, 459);
+		panel.setBounds(1084, 125, 509, 459);
 		panel_1.add(panel);
 		panel.setBackground(new Color(39, 39, 39));
 		panel.setLayout(null);
@@ -150,80 +150,80 @@ public class TelaCompraCarros extends JFrame {
 		JLabel lblNewLabel_1_1_2_1 = new JLabel("Bairro:");
 		lblNewLabel_1_1_2_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1_1_2_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1.setBounds(10, 364, 70, 42);
+		lblNewLabel_1_1_2_1.setBounds(33, 364, 70, 42);
 		panel.add(lblNewLabel_1_1_2_1);
 		
 		JLabel lblNewLabel_1_1_2_1_1 = new JLabel("Rua:");
 		lblNewLabel_1_1_2_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1_1_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1.setBounds(20, 293, 58, 43);
+		lblNewLabel_1_1_2_1_1.setBounds(43, 293, 58, 43);
 		panel.add(lblNewLabel_1_1_2_1_1);
 		
 		textField_11 = new JTextField();
 		textField_11.setEditable(false);
 		textField_11.setColumns(10);
-		textField_11.setBounds(83, 293, 373, 43);
+		textField_11.setBounds(106, 293, 373, 43);
 		panel.add(textField_11);
 		
 		JLabel lblNewLabel_1_1_2_1_1_1 = new JLabel("Tel:");
 		lblNewLabel_1_1_2_1_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1_1_2_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_1.setBounds(20, 224, 169, 43);
+		lblNewLabel_1_1_2_1_1_1.setBounds(43, 224, 169, 43);
 		panel.add(lblNewLabel_1_1_2_1_1_1);
 		
 		textField_12 = new JTextField();
 		textField_12.setEditable(false);
 		textField_12.setColumns(10);
-		textField_12.setBounds(83, 224, 373, 43);
+		textField_12.setBounds(106, 224, 373, 43);
 		panel.add(textField_12);
 		
 		JLabel lblNewLabel_1_1_2_1_1_2 = new JLabel("CEP:");
 		lblNewLabel_1_1_2_1_1_2.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1_1_2_1_1_2.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_2.setBounds(20, 154, 70, 42);
+		lblNewLabel_1_1_2_1_1_2.setBounds(43, 154, 70, 42);
 		panel.add(lblNewLabel_1_1_2_1_1_2);
 		
 		textField_13 = new JTextField();
 		textField_13.setEditable(false);
 		textField_13.setColumns(10);
-		textField_13.setBounds(83, 154, 373, 43);
+		textField_13.setBounds(106, 154, 373, 43);
 		panel.add(textField_13);
 		
 		JLabel lblNewLabel_1_1_2_1_1_2_1 = new JLabel("CPF:");
 		lblNewLabel_1_1_2_1_1_2_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1_1_2_1_1_2_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_2_1.setBounds(20, 83, 70, 43);
+		lblNewLabel_1_1_2_1_1_2_1.setBounds(43, 83, 70, 43);
 		panel.add(lblNewLabel_1_1_2_1_1_2_1);
 		
 		textField_8 = new JTextField();
 		textField_8.setEditable(false);
 		textField_8.setColumns(10);
-		textField_8.setBounds(83, 84, 373, 44);
+		textField_8.setBounds(106, 84, 373, 44);
 		panel.add(textField_8);
 		
 		JLabel lblNewLabel_1_1_2_1_1_2_1_1 = new JLabel("Nome:");
 		lblNewLabel_1_1_2_1_1_2_1_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1_1_2_1_1_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_2_1_1.setBounds(10, 11, 70, 43);
+		lblNewLabel_1_1_2_1_1_2_1_1.setBounds(33, 11, 70, 43);
 		panel.add(lblNewLabel_1_1_2_1_1_2_1_1);
 		
 		textField_15 = new JTextField();
-		textField_15.setBounds(83, 364, 373, 42);
+		textField_15.setBounds(106, 364, 373, 42);
 		panel.add(textField_15);
 		textField_15.setEditable(false);
 		textField_15.setColumns(10);
 		
 		textField_6 = new JTextField();
-		textField_6.setBounds(83, 11, 373, 44);
+		textField_6.setBounds(106, 11, 373, 44);
 		panel.add(textField_6);
 		textField_6.setEditable(false);
 		textField_6.setColumns(10);
 		
 		JLabel lblNewLabel_2 = new JLabel("TELA DE COMPRA");
-		lblNewLabel_2.setBounds(434, 11, 479, 72);
+		lblNewLabel_2.setBounds(851, 56, 359, 72);
 		panel_1.add(lblNewLabel_2);
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 38));
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2.setForeground(new Color(255, 0, 0));
+		lblNewLabel_2.setForeground(new Color(51, 102, 51));
 	}
 }
