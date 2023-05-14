@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_X3pAkPKgEe2tzN5ghuZWvQ">
+  <modelElement href="Estudo-de-Caso22.uml#_YIbOkPKgEe2tzN5ghuZWvQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_YM9wUPKgEe2tzN5ghuZWvQ" sourceAnchor="0.0,46.0" targetAnchor="69.0,111.0" superClass="_YM--cPKgEe2tzN5ghuZWvQ" subClass="_YM6F8PKgEe2tzN5ghuZWvQ">
+    <modelElement href="Estudo-de-Caso22.uml#_YJzHkPKgEe2tzN5ghuZWvQ"/>
+    <bendpoints xmi:id="_YUf7sPKgEe2tzN5ghuZWvQ" sourceX="-306" targetX="-328" targetY="348"/>
+    <bendpoints xmi:id="_YUf7sfKgEe2tzN5ghuZWvQ" sourceX="-306" sourceY="-320" targetX="-328" targetY="28"/>
+    <bendpoints xmi:id="_YUgiwPKgEe2tzN5ghuZWvQ" sourceX="22" sourceY="-320" targetY="28"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_YNDP4PKgEe2tzN5ghuZWvQ" sourceAnchor="86.0,0.0" targetAnchor="69.0,111.0" superClass="_YM--cPKgEe2tzN5ghuZWvQ" subClass="_YNFsIPKgEe2tzN5ghuZWvQ">
+    <modelElement href="Estudo-de-Caso22.uml#_YJ2K4PKgEe2tzN5ghuZWvQ"/>
+    <bendpoints xmi:id="_YUgiwfKgEe2tzN5ghuZWvQ" sourceY="-27" targetX="-227" targetY="28"/>
+    <bendpoints xmi:id="_YUgiwvKgEe2tzN5ghuZWvQ" sourceX="227" sourceY="-27" targetY="28"/>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_YM2bkPKgEe2tzN5ghuZWvQ" name="Admin">
+    <modelElement href="Estudo-de-Caso22.uml#_YI2sYPKgEe2tzN5ghuZWvQ"/>
+    <visualProperties xmi:id="_YM2bkfKgEe2tzN5ghuZWvQ" position="30.0,30.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_YM2bkvKgEe2tzN5ghuZWvQ" label="+"/>
+    <attributes xmi:id="_YM2bk_KgEe2tzN5ghuZWvQ" defaultValue="&quot;AntonioCarlosNicolodi&quot;" name="usuarioAdmin">
+      <modelElement href="Estudo-de-Caso22.uml#_YKGpkPKgEe2tzN5ghuZWvQ"/>
+      <visibility xmi:id="_YM2blPKgEe2tzN5ghuZWvQ" label="+"/>
+      <cardinality xmi:id="_YM2blfKgEe2tzN5ghuZWvQ" label="1" max="1" min="1"/>
+      <type xmi:id="_YM2blvKgEe2tzN5ghuZWvQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_YM2bl_KgEe2tzN5ghuZWvQ" defaultValue="&quot;123456789&quot;" name="senhaAdmin">
+      <modelElement href="Estudo-de-Caso22.uml#_YKH3sPKgEe2tzN5ghuZWvQ"/>
+      <visibility xmi:id="_YM2bmPKgEe2tzN5ghuZWvQ" label="+"/>
+      <cardinality xmi:id="_YM2bmfKgEe2tzN5ghuZWvQ" label="1" max="1" min="1"/>
+      <type xmi:id="_YM2bmvKgEe2tzN5ghuZWvQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_YM6F8PKgEe2tzN5ghuZWvQ" name="Funcionario" generalizations="_YM9wUPKgEe2tzN5ghuZWvQ">
+    <modelElement href="Estudo-de-Caso22.uml#_YI-oMPKgEe2tzN5ghuZWvQ"/>
+    <visualProperties xmi:id="_YM6F8fKgEe2tzN5ghuZWvQ" position="88.0,189.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_YM6F8vKgEe2tzN5ghuZWvQ" label="+"/>
+    <attributes xmi:id="_YM6F8_KgEe2tzN5ghuZWvQ" name="matricula">
+      <modelElement href="Estudo-de-Caso22.uml#_YKOlYPKgEe2tzN5ghuZWvQ"/>
+      <visibility xmi:id="_YM6F9PKgEe2tzN5ghuZWvQ" label="+"/>
+      <cardinality xmi:id="_YM6F9fKgEe2tzN5ghuZWvQ" label="1" max="1" min="1"/>
+      <type xmi:id="_YM6F9vKgEe2tzN5ghuZWvQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_YM6F9_KgEe2tzN5ghuZWvQ" name="usuarioFuncionario">
+      <modelElement href="Estudo-de-Caso22.uml#_YKPMcPKgEe2tzN5ghuZWvQ"/>
+      <visibility xmi:id="_YM6F-PKgEe2tzN5ghuZWvQ" label="+"/>
+      <cardinality xmi:id="_YM6F-fKgEe2tzN5ghuZWvQ" label="1" max="1" min="1"/>
+      <type xmi:id="_YM6F-vKgEe2tzN5ghuZWvQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_YM6F-_KgEe2tzN5ghuZWvQ" name="senhaFuncionario">
+      <modelElement href="Estudo-de-Caso22.uml#_YKPzgPKgEe2tzN5ghuZWvQ"/>
+      <visibility xmi:id="_YM6F_PKgEe2tzN5ghuZWvQ" label="+"/>
+      <cardinality xmi:id="_YM6F_fKgEe2tzN5ghuZWvQ" label="1" max="1" min="1"/>
+      <type xmi:id="_YM6F_vKgEe2tzN5ghuZWvQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_YM--cPKgEe2tzN5ghuZWvQ" name="Pessoa" abstractClass="true" subclassedBy="_YM9wUPKgEe2tzN5ghuZWvQ _YNDP4PKgEe2tzN5ghuZWvQ">
+    <modelElement href="Estudo-de-Caso22.uml#_YJC5oPKgEe2tzN5ghuZWvQ"/>
+    <visualProperties xmi:id="_YM--cfKgEe2tzN5ghuZWvQ" position="41.0,-224.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_YM--cvKgEe2tzN5ghuZWvQ" label="+"/>
+    <attributes xmi:id="_YM--c_KgEe2tzN5ghuZWvQ" name="nome">
+      <modelElement href="Estudo-de-Caso22.uml#_YKRBoPKgEe2tzN5ghuZWvQ"/>
+      <visibility xmi:id="_YM--dPKgEe2tzN5ghuZWvQ" label="+"/>
+      <cardinality xmi:id="_YM--dfKgEe2tzN5ghuZWvQ" label="1" max="1" min="1"/>
+      <type xmi:id="_YM--dvKgEe2tzN5ghuZWvQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_YM--d_KgEe2tzN5ghuZWvQ" name="cpf">
+      <modelElement href="Estudo-de-Caso22.uml#_YKRosPKgEe2tzN5ghuZWvQ"/>
+      <visibility xmi:id="_YM--ePKgEe2tzN5ghuZWvQ" label="+"/>
+      <cardinality xmi:id="_YM--efKgEe2tzN5ghuZWvQ" label="1" max="1" min="1"/>
+      <type xmi:id="_YM--evKgEe2tzN5ghuZWvQ" name="Long">
+        <modelElement href="Estudo-de-Caso22.uml#_YJ_74PKgEe2tzN5ghuZWvQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_YM--e_KgEe2tzN5ghuZWvQ" name="cep">
+      <modelElement href="Estudo-de-Caso22.uml#_YKSPwPKgEe2tzN5ghuZWvQ"/>
+      <visibility xmi:id="_YM--fPKgEe2tzN5ghuZWvQ" label="+"/>
+      <cardinality xmi:id="_YM--ffKgEe2tzN5ghuZWvQ" label="1" max="1" min="1"/>
+      <type xmi:id="_YM--fvKgEe2tzN5ghuZWvQ" name="Long">
+        <modelElement href="Estudo-de-Caso22.uml#_YJ_74PKgEe2tzN5ghuZWvQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_YM--f_KgEe2tzN5ghuZWvQ" name="telefone">
+      <modelElement href="Estudo-de-Caso22.uml#_YKS20PKgEe2tzN5ghuZWvQ"/>
+      <visibility xmi:id="_YM--gPKgEe2tzN5ghuZWvQ" label="+"/>
+      <cardinality xmi:id="_YM--gfKgEe2tzN5ghuZWvQ" label="1" max="1" min="1"/>
+      <type xmi:id="_YM--gvKgEe2tzN5ghuZWvQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_YNFsIPKgEe2tzN5ghuZWvQ" name="Usuario" generalizations="_YNDP4PKgEe2tzN5ghuZWvQ">
+    <modelElement href="Estudo-de-Caso22.uml#_YJHyIPKgEe2tzN5ghuZWvQ"/>
+    <visualProperties xmi:id="_YNFsIfKgEe2tzN5ghuZWvQ" position="-203.0,-58.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_YNFsIvKgEe2tzN5ghuZWvQ" label="+"/>
+    <attributes xmi:id="_YNFsI_KgEe2tzN5ghuZWvQ" name="usuarioCliente">
+      <modelElement href="Estudo-de-Caso22.uml#_YKUE8PKgEe2tzN5ghuZWvQ"/>
+      <visibility xmi:id="_YNFsJPKgEe2tzN5ghuZWvQ" label="+"/>
+      <cardinality xmi:id="_YNFsJfKgEe2tzN5ghuZWvQ" label="1" max="1" min="1"/>
+      <type xmi:id="_YNFsJvKgEe2tzN5ghuZWvQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_YNFsJ_KgEe2tzN5ghuZWvQ" name="senhaCliente">
+      <modelElement href="Estudo-de-Caso22.uml#_YKUsAPKgEe2tzN5ghuZWvQ"/>
+      <visibility xmi:id="_YNFsKPKgEe2tzN5ghuZWvQ" label="+"/>
+      <cardinality xmi:id="_YNFsKfKgEe2tzN5ghuZWvQ" label="1" max="1" min="1"/>
+      <type xmi:id="_YNFsKvKgEe2tzN5ghuZWvQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_YNFsK_KgEe2tzN5ghuZWvQ" name="toString">
+      <modelElement href="Estudo-de-Caso22.uml#_YJJnUPKgEe2tzN5ghuZWvQ"/>
+      <visibility xmi:id="_YNFsLPKgEe2tzN5ghuZWvQ" label="+"/>
+      <cardinality xmi:id="_YNFsLfKgEe2tzN5ghuZWvQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_YNFsLvKgEe2tzN5ghuZWvQ">
+        <modelElement href="Estudo-de-Caso22.uml#_YJKOYPKgEe2tzN5ghuZWvQ"/>
+        <type xmi:id="_YNFsL_KgEe2tzN5ghuZWvQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_YNKkoPKgEe2tzN5ghuZWvQ" name="Carro">
+    <modelElement href="Estudo-de-Caso22.uml#_YI5vsPKgEe2tzN5ghuZWvQ"/>
+    <visualProperties xmi:id="_YNKkofKgEe2tzN5ghuZWvQ" position="246.0,-188.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_YNKkovKgEe2tzN5ghuZWvQ" label="+"/>
+    <attributes xmi:id="_YNKko_KgEe2tzN5ghuZWvQ" name="modelo">
+      <modelElement href="Estudo-de-Caso22.uml#_YKJF0PKgEe2tzN5ghuZWvQ"/>
+      <visibility xmi:id="_YNKkpPKgEe2tzN5ghuZWvQ" label="+"/>
+      <cardinality xmi:id="_YNKkpfKgEe2tzN5ghuZWvQ" label="1" max="1" min="1"/>
+      <type xmi:id="_YNKkpvKgEe2tzN5ghuZWvQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_YNKkp_KgEe2tzN5ghuZWvQ" name="ano">
+      <modelElement href="Estudo-de-Caso22.uml#_YKK7APKgEe2tzN5ghuZWvQ"/>
+      <visibility xmi:id="_YNKkqPKgEe2tzN5ghuZWvQ" label="+"/>
+      <cardinality xmi:id="_YNKkqfKgEe2tzN5ghuZWvQ" label="1" max="1" min="1"/>
+      <type xmi:id="_YNKkqvKgEe2tzN5ghuZWvQ" name="Integer">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_YNKkq_KgEe2tzN5ghuZWvQ" name="cor">
+      <modelElement href="Estudo-de-Caso22.uml#_YKMJIPKgEe2tzN5ghuZWvQ"/>
+      <visibility xmi:id="_YNKkrPKgEe2tzN5ghuZWvQ" label="+"/>
+      <cardinality xmi:id="_YNKkrfKgEe2tzN5ghuZWvQ" label="1" max="1" min="1"/>
+      <type xmi:id="_YNKkrvKgEe2tzN5ghuZWvQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_YNKkr_KgEe2tzN5ghuZWvQ" name="marca">
+      <modelElement href="Estudo-de-Caso22.uml#_YKMwMPKgEe2tzN5ghuZWvQ"/>
+      <visibility xmi:id="_YNKksPKgEe2tzN5ghuZWvQ" label="+"/>
+      <cardinality xmi:id="_YNKksfKgEe2tzN5ghuZWvQ" label="1" max="1" min="1"/>
+      <type xmi:id="_YNKksvKgEe2tzN5ghuZWvQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_YNKks_KgEe2tzN5ghuZWvQ" name="preco">
+      <modelElement href="Estudo-de-Caso22.uml#_YKNXQPKgEe2tzN5ghuZWvQ"/>
+      <visibility xmi:id="_YNKktPKgEe2tzN5ghuZWvQ" label="+"/>
+      <cardinality xmi:id="_YNKktfKgEe2tzN5ghuZWvQ" label="1" max="1" min="1"/>
+      <type xmi:id="_YNKktvKgEe2tzN5ghuZWvQ" name="Double">
+        <modelElement href="Estudo-de-Caso22.uml#_YJ7DYvKgEe2tzN5ghuZWvQ"/>
+      </type>
+    </attributes>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
