@@ -30,6 +30,14 @@ public class UsuarioDAO {
 		}
 		return false;
 	}
+	
+	public boolean excluir() {
+		return false;
+	}
+	
+	public boolean alterar() {
+		return false;
+	}
 
 	public ArrayList<Usuario> listarUsuarios() {
 		return listaUsuario;
