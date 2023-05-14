@@ -89,7 +89,7 @@ public class TelaCadastroUsuario extends JFrame {
 		panel.add(lblNewLabel_1);
 
 		JButton btnCadUsuario = new JButton("CADASTRAR");
-		btnCadUsuario.setBounds(534, 426, 312, 77);
+		btnCadUsuario.setBounds(534, 406, 312, 77);
 		panel.add(btnCadUsuario);
 		btnCadUsuario.setBackground(SystemColor.info);
 		btnCadUsuario.addActionListener(new ActionListener() {
@@ -209,7 +209,7 @@ public class TelaCadastroUsuario extends JFrame {
 		textCadCpf.setColumns(10);
 
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(318, 553, 744, 158);
+		scrollPane.setBounds(318, 517, 744, 158);
 		panel.add(scrollPane);
 
 		table = new JTable();
