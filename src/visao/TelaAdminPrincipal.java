@@ -66,29 +66,21 @@ public class TelaAdminPrincipal extends JFrame {
 		btnNewButton_1_1_1_1.setBounds(590, 55, 233, 71);
 		contentPane.add(btnNewButton_1_1_1_1);
 		
-		JButton btnNewButton_1_1_1_2 = new JButton("Remover Funcionário");
-		btnNewButton_1_1_1_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_1_1_1_2.setBounds(230, 156, 233, 71);
-		contentPane.add(btnNewButton_1_1_1_2);
-		
-		JButton btnNewButton_1_1_1_2_1 = new JButton("Alterar Funcionário");
-		btnNewButton_1_1_1_2_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_1_1_1_2_1.setBounds(230, 264, 233, 71);
-		contentPane.add(btnNewButton_1_1_1_2_1);
-		
-		JButton btnNewButton_1_1_1_2_1_1 = new JButton("Listar Funcionários");
-		btnNewButton_1_1_1_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_1_1_1_2_1_1.setBounds(230, 375, 233, 71);
-		contentPane.add(btnNewButton_1_1_1_2_1_1);
-		
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(0, 0, 160));
 		panel.setBounds(0, 0, 1370, 749);
 		contentPane.add(panel);
+		panel.setLayout(null);
 		
 		JLabel lblFunesDeFuncionrio = new JLabel("Funções de Funcionário");
+		lblFunesDeFuncionrio.setBounds(592, 5, 185, 22);
 		panel.add(lblFunesDeFuncionrio);
 		lblFunesDeFuncionrio.setForeground(new Color(255, 255, 255));
 		lblFunesDeFuncionrio.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		
+		JButton btnNewButton_1_1_1_2_1_1 = new JButton("Listar Funcionários");
+		btnNewButton_1_1_1_2_1_1.setBounds(232, 164, 233, 71);
+		panel.add(btnNewButton_1_1_1_2_1_1);
+		btnNewButton_1_1_1_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 	}
 }
