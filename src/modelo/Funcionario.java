@@ -2,17 +2,8 @@ package modelo;
 
 public class Funcionario extends Pessoa {
 
-	private String matricula;
 	private String usuarioFuncionario;
 	private String senhaFuncionario;
-
-	public String getMatricula() {
-		return matricula;
-	}
-
-	public void setMatricula(String matricula) {
-		this.matricula = matricula;
-	}
 
 	public String getUsuarioFuncionario() {
 		return usuarioFuncionario;
@@ -30,4 +21,7 @@ public class Funcionario extends Pessoa {
 		this.senhaFuncionario = senhaFuncionario;
 	}
 
+	public String toString() {
+		return "\nNome: " + super.getNome() + "\nCPF: " + super.getCpf() + "\nUsuario: " + this.usuarioFuncionario + "\n";
+	}
 }

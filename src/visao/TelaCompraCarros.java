@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Color;
 import javax.swing.SwingConstants;
 import java.awt.Font;
@@ -13,21 +15,22 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.SystemColor;
 
 public class TelaCompraCarros extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField_10;
-	private JTextField textField_11;
-	private JTextField textField_12;
-	private JTextField textField_13;
-	private JTextField textField_8;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+	private JTextField textField_3;
+	private JTextField textField_4;
 	private JTextField textField_5;
 	private JTextField textField_6;
 	private JTextField textField_7;
+	private JTextField textField_8;
 	private JTextField textField_9;
-	private JTextField textField_14;
-	private JTextField textField_15;
+	private JTextField textField_10;
 
 	/**
 	 * Launch the application.
@@ -58,172 +61,185 @@ public class TelaCompraCarros extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
-		JPanel panel_1 = new JPanel();
-		panel_1.setBackground(new Color(0, 0, 160));
-		panel_1.setBounds(0, 0, 1438, 798);
-		contentPane.add(panel_1);
-		panel_1.setLayout(null);
-		
+
 		JPanel panel_3 = new JPanel();
-		panel_3.setBounds(32, 80, 522, 459);
-		panel_1.add(panel_3);
-		panel_3.setBackground(new Color(39, 39, 39));
 		panel_3.setLayout(null);
-		
+		panel_3.setBackground(new Color(39, 39, 39));
+		panel_3.setBounds(66, 169, 509, 286);
+		contentPane.add(panel_3);
+
 		JLabel lblNewLabel_1_1_2_1_1_2_1_1_1 = new JLabel("Modelo:");
-		lblNewLabel_1_1_2_1_1_2_1_1_1.setForeground(new Color(255, 255, 255));
-		lblNewLabel_1_1_2_1_1_2_1_1_1.setBackground(new Color(255, 255, 255));
+		lblNewLabel_1_1_2_1_1_2_1_1_1.setForeground(Color.WHITE);
 		lblNewLabel_1_1_2_1_1_2_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_2_1_1_1.setBounds(0, -2, 86, 60);
+		lblNewLabel_1_1_2_1_1_2_1_1_1.setBackground(Color.WHITE);
+		lblNewLabel_1_1_2_1_1_2_1_1_1.setBounds(10, 14, 78, 46);
 		panel_3.add(lblNewLabel_1_1_2_1_1_2_1_1_1);
-		
+
 		JLabel lblNewLabel_1_1_2_1_1_2_1_2 = new JLabel("Ano:");
-		lblNewLabel_1_1_2_1_1_2_1_2.setForeground(new Color(255, 255, 255));
+		lblNewLabel_1_1_2_1_1_2_1_2.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_1_1_2_1_1_2_1_2.setForeground(Color.WHITE);
 		lblNewLabel_1_1_2_1_1_2_1_2.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_2_1_2.setBounds(10, 77, 76, 46);
+		lblNewLabel_1_1_2_1_1_2_1_2.setBounds(26, 71, 62, 46);
 		panel_3.add(lblNewLabel_1_1_2_1_1_2_1_2);
-		
+
 		JLabel lblNewLabel_1_1_2_1_1_2_2 = new JLabel("Cor:");
-		lblNewLabel_1_1_2_1_1_2_2.setForeground(new Color(255, 255, 255));
+		lblNewLabel_1_1_2_1_1_2_2.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_1_1_2_1_1_2_2.setForeground(Color.WHITE);
 		lblNewLabel_1_1_2_1_1_2_2.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_2_2.setBounds(12, 147, 62, 43);
+		lblNewLabel_1_1_2_1_1_2_2.setBounds(26, 120, 62, 43);
 		panel_3.add(lblNewLabel_1_1_2_1_1_2_2);
-		
-		textField_9 = new JTextField();
-		textField_9.setEditable(false);
-		textField_9.setColumns(10);
-		textField_9.setBounds(75, 77, 396, 43);
-		panel_3.add(textField_9);
-		
+
+		textField = new JTextField();
+		textField.setEditable(false);
+		textField.setColumns(10);
+		textField.setBounds(101, 66, 396, 43);
+		panel_3.add(textField);
+
 		JLabel lblNewLabel_1_1_2_1_1_1_1 = new JLabel("Marca:");
-		lblNewLabel_1_1_2_1_1_1_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_1_1_2_1_1_1_1.setForeground(Color.WHITE);
 		lblNewLabel_1_1_2_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_1_1.setBounds(0, 223, 74, 43);
+		lblNewLabel_1_1_2_1_1_1_1.setBounds(26, 174, 74, 43);
 		panel_3.add(lblNewLabel_1_1_2_1_1_1_1);
-		
-		textField_14 = new JTextField();
-		textField_14.setEditable(false);
-		textField_14.setColumns(10);
-		textField_14.setBounds(75, 152, 396, 43);
-		panel_3.add(textField_14);
-		
+
+		textField_1 = new JTextField();
+		textField_1.setEditable(false);
+		textField_1.setColumns(10);
+		textField_1.setBounds(101, 120, 396, 43);
+		panel_3.add(textField_1);
+
 		JLabel lblNewLabel_1_1_2_1_1_3 = new JLabel("Preço:");
-		lblNewLabel_1_1_2_1_1_3.setForeground(new Color(255, 255, 255));
+		lblNewLabel_1_1_2_1_1_3.setForeground(Color.WHITE);
 		lblNewLabel_1_1_2_1_1_3.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_3.setBounds(0, 294, 74, 46);
+		lblNewLabel_1_1_2_1_1_3.setBounds(26, 228, 74, 46);
 		panel_3.add(lblNewLabel_1_1_2_1_1_3);
-		
-		textField_5 = new JTextField();
-		textField_5.setBounds(82, 11, 389, 44);
-		panel_3.add(textField_5);
-		textField_5.setEditable(false);
-		textField_5.setColumns(10);
-		
-		textField_7 = new JTextField();
-		textField_7.setBounds(75, 297, 396, 43);
-		panel_3.add(textField_7);
-		textField_7.setEditable(false);
-		textField_7.setColumns(10);
-		
-		textField_10 = new JTextField();
-		textField_10.setBounds(75, 223, 396, 43);
-		panel_3.add(textField_10);
-		textField_10.setEditable(false);
-		textField_10.setColumns(10);
-		
+
+		textField_2 = new JTextField();
+		textField_2.setEditable(false);
+		textField_2.setColumns(10);
+		textField_2.setBounds(101, 11, 396, 44);
+		panel_3.add(textField_2);
+
+		textField_3 = new JTextField();
+		textField_3.setEditable(false);
+		textField_3.setColumns(10);
+		textField_3.setBounds(101, 231, 396, 43);
+		panel_3.add(textField_3);
+
+		textField_4 = new JTextField();
+		textField_4.setEditable(false);
+		textField_4.setColumns(10);
+		textField_4.setBounds(101, 174, 396, 43);
+		panel_3.add(textField_4);
+
 		JButton btnNewButton = new JButton("COMPRAR");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, "Compra realizada!");
+				TelaCarrosUsuario telaCarrosComprar = new TelaCarrosUsuario();
+				dispose();
+				telaCarrosComprar.setExtendedState(JFrame.MAXIMIZED_BOTH);
+				telaCarrosComprar.setVisible(true);
 			}
 		});
-		btnNewButton.setBounds(539, 569, 248, 72);
-		panel_1.add(btnNewButton);
-		btnNewButton.setFont(new Font("Sitka Text", Font.PLAIN, 19));
-		
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnNewButton.setBounds(561, 569, 248, 72);
+		contentPane.add(btnNewButton);
+
 		JPanel panel = new JPanel();
-		panel.setBounds(734, 80, 509, 459);
-		panel_1.add(panel);
-		panel.setBackground(new Color(39, 39, 39));
 		panel.setLayout(null);
-		
+		panel.setBackground(new Color(39, 39, 39));
+		panel.setBounds(816, 169, 485, 339);
+		contentPane.add(panel);
+
 		JLabel lblNewLabel_1_1_2_1 = new JLabel("Bairro:");
-		lblNewLabel_1_1_2_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_1_1_2_1.setForeground(Color.WHITE);
 		lblNewLabel_1_1_2_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1.setBounds(10, 364, 70, 42);
+		lblNewLabel_1_1_2_1.setBounds(26, 280, 70, 42);
 		panel.add(lblNewLabel_1_1_2_1);
-		
+
 		JLabel lblNewLabel_1_1_2_1_1 = new JLabel("Rua:");
-		lblNewLabel_1_1_2_1_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_1_1_2_1_1.setForeground(Color.WHITE);
 		lblNewLabel_1_1_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1.setBounds(20, 293, 58, 43);
+		lblNewLabel_1_1_2_1_1.setBounds(36, 226, 58, 43);
 		panel.add(lblNewLabel_1_1_2_1_1);
-		
-		textField_11 = new JTextField();
-		textField_11.setEditable(false);
-		textField_11.setColumns(10);
-		textField_11.setBounds(83, 293, 373, 43);
-		panel.add(textField_11);
-		
+
+		textField_5 = new JTextField();
+		textField_5.setEditable(false);
+		textField_5.setColumns(10);
+		textField_5.setBounds(99, 226, 373, 43);
+		panel.add(textField_5);
+
 		JLabel lblNewLabel_1_1_2_1_1_1 = new JLabel("Tel:");
-		lblNewLabel_1_1_2_1_1_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_1_1_2_1_1_1.setForeground(Color.WHITE);
 		lblNewLabel_1_1_2_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_1.setBounds(20, 224, 169, 43);
+		lblNewLabel_1_1_2_1_1_1.setBounds(36, 172, 169, 43);
 		panel.add(lblNewLabel_1_1_2_1_1_1);
-		
-		textField_12 = new JTextField();
-		textField_12.setEditable(false);
-		textField_12.setColumns(10);
-		textField_12.setBounds(83, 224, 373, 43);
-		panel.add(textField_12);
-		
+
+		textField_6 = new JTextField();
+		textField_6.setEditable(false);
+		textField_6.setColumns(10);
+		textField_6.setBounds(99, 172, 373, 43);
+		panel.add(textField_6);
+
 		JLabel lblNewLabel_1_1_2_1_1_2 = new JLabel("CEP:");
-		lblNewLabel_1_1_2_1_1_2.setForeground(new Color(255, 255, 255));
+		lblNewLabel_1_1_2_1_1_2.setForeground(Color.WHITE);
 		lblNewLabel_1_1_2_1_1_2.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_2.setBounds(20, 154, 70, 42);
+		lblNewLabel_1_1_2_1_1_2.setBounds(36, 119, 70, 42);
 		panel.add(lblNewLabel_1_1_2_1_1_2);
-		
-		textField_13 = new JTextField();
-		textField_13.setEditable(false);
-		textField_13.setColumns(10);
-		textField_13.setBounds(83, 154, 373, 43);
-		panel.add(textField_13);
-		
+
+		textField_7 = new JTextField();
+		textField_7.setEditable(false);
+		textField_7.setColumns(10);
+		textField_7.setBounds(99, 119, 373, 43);
+		panel.add(textField_7);
+
 		JLabel lblNewLabel_1_1_2_1_1_2_1 = new JLabel("CPF:");
-		lblNewLabel_1_1_2_1_1_2_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_1_1_2_1_1_2_1.setForeground(Color.WHITE);
 		lblNewLabel_1_1_2_1_1_2_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_2_1.setBounds(20, 83, 70, 43);
+		lblNewLabel_1_1_2_1_1_2_1.setBounds(36, 65, 70, 43);
 		panel.add(lblNewLabel_1_1_2_1_1_2_1);
-		
+
 		textField_8 = new JTextField();
 		textField_8.setEditable(false);
 		textField_8.setColumns(10);
-		textField_8.setBounds(83, 84, 373, 44);
+		textField_8.setBounds(99, 66, 373, 44);
 		panel.add(textField_8);
-		
+
 		JLabel lblNewLabel_1_1_2_1_1_2_1_1 = new JLabel("Nome:");
-		lblNewLabel_1_1_2_1_1_2_1_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_1_1_2_1_1_2_1_1.setForeground(Color.WHITE);
 		lblNewLabel_1_1_2_1_1_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1_1_2_1_1_2_1_1.setBounds(10, 11, 70, 43);
+		lblNewLabel_1_1_2_1_1_2_1_1.setBounds(26, 11, 70, 43);
 		panel.add(lblNewLabel_1_1_2_1_1_2_1_1);
-		
-		textField_15 = new JTextField();
-		textField_15.setBounds(83, 364, 373, 42);
-		panel.add(textField_15);
-		textField_15.setEditable(false);
-		textField_15.setColumns(10);
-		
-		textField_6 = new JTextField();
-		textField_6.setBounds(83, 11, 373, 44);
-		panel.add(textField_6);
-		textField_6.setEditable(false);
-		textField_6.setColumns(10);
-		
-		JLabel lblNewLabel_2 = new JLabel("TELA DE COMPRA");
-		lblNewLabel_2.setBounds(434, 11, 479, 72);
-		panel_1.add(lblNewLabel_2);
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 38));
+
+		textField_9 = new JTextField();
+		textField_9.setEditable(false);
+		textField_9.setColumns(10);
+		textField_9.setBounds(99, 280, 373, 42);
+		panel.add(textField_9);
+
+		textField_10 = new JTextField();
+		textField_10.setEditable(false);
+		textField_10.setColumns(10);
+		textField_10.setBounds(99, 11, 373, 44);
+		panel.add(textField_10);
+
+		JLabel lblNewLabel_2 = new JLabel("Finalizar Compra");
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2.setForeground(new Color(255, 0, 0));
+		lblNewLabel_2.setForeground(Color.RED);
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 38));
+		lblNewLabel_2.setBounds(444, 0, 479, 72);
+		contentPane.add(lblNewLabel_2);
+
+		JButton btnNewButton_1 = new JButton("Voltar");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaCarrosUsuario telaCarrosComprar = new TelaCarrosUsuario();
+				dispose();
+				telaCarrosComprar.setExtendedState(JFrame.MAXIMIZED_BOTH);
+				telaCarrosComprar.setVisible(true);
+			}
+		});
+		btnNewButton_1.setBounds(10, 15, 131, 30);
+		contentPane.add(btnNewButton_1);
 	}
 }

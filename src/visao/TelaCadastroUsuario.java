@@ -25,6 +25,7 @@ import java.awt.Color;
 import java.awt.SystemColor;
 import java.awt.Window.Type;
 import javax.swing.ImageIcon;
+import javax.swing.SwingConstants;
 
 public class TelaCadastroUsuario extends JFrame {
 
@@ -43,7 +44,7 @@ public class TelaCadastroUsuario extends JFrame {
 	 * Create the frame.
 	 */
 	public TelaCadastroUsuario() {
-		setTitle("Cadastro");
+		setTitle("Cadastro de Usuário");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1920, 1080);
 		contentPane = new JPanel();
@@ -53,13 +54,6 @@ public class TelaCadastroUsuario extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(601, 759, 744, 158);
-		contentPane.add(scrollPane);
-
-		table = new JTable();
-		scrollPane.setViewportView(table);
-
 		model = new DefaultTableModel();
 		model.addColumn("Nome");
 		model.addColumn("CPF");
@@ -68,8 +62,6 @@ public class TelaCadastroUsuario extends JFrame {
 			Object[] rowData = { obj.getNome(), obj.getCpf() };
 			model.addRow(rowData);
 		}
-
-		table.setModel(model);
 
 		JButton btnVoltarTelaLogin = new JButton("Voltar");
 		btnVoltarTelaLogin.setBackground(SystemColor.info);
@@ -81,131 +73,155 @@ public class TelaCadastroUsuario extends JFrame {
 				telaLoginUsu.setVisible(true);
 			}
 		});
-		btnVoltarTelaLogin.setBounds(10, 11, 131, 30);
+		btnVoltarTelaLogin.setBounds(10, 15, 131, 30);
 		contentPane.add(btnVoltarTelaLogin);
-		
+
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(0, 0, 160));
 		panel.setBounds(0, 0, 1380, 822);
 		contentPane.add(panel);
 		panel.setLayout(null);
-		
+
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\bruna\\Downloads\\Minimalist Login Page Mobile Prototype (1).png"));
+		lblNewLabel_1
+				.setIcon(new ImageIcon("C:\\Users\\bruna\\Downloads\\Minimalist Login Page Mobile Prototype (1).png"));
 		lblNewLabel_1.setBounds(0, 0, 406, 750);
 		panel.add(lblNewLabel_1);
-		
-				JButton btnCadUsuario = new JButton("CADASTRAR");
-				btnCadUsuario.setBounds(763, 464, 312, 77);
-				panel.add(btnCadUsuario);
-				btnCadUsuario.setBackground(SystemColor.info);
-				btnCadUsuario.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						Usuario user = new Usuario();
 
-						String usuarioCad = textCadUsu.getText();
-						String senhaCad = textCadSenha.getText();
-						String nomeCad = textCadNome.getText();
-						String cpfCad = textCadCpf.getText();
-						String cepCad = textCadCep.getText();
-						String telCad = textCadTel.getText();
+		JButton btnCadUsuario = new JButton("CADASTRAR");
+		btnCadUsuario.setBounds(534, 426, 312, 77);
+		panel.add(btnCadUsuario);
+		btnCadUsuario.setBackground(SystemColor.info);
+		btnCadUsuario.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Usuario user = new Usuario();
 
-						user.setUsuarioCliente(usuarioCad);
-						user.setSenhaCliente(senhaCad);
-						user.setCep(Long.valueOf(cepCad));
-						user.setCpf(Long.valueOf(cpfCad));
-						user.setTelefone(telCad);
-						user.setNome(nomeCad);
+				String usuarioCad = textCadUsu.getText();
+				String senhaCad = textCadSenha.getText();
+				String nomeCad = textCadNome.getText();
+				String cpfCad = textCadCpf.getText();
+				String cepCad = textCadCep.getText();
+				String telCad = textCadTel.getText();
 
-						try {
-							usuarioDao.inserir(user);
-							textCadUsu.setText(null);
-							textCadSenha.setText(null);
-							textCadNome.setText(null);
-							textCadCpf.setText(null);
-							textCadCep.setText(null);
-							textCadTel.setText(null);
+				user.setUsuarioCliente(usuarioCad);
+				user.setSenhaCliente(senhaCad);
+				user.setCep(Long.valueOf(cepCad));
+				user.setCpf(Long.valueOf(cpfCad));
+				user.setTelefone(telCad);
+				user.setNome(nomeCad);
 
-							for (Usuario user1 : UsuarioDAO.getInstancia().listarUsuarios()) {
-								Object[] usuario = new Object[6];
-								usuario[0] = user1.getNome();
-								usuario[1] = user1.getCpf();
+				try {
+					usuarioDao.inserir(user);
+					textCadUsu.setText(null);
+					textCadSenha.setText(null);
+					textCadNome.setText(null);
+					textCadCpf.setText(null);
+					textCadCep.setText(null);
+					textCadTel.setText(null);
 
-								model.addRow(usuario);
-							}
+					for (Usuario user1 : UsuarioDAO.getInstancia().listarUsuarios()) {
+						Object[] usuario = new Object[6];
+						usuario[0] = user1.getNome();
+						usuario[1] = user1.getCpf();
 
-							JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso!");
-
-						} catch (Exception ex) {
-							ex.printStackTrace();				}
+						model.addRow(usuario);
 					}
-				});
-				btnCadUsuario.setFont(new Font("Tahoma", Font.PLAIN, 18));
-				
-						JLabel lblNewLabel = new JLabel("Usuário:");
-						lblNewLabel.setBounds(452, 46, 105, 49);
-						panel.add(lblNewLabel);
-						lblNewLabel.setForeground(new Color(255, 255, 255));
-						lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 26));
-						
-								JLabel lblSenha = new JLabel("Senha:");
-								lblSenha.setBounds(982, 49, 105, 43);
-								panel.add(lblSenha);
-								lblSenha.setForeground(new Color(255, 255, 255));
-								lblSenha.setFont(new Font("Tahoma", Font.PLAIN, 26));
-								
-										JLabel lblNome = new JLabel("Nome:");
-										lblNome.setBounds(452, 159, 105, 43);
-										panel.add(lblNome);
-										lblNome.setForeground(new Color(255, 255, 255));
-										lblNome.setFont(new Font("Tahoma", Font.PLAIN, 26));
-										
-												JLabel lblCpf = new JLabel("CPF:");
-												lblCpf.setBounds(982, 165, 93, 43);
-												panel.add(lblCpf);
-												lblCpf.setForeground(new Color(255, 255, 255));
-												lblCpf.setFont(new Font("Tahoma", Font.PLAIN, 26));
-												
-														textCadUsu = new JTextField();
-														textCadUsu.setBounds(567, 52, 195, 43);
-														panel.add(textCadUsu);
-														textCadUsu.setColumns(10);
-														
-																textCadSenha = new JTextField();
-																textCadSenha.setBounds(1074, 52, 195, 43);
-																panel.add(textCadSenha);
-																textCadSenha.setColumns(10);
-																
-																		textCadNome = new JTextField();
-																		textCadNome.setBounds(567, 159, 195, 43);
-																		panel.add(textCadNome);
-																		textCadNome.setColumns(10);
-																		
-																				JLabel lblTelefone = new JLabel("Telefone:");
-																				lblTelefone.setBounds(934, 262, 129, 43);
-																				panel.add(lblTelefone);
-																				lblTelefone.setForeground(new Color(255, 255, 255));
-																				lblTelefone.setFont(new Font("Tahoma", Font.PLAIN, 26));
-																				
-																						textCadTel = new JTextField();
-																						textCadTel.setBounds(1074, 262, 195, 43);
-																						panel.add(textCadTel);
-																						textCadTel.setColumns(10);
-																						
-																								JLabel lblCep = new JLabel("CEP:");
-																								lblCep.setBounds(452, 262, 105, 43);
-																								panel.add(lblCep);
-																								lblCep.setForeground(new Color(255, 255, 255));
-																								lblCep.setFont(new Font("Tahoma", Font.PLAIN, 26));
-																								
-																										textCadCep = new JTextField();
-																										textCadCep.setBounds(567, 262, 195, 43);
-																										panel.add(textCadCep);
-																										textCadCep.setColumns(10);
-																										
-																												textCadCpf = new JTextField();
-																												textCadCpf.setBounds(1074, 165, 195, 43);
-																												panel.add(textCadCpf);
-																												textCadCpf.setColumns(10);
+
+					JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso!");
+
+				} catch (Exception ex) {
+					ex.printStackTrace();
+				}
+			}
+		});
+		btnCadUsuario.setFont(new Font("Tahoma", Font.PLAIN, 18));
+
+		JLabel lblNewLabel = new JLabel("Usuário:");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel.setBounds(479, 76, 105, 49);
+		panel.add(lblNewLabel);
+		lblNewLabel.setForeground(new Color(255, 255, 255));
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 26));
+
+		JLabel lblSenha = new JLabel("Senha:");
+		lblSenha.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblSenha.setBounds(479, 244, 105, 43);
+		panel.add(lblSenha);
+		lblSenha.setForeground(new Color(255, 255, 255));
+		lblSenha.setFont(new Font("Tahoma", Font.PLAIN, 26));
+
+		JLabel lblNome = new JLabel("Nome:");
+		lblNome.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNome.setBounds(479, 136, 105, 43);
+		panel.add(lblNome);
+		lblNome.setForeground(new Color(255, 255, 255));
+		lblNome.setFont(new Font("Tahoma", Font.PLAIN, 26));
+
+		JLabel lblCpf = new JLabel("CPF:");
+		lblCpf.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblCpf.setBounds(491, 298, 93, 43);
+		panel.add(lblCpf);
+		lblCpf.setForeground(new Color(255, 255, 255));
+		lblCpf.setFont(new Font("Tahoma", Font.PLAIN, 26));
+
+		textCadUsu = new JTextField();
+		textCadUsu.setBounds(593, 76, 195, 43);
+		panel.add(textCadUsu);
+		textCadUsu.setColumns(10);
+
+		textCadSenha = new JTextField();
+		textCadSenha.setBounds(593, 238, 195, 43);
+		panel.add(textCadSenha);
+		textCadSenha.setColumns(10);
+
+		textCadNome = new JTextField();
+		textCadNome.setBounds(593, 130, 195, 43);
+		panel.add(textCadNome);
+		textCadNome.setColumns(10);
+
+		JLabel lblTelefone = new JLabel("Telefone:");
+		lblTelefone.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblTelefone.setBounds(455, 352, 129, 43);
+		panel.add(lblTelefone);
+		lblTelefone.setForeground(new Color(255, 255, 255));
+		lblTelefone.setFont(new Font("Tahoma", Font.PLAIN, 26));
+
+		textCadTel = new JTextField();
+		textCadTel.setBounds(593, 346, 195, 43);
+		panel.add(textCadTel);
+		textCadTel.setColumns(10);
+
+		JLabel lblCep = new JLabel("CEP:");
+		lblCep.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblCep.setBounds(479, 190, 105, 43);
+		panel.add(lblCep);
+		lblCep.setForeground(new Color(255, 255, 255));
+		lblCep.setFont(new Font("Tahoma", Font.PLAIN, 26));
+
+		textCadCep = new JTextField();
+		textCadCep.setBounds(593, 184, 195, 43);
+		panel.add(textCadCep);
+		textCadCep.setColumns(10);
+
+		textCadCpf = new JTextField();
+		textCadCpf.setBounds(593, 292, 195, 43);
+		panel.add(textCadCpf);
+		textCadCpf.setColumns(10);
+
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(318, 553, 744, 158);
+		panel.add(scrollPane);
+
+		table = new JTable();
+		scrollPane.setViewportView(table);
+
+		table.setModel(model);
+
+		JLabel lblNewLabel_2_5 = new JLabel("Cadastro");
+		lblNewLabel_2_5.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_2_5.setForeground(Color.RED);
+		lblNewLabel_2_5.setFont(new Font("Tahoma", Font.BOLD, 38));
+		lblNewLabel_2_5.setBounds(450, 0, 479, 72);
+		panel.add(lblNewLabel_2_5);
 	}
 }

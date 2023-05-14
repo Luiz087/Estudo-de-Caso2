@@ -4,7 +4,6 @@ public abstract class Pessoa {
 
 	private String nome;
 	private Long cpf;
-	private Long cep;
 	private String telefone;
 
 	public String getTelefone() {
@@ -29,14 +28,6 @@ public abstract class Pessoa {
 
 	public void setCpf(Long cpf) {
 		this.cpf = cpf;
-	}
-
-	public Long getCep() {
-		return cep;
-	}
-
-	public void setCep(Long cep) {
-		this.cep = cep;
 	}
 
 }
