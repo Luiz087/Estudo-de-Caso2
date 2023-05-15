@@ -70,26 +70,28 @@ public class TelaLogin extends JFrame {
 		fundologin.setBounds(-106, -198, 1582, 963);
 		contentPane.add(fundologin);
 		fundologin.setLayout(null);
-
-		JLabel lblUsuario = new JLabel("Usuário: ");
-		lblUsuario.setBounds(420, 393, 105, 43);
-		fundologin.add(lblUsuario);
-		lblUsuario.setForeground(new Color(255, 255, 255));
-		lblUsuario.setFont(new Font("Tahoma", Font.PLAIN, 26));
+		
+		JLabel lblUsurio = new JLabel("Usuário:");
+		lblUsurio.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblUsurio.setForeground(Color.WHITE);
+		lblUsurio.setFont(new Font("Tahoma", Font.PLAIN, 26));
+		lblUsurio.setBounds(374, 395, 105, 43);
+		fundologin.add(lblUsurio);
 
 		JLabel lblSenha = new JLabel("Senha:");
-		lblSenha.setBounds(420, 516, 81, 43);
+		lblSenha.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblSenha.setBounds(374, 518, 105, 43);
 		fundologin.add(lblSenha);
 		lblSenha.setForeground(new Color(255, 255, 255));
 		lblSenha.setFont(new Font("Tahoma", Font.PLAIN, 26));
 
 		textLoginUsu = new JTextField();
-		textLoginUsu.setBounds(535, 393, 215, 43);
+		textLoginUsu.setBounds(494, 395, 215, 43);
 		fundologin.add(textLoginUsu);
 		textLoginUsu.setColumns(10);
 
 		textLoginSenha = new JTextField();
-		textLoginSenha.setBounds(535, 516, 215, 43);
+		textLoginSenha.setBounds(494, 518, 215, 43);
 		fundologin.add(textLoginSenha);
 		textLoginSenha.setColumns(10);
 

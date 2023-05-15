@@ -131,6 +131,7 @@ public class TelaCadastroUsuario extends JFrame {
 
 				} catch (Exception ex) {
 					ex.printStackTrace();
+					JOptionPane.showMessageDialog(null, "Ocorreu um erro. Tente novamente!");
 				}
 			}
 		});

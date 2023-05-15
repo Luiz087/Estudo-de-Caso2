@@ -39,7 +39,7 @@ public class TelaPrincipFunc extends JFrame {
 	 */
 	public TelaPrincipFunc() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 674, 598);
+		setBounds(100, 100, 1258, 598);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(0, 0, 160));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
