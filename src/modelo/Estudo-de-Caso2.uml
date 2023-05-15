@@ -4,7 +4,7 @@
     <eAnnotations xmi:id="_FVNREPKpEe2tzN5ghuZWvQ" source="http://ns.yatta.de/umllab">
       <contents xmi:type="ecore:EAnnotation" xmi:id="_FVNREfKpEe2tzN5ghuZWvQ" source="codegen">
         <details xmi:id="_FVNREvKpEe2tzN5ghuZWvQ" key="codegenDirectory" value="/Estudo-de-Caso2/src"/>
-        <details xmi:id="_FfDJkPKpEe2tzN5ghuZWvQ" key="AssociatedSourceCode" value="/Estudo-de-Caso2/src/modelo/Admin.java;1559616363/1;/Estudo-de-Caso2/src/modelo/Carro.java;1757990458/1;/Estudo-de-Caso2/src/modelo/Funcionario.java;2932868151/1;/Estudo-de-Caso2/src/modelo/ICarroDAO.java;2547654964/1;/Estudo-de-Caso2/src/modelo/IFuncionarioDAO.java;2655609067/1;/Estudo-de-Caso2/src/modelo/IUsuarioDAO.java;401557454/1;/Estudo-de-Caso2/src/modelo/Pessoa.java;1611833362/1;/Estudo-de-Caso2/src/modelo/Usuario.java;1589063918/1;/Estudo-de-Caso2/src/controle/CarroDAO.java;1953996973/1;/Estudo-de-Caso2/src/controle/FuncionarioDAO.java;1860147850/1;/Estudo-de-Caso2/src/controle/UsuarioDAO.java;1658689600/1;"/>
+        <details xmi:id="_FfDJkPKpEe2tzN5ghuZWvQ" key="AssociatedSourceCode" value="/Estudo-de-Caso2/src/modelo/Admin.java;1559616363/1;/Estudo-de-Caso2/src/modelo/Carro.java;1757990458/1;/Estudo-de-Caso2/src/modelo/Funcionario.java;2932868151/1;/Estudo-de-Caso2/src/modelo/ICarroDAO.java;2547654964/1;/Estudo-de-Caso2/src/modelo/IFuncionarioDAO.java;2655609067/1;/Estudo-de-Caso2/src/modelo/IUsuarioDAO.java;401557454/1;/Estudo-de-Caso2/src/modelo/Pessoa.java;1611833362/1;/Estudo-de-Caso2/src/modelo/Usuario.java;519566770/1;/Estudo-de-Caso2/src/controle/CarroDAO.java;1953996973/1;/Estudo-de-Caso2/src/controle/FuncionarioDAO.java;1860147850/1;/Estudo-de-Caso2/src/controle/UsuarioDAO.java;1658689600/1;"/>
       </contents>
     </eAnnotations>
     <elementImport xmi:id="_FaVosPKpEe2tzN5ghuZWvQ">
@@ -93,7 +93,7 @@
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
           <language>java</language>
-          <body>return &quot;\nNome: &quot; + super.getNome() + &quot;\nCPF: &quot; + super.getCpf() + &quot;\nCEP: &quot; + super.getCep() + &quot;\nUsuario: &quot; + this.usuarioCliente + &quot;\n&quot;;&#xD;
+          <body>return &quot;\nNome: &quot; + super.getNome() + &quot;\nCPF: &quot; + super.getCpf() + &quot;\nCEP: &quot; + this.cep + &quot;\nUsuario: &quot; + this.usuarioCliente + &quot;\n&quot;;&#xD;
 	</body>
         </ownedBehavior>
         <ownedOperation xmi:id="_FbYKgPKpEe2tzN5ghuZWvQ" name="toString" method="_FcZeMPKpEe2tzN5ghuZWvQ">
