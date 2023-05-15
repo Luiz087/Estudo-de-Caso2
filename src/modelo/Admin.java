@@ -2,7 +2,7 @@ package modelo;
 
 public class Admin {
 	
-	private String usuarioAdmin = "AntonioCarlosNicolodi";
+	private String usuarioAdmin = "JorgimDaEsquina123";
 	private String senhaAdmin = "123456789";
 	
 	public String getUsuarioAdmin() {
