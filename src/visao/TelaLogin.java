@@ -72,29 +72,29 @@ public class TelaLogin extends JFrame {
 		fundologin.setLayout(null);
 
 		JLabel lblUsuario = new JLabel("Usuário: ");
-		lblUsuario.setBounds(568, 396, 105, 92);
+		lblUsuario.setBounds(420, 393, 105, 43);
 		fundologin.add(lblUsuario);
 		lblUsuario.setForeground(new Color(255, 255, 255));
 		lblUsuario.setFont(new Font("Tahoma", Font.PLAIN, 26));
 
 		JLabel lblSenha = new JLabel("Senha:");
-		lblSenha.setBounds(578, 528, 105, 43);
+		lblSenha.setBounds(420, 516, 81, 43);
 		fundologin.add(lblSenha);
 		lblSenha.setForeground(new Color(255, 255, 255));
 		lblSenha.setFont(new Font("Tahoma", Font.PLAIN, 26));
 
 		textLoginUsu = new JTextField();
-		textLoginUsu.setBounds(683, 427, 215, 43);
+		textLoginUsu.setBounds(535, 393, 215, 43);
 		fundologin.add(textLoginUsu);
 		textLoginUsu.setColumns(10);
 
 		textLoginSenha = new JTextField();
-		textLoginSenha.setBounds(683, 528, 215, 43);
+		textLoginSenha.setBounds(535, 516, 215, 43);
 		fundologin.add(textLoginSenha);
 		textLoginSenha.setColumns(10);
 
 		JButton btnLoginUsuario = new JButton("ENTRAR");
-		btnLoginUsuario.setBounds(683, 629, 215, 43);
+		btnLoginUsuario.setBounds(494, 629, 215, 43);
 		fundologin.add(btnLoginUsuario);
 		btnLoginUsuario.setBackground(SystemColor.info);
 		btnLoginUsuario.addActionListener(new ActionListener() {
@@ -121,21 +121,21 @@ public class TelaLogin extends JFrame {
 		btnLoginUsuario.setFont(new Font("Tahoma", Font.PLAIN, 18));
 
 		JLabel lblNPConta = new JLabel("Não possui conta?");
-		lblNPConta.setBounds(706, 801, 169, 14);
+		lblNPConta.setBounds(1196, 646, 169, 14);
 		fundologin.add(lblNPConta);
 		lblNPConta.setForeground(new Color(255, 0, 0));
 		lblNPConta.setHorizontalAlignment(SwingConstants.CENTER);
 
 		JButton btnCriarConta = new JButton("CRIAR CONTA");
 		btnCriarConta.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnCriarConta.setBounds(683, 826, 215, 43);
+		btnCriarConta.setBounds(1178, 670, 215, 43);
 		fundologin.add(btnCriarConta);
 		btnCriarConta.setBackground(SystemColor.info);
 
 		JLabel lblBemVindo = new JLabel("BEM VINDO A GSP");
 		lblBemVindo.setForeground(Color.WHITE);
 		lblBemVindo.setFont(new Font("Tahoma", Font.BOLD, 40));
-		lblBemVindo.setBounds(606, 259, 370, 92);
+		lblBemVindo.setBounds(401, 260, 370, 92);
 		fundologin.add(lblBemVindo);
 
 		JButton btnEntrarAdmin = new JButton("Entrar Admin");
@@ -147,7 +147,7 @@ public class TelaLogin extends JFrame {
 				telaAdmPrinc.setVisible(true);
 			}
 		});
-		btnEntrarAdmin.setBounds(683, 683, 105, 23);
+		btnEntrarAdmin.setBounds(494, 683, 105, 23);
 		fundologin.add(btnEntrarAdmin);
 
 		JButton btnEntrarFunc = new JButton("Entrar Func");
@@ -159,8 +159,18 @@ public class TelaLogin extends JFrame {
 				telPrincFunci.setVisible(true);
 			}
 		});
-		btnEntrarFunc.setBounds(793, 683, 105, 23);
+		btnEntrarFunc.setBounds(609, 683, 100, 23);
 		fundologin.add(btnEntrarFunc);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(TelaLogin.class.getResource("/visao/Design sem nome (5).png")));
+		lblNewLabel.setBounds(47, 64, 1935, 1074);
+		fundologin.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon(TelaLogin.class.getResource("/visao/Design sem nome (3).png")));
+		lblNewLabel_1.setBounds(83, 198, 987, 754);
+		fundologin.add(lblNewLabel_1);
 		btnCriarConta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaCadastroUsuario telaCadUsu = new TelaCadastroUsuario();

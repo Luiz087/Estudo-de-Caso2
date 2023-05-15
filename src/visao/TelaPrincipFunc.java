@@ -10,6 +10,9 @@ import java.awt.SystemColor;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 
 public class TelaPrincipFunc extends JFrame {
 
@@ -38,6 +41,7 @@ public class TelaPrincipFunc extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 674, 598);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(0, 0, 160));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -66,7 +70,7 @@ public class TelaPrincipFunc extends JFrame {
 			}
 		});
 		btnNewButton_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_1_1_1_1.setBounds(215, 71, 233, 71);
+		btnNewButton_1_1_1_1.setBounds(617, 211, 233, 71);
 		contentPane.add(btnNewButton_1_1_1_1);
 
 		JButton btnNewButton_1_1_1_2 = new JButton("Listar Usuários");
@@ -79,8 +83,13 @@ public class TelaPrincipFunc extends JFrame {
 			}
 		});
 		btnNewButton_1_1_1_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_1_1_1_2.setBounds(215, 153, 233, 71);
+		btnNewButton_1_1_1_2.setBounds(617, 324, 233, 71);
 		contentPane.add(btnNewButton_1_1_1_2);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(TelaPrincipFunc.class.getResource("/visao/Design sem nome (3).png")));
+		lblNewLabel.setBounds(192, -17, 1024, 727);
+		contentPane.add(lblNewLabel);
 	}
 
 }

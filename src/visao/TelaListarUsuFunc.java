@@ -17,6 +17,7 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
 
 public class TelaListarUsuFunc extends JFrame {
 
@@ -47,6 +48,7 @@ public class TelaListarUsuFunc extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1386, 1034);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(0, 0, 160));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -56,7 +58,7 @@ public class TelaListarUsuFunc extends JFrame {
 		lblNewLabel_2_5.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_2_5.setForeground(Color.RED);
 		lblNewLabel_2_5.setFont(new Font("Tahoma", Font.BOLD, 38));
-		lblNewLabel_2_5.setBounds(445, 0, 479, 72);
+		lblNewLabel_2_5.setBounds(198, -338, 979, 749);
 		contentPane.add(lblNewLabel_2_5);
 		
 		JButton btnVoltarTelaLogin = new JButton("Voltar");
@@ -86,5 +88,10 @@ public class TelaListarUsuFunc extends JFrame {
 		));
 		
 		scrollPane.setViewportView(table);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(TelaListarUsuFunc.class.getResource("/visao/Design sem nome (3).png")));
+		lblNewLabel.setBounds(179, 0, 1382, 749);
+		contentPane.add(lblNewLabel);
 	}
 }

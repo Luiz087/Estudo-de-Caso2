@@ -14,6 +14,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
 import javax.swing.JToolBar;
+import javax.swing.ImageIcon;
 
 public class TelaPrincipAdmin extends JFrame {
 
@@ -52,13 +53,13 @@ public class TelaPrincipAdmin extends JFrame {
 		lblNewLabel.setForeground(new Color(255, 255, 255));
 		lblNewLabel.setBackground(new Color(255, 255, 255));
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblNewLabel.setBounds(408, 11, 217, 33);
+		lblNewLabel.setBounds(443, 231, 233, 33);
 		contentPane.add(lblNewLabel);
 
 		JLabel lblFunesDeFuncionrio = new JLabel("Funções de Funcionário");
 		lblFunesDeFuncionrio.setForeground(Color.WHITE);
 		lblFunesDeFuncionrio.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblFunesDeFuncionrio.setBounds(775, 16, 185, 22);
+		lblFunesDeFuncionrio.setBounds(758, 236, 228, 22);
 		contentPane.add(lblFunesDeFuncionrio);
 
 		JButton btnNewButton_1_1_1_2_1_1 = new JButton("Listar Funcionários");
@@ -71,7 +72,7 @@ public class TelaPrincipAdmin extends JFrame {
 			}
 		});
 		btnNewButton_1_1_1_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_1_1_1_2_1_1.setBounds(397, 55, 233, 71);
+		btnNewButton_1_1_1_2_1_1.setBounds(443, 269, 233, 71);
 		contentPane.add(btnNewButton_1_1_1_2_1_1);
 
 		JButton btnNewButton_1_1_1_2_1_1_1 = new JButton("Listar Clientes");
@@ -84,7 +85,7 @@ public class TelaPrincipAdmin extends JFrame {
 			}
 		});
 		btnNewButton_1_1_1_2_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_1_1_1_2_1_1_1.setBounds(758, 137, 233, 71);
+		btnNewButton_1_1_1_2_1_1_1.setBounds(758, 378, 233, 71);
 		contentPane.add(btnNewButton_1_1_1_2_1_1_1);
 
 		JButton btnSair = new JButton("Sair");
@@ -110,7 +111,7 @@ public class TelaPrincipAdmin extends JFrame {
 			}
 		});
 		btnNewButton_1_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_1_1_1_1_1.setBounds(758, 55, 233, 71);
+		btnNewButton_1_1_1_1_1.setBounds(758, 269, 233, 71);
 		contentPane.add(btnNewButton_1_1_1_1_1);
 
 		JButton btnNewButton_1_1_1_2_1_1_2 = new JButton("Listar Carros Vendidos");
@@ -123,7 +124,12 @@ public class TelaPrincipAdmin extends JFrame {
 			}
 		});
 		btnNewButton_1_1_1_2_1_1_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_1_1_1_2_1_1_2.setBounds(397, 137, 233, 71);
+		btnNewButton_1_1_1_2_1_1_2.setBounds(443, 378, 233, 71);
 		contentPane.add(btnNewButton_1_1_1_2_1_1_2);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon(TelaPrincipAdmin.class.getResource("/visao/Design sem nome (3).png")));
+		lblNewLabel_1.setBounds(195, 0, 1370, 749);
+		contentPane.add(lblNewLabel_1);
 	}
 }

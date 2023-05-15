@@ -18,6 +18,7 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
 
 public class TelaListarUsuAdm extends JFrame {
 
@@ -48,6 +49,7 @@ public class TelaListarUsuAdm extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1386, 1034);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(0, 0, 160));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -95,7 +97,12 @@ public class TelaListarUsuAdm extends JFrame {
 			}
 		});
 		btnNewButton_1_1.setFont(new Font("Tahoma", Font.PLAIN, 26));
-		btnNewButton_1_1.setBounds(560, 632, 250, 46);
+		btnNewButton_1_1.setBounds(584, 619, 250, 46);
 		contentPane.add(btnNewButton_1_1);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(TelaListarUsuAdm.class.getResource("/visao/Design sem nome (3).png")));
+		lblNewLabel.setBounds(183, 0, 1360, 749);
+		contentPane.add(lblNewLabel);
 	}
 }
