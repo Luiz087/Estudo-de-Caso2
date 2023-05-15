@@ -31,7 +31,7 @@ public class Usuario extends Pessoa {
 	}
 	
 	public String toString() {
-		return "\nNome: " + super.getNome() + "\nCPF: " + super.getCpf() + "\nCEP: " + super.getCep() + "\nUsuario: " + this.usuarioCliente + "\n";
+		return "\nNome: " + super.getNome() + "\nCPF: " + super.getCpf() + "\nCEP: " + this.cep + "\nUsuario: " + this.usuarioCliente + "\n";
 	}
 
 }
