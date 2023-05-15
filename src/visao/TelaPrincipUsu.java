@@ -12,6 +12,9 @@ import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+import java.awt.Color;
 
 public class TelaPrincipUsu extends JFrame {
 
@@ -40,6 +43,7 @@ public class TelaPrincipUsu extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 695, 603);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(0, 0, 160));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -67,7 +71,7 @@ public class TelaPrincipUsu extends JFrame {
 			}
 		});
 		btnNewButton_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_1_1_1_1.setBounds(221, 76, 233, 71);
+		btnNewButton_1_1_1_1.setBounds(620, 117, 233, 71);
 		contentPane.add(btnNewButton_1_1_1_1);
 
 		JButton btnNewButton_1_1_1_1_1 = new JButton("Excluir conta");
@@ -81,7 +85,7 @@ public class TelaPrincipUsu extends JFrame {
 			}
 		});
 		btnNewButton_1_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_1_1_1_1_1.setBounds(221, 240, 233, 71);
+		btnNewButton_1_1_1_1_1.setBounds(620, 406, 233, 71);
 		contentPane.add(btnNewButton_1_1_1_1_1);
 
 		JButton btnNewButton_1_1_1_1_2 = new JButton("Alterar Dados");
@@ -94,7 +98,12 @@ public class TelaPrincipUsu extends JFrame {
 			}
 		});
 		btnNewButton_1_1_1_1_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_1_1_1_1_2.setBounds(221, 158, 233, 71);
+		btnNewButton_1_1_1_1_2.setBounds(620, 260, 233, 71);
 		contentPane.add(btnNewButton_1_1_1_1_2);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(TelaPrincipUsu.class.getResource("/visao/Design sem nome (3).png")));
+		lblNewLabel.setBounds(193, 0, 1294, 733);
+		contentPane.add(lblNewLabel);
 	}
 }
