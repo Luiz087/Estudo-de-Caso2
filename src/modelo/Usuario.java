@@ -4,6 +4,15 @@ public class Usuario extends Pessoa {
 
 	private String usuarioCliente;
 	private String senhaCliente;
+	private Long cep;
+
+	public Long getCep() {
+		return cep;
+	}
+
+	public void setCep(Long cep) {
+		this.cep = cep;
+	}
 
 	public String getUsuarioCliente() {
 		return usuarioCliente;
