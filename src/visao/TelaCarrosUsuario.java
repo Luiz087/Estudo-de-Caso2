@@ -57,6 +57,7 @@ public class TelaCarrosUsuario extends JFrame {
 	 * Create the frame.
 	 */
 	public TelaCarrosUsuario() {
+		setTitle("Lista de Carros");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1409, 788);
 		contentPane = new JPanel();

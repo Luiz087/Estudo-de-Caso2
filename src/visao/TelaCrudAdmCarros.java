@@ -55,6 +55,7 @@ public class TelaCrudAdmCarros extends JFrame {
 	 * Create the frame.
 	 */
 	public TelaCrudAdmCarros() {
+		setTitle("Tela do Administrador");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1408, 788);
 		contentPane = new JPanel();

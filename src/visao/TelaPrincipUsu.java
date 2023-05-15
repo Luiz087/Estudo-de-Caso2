@@ -40,6 +40,7 @@ public class TelaPrincipUsu extends JFrame {
 	 * Create the frame.
 	 */
 	public TelaPrincipUsu() {
+		setTitle("Tela Inicial");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 695, 603);
 		contentPane = new JPanel();
