@@ -220,8 +220,8 @@ public class TelaCadastroUsuario extends JFrame {
 
 		JLabel lblNewLabel_2_5 = new JLabel("Cadastro");
 		lblNewLabel_2_5.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2_5.setForeground(Color.RED);
-		lblNewLabel_2_5.setFont(new Font("Tahoma", Font.BOLD, 38));
+		lblNewLabel_2_5.setForeground(new Color(255, 255, 255));
+		lblNewLabel_2_5.setFont(new Font("Segoe UI Black", Font.BOLD, 38));
 		lblNewLabel_2_5.setBounds(450, 0, 479, 72);
 		panel.add(lblNewLabel_2_5);
 	}

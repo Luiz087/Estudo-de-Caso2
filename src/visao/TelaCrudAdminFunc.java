@@ -59,6 +59,7 @@ public class TelaCrudAdminFunc extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1408, 788);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(0, 0, 160));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -165,8 +166,8 @@ public class TelaCrudAdminFunc extends JFrame {
 		
 		lblNewLabel_1 = new JLabel("Lista de Funcionários");
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setForeground(Color.RED);
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 38));
+		lblNewLabel_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_1.setFont(new Font("Segoe UI Black", Font.BOLD, 38));
 		lblNewLabel_1.setBounds(445, 0, 479, 72);
 		contentPane.add(lblNewLabel_1);
 		

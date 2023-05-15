@@ -57,12 +57,13 @@ public class TelaListarUsuAdm extends JFrame {
 		
 		JLabel lblNewLabel_2_5 = new JLabel("Lista de Usuários");
 		lblNewLabel_2_5.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2_5.setForeground(Color.RED);
-		lblNewLabel_2_5.setFont(new Font("Tahoma", Font.BOLD, 38));
+		lblNewLabel_2_5.setForeground(new Color(255, 255, 255));
+		lblNewLabel_2_5.setFont(new Font("Segoe UI Black", Font.BOLD, 38));
 		lblNewLabel_2_5.setBounds(445, 0, 479, 72);
 		contentPane.add(lblNewLabel_2_5);
 		
 		JButton btnVoltarTelaLogin = new JButton("Voltar");
+		btnVoltarTelaLogin.setFont(new Font("Arial", Font.PLAIN, 11));
 		btnVoltarTelaLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaPrincipAdmin telaPrincipiAdm = new TelaPrincipAdmin();

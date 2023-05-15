@@ -58,6 +58,7 @@ public class TelaCrudAdmCarros extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1408, 788);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(0, 0, 160));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -164,8 +165,8 @@ public class TelaCrudAdmCarros extends JFrame {
 		
 		JLabel lblNewLabel_2 = new JLabel("Lista de Carros");
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2.setForeground(Color.RED);
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 38));
+		lblNewLabel_2.setForeground(new Color(255, 255, 255));
+		lblNewLabel_2.setFont(new Font("Segoe UI Black", Font.BOLD, 38));
 		lblNewLabel_2.setBounds(445, 0, 479, 72);
 		contentPane.add(lblNewLabel_2);
 		

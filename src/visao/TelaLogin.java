@@ -136,8 +136,8 @@ public class TelaLogin extends JFrame {
 
 		JLabel lblBemVindo = new JLabel("BEM VINDO A GSP");
 		lblBemVindo.setForeground(Color.WHITE);
-		lblBemVindo.setFont(new Font("Tahoma", Font.BOLD, 40));
-		lblBemVindo.setBounds(401, 260, 370, 92);
+		lblBemVindo.setFont(new Font("Segoe UI Black", Font.BOLD, 40));
+		lblBemVindo.setBounds(374, 258, 596, 92);
 		fundologin.add(lblBemVindo);
 
 		JButton btnEntrarAdmin = new JButton("Entrar Admin");

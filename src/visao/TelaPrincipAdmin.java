@@ -52,13 +52,13 @@ public class TelaPrincipAdmin extends JFrame {
 		JLabel lblNewLabel = new JLabel("Funções de Administrador");
 		lblNewLabel.setForeground(new Color(255, 255, 255));
 		lblNewLabel.setBackground(new Color(255, 255, 255));
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblNewLabel.setBounds(443, 231, 233, 33);
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lblNewLabel.setBounds(443, 231, 254, 33);
 		contentPane.add(lblNewLabel);
 
 		JLabel lblFunesDeFuncionrio = new JLabel("Funções de Funcionário");
 		lblFunesDeFuncionrio.setForeground(Color.WHITE);
-		lblFunesDeFuncionrio.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblFunesDeFuncionrio.setFont(new Font("Tahoma", Font.BOLD, 18));
 		lblFunesDeFuncionrio.setBounds(758, 236, 228, 22);
 		contentPane.add(lblFunesDeFuncionrio);
 
@@ -89,6 +89,7 @@ public class TelaPrincipAdmin extends JFrame {
 		contentPane.add(btnNewButton_1_1_1_2_1_1_1);
 
 		JButton btnSair = new JButton("Sair");
+		btnSair.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnSair.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaLogin telaLoginUsu = new TelaLogin();

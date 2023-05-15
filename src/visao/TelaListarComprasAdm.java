@@ -56,8 +56,8 @@ public class TelaListarComprasAdm extends JFrame {
 		
 		JLabel lblNewLabel_2_5 = new JLabel("Lista de Comprados");
 		lblNewLabel_2_5.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2_5.setForeground(Color.RED);
-		lblNewLabel_2_5.setFont(new Font("Tahoma", Font.BOLD, 38));
+		lblNewLabel_2_5.setForeground(new Color(255, 255, 255));
+		lblNewLabel_2_5.setFont(new Font("Segoe UI Black", Font.BOLD, 38));
 		lblNewLabel_2_5.setBounds(445, 0, 479, 72);
 		contentPane.add(lblNewLabel_2_5);
 		
