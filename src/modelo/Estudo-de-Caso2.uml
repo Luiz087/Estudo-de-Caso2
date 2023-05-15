@@ -1,74 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+<<<<<<< HEAD
   <uml:Model xmi:id="_FMQwcPKpEe2tzN5ghuZWvQ" name="Estudo_de_Caso2">
     <eAnnotations xmi:id="_FVNREPKpEe2tzN5ghuZWvQ" source="http://ns.yatta.de/umllab">
       <contents xmi:type="ecore:EAnnotation" xmi:id="_FVNREfKpEe2tzN5ghuZWvQ" source="codegen">
         <details xmi:id="_FVNREvKpEe2tzN5ghuZWvQ" key="codegenDirectory" value="/Estudo-de-Caso2/src"/>
         <details xmi:id="_FfDJkPKpEe2tzN5ghuZWvQ" key="AssociatedSourceCode" value="/Estudo-de-Caso2/src/modelo/Admin.java;1559616363/1;/Estudo-de-Caso2/src/modelo/Carro.java;1757990458/1;/Estudo-de-Caso2/src/modelo/Funcionario.java;2932868151/1;/Estudo-de-Caso2/src/modelo/ICarroDAO.java;2547654964/1;/Estudo-de-Caso2/src/modelo/IFuncionarioDAO.java;2655609067/1;/Estudo-de-Caso2/src/modelo/IUsuarioDAO.java;401557454/1;/Estudo-de-Caso2/src/modelo/Pessoa.java;1371158501/1;/Estudo-de-Caso2/src/modelo/Usuario.java;3654857464/1;/Estudo-de-Caso2/src/controle/CarroDAO.java;1953996973/1;/Estudo-de-Caso2/src/controle/FuncionarioDAO.java;1860147850/1;/Estudo-de-Caso2/src/controle/UsuarioDAO.java;1658689600/1;"/>
+=======
+  <uml:Model xmi:id="_Ebo_QPK-Ee2tzN5ghuZWvQ" name="Estudo_de_Caso2">
+    <eAnnotations xmi:id="_Eg0aMPK-Ee2tzN5ghuZWvQ" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_Eg0aMfK-Ee2tzN5ghuZWvQ" source="codegen">
+        <details xmi:id="_Eg0aMvK-Ee2tzN5ghuZWvQ" key="codegenDirectory" value="/Estudo-de-Caso2/src"/>
+        <details xmi:id="_Ep1MQPK-Ee2tzN5ghuZWvQ" key="AssociatedSourceCode" value="/Estudo-de-Caso2/src/modelo/Admin.java;2216985936/1;/Estudo-de-Caso2/src/modelo/Carro.java;1757990458/1;/Estudo-de-Caso2/src/modelo/Funcionario.java;1824271524/1;/Estudo-de-Caso2/src/modelo/ICarroDAO.java;2547654964/1;/Estudo-de-Caso2/src/modelo/IFuncionarioDAO.java;2655609067/1;/Estudo-de-Caso2/src/modelo/IUsuarioDAO.java;401557454/1;/Estudo-de-Caso2/src/modelo/Pessoa.java;1371158501/1;/Estudo-de-Caso2/src/modelo/Usuario.java;3654857464/1;"/>
+>>>>>>> main
       </contents>
     </eAnnotations>
-    <elementImport xmi:id="_FaVosPKpEe2tzN5ghuZWvQ">
+    <elementImport xmi:id="_EmY2sPK-Ee2tzN5ghuZWvQ">
       <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
     </elementImport>
-    <elementImport xmi:id="_FaWPwPKpEe2tzN5ghuZWvQ">
+    <elementImport xmi:id="_EmY2sfK-Ee2tzN5ghuZWvQ">
       <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
     </elementImport>
-    <elementImport xmi:id="_FaWPwfKpEe2tzN5ghuZWvQ">
+    <elementImport xmi:id="_EmY2svK-Ee2tzN5ghuZWvQ">
       <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
     </elementImport>
-    <elementImport xmi:id="_FaWPwvKpEe2tzN5ghuZWvQ">
+    <elementImport xmi:id="_EmY2s_K-Ee2tzN5ghuZWvQ">
       <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
     </elementImport>
-    <elementImport xmi:id="_FaWPw_KpEe2tzN5ghuZWvQ">
+    <elementImport xmi:id="_EmY2tPK-Ee2tzN5ghuZWvQ">
       <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
     </elementImport>
-    <elementImport xmi:id="_FaWPxPKpEe2tzN5ghuZWvQ">
+    <elementImport xmi:id="_EmY2tfK-Ee2tzN5ghuZWvQ">
       <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
     </elementImport>
-    <elementImport xmi:id="_FaWPxfKpEe2tzN5ghuZWvQ">
+    <elementImport xmi:id="_EmY2tvK-Ee2tzN5ghuZWvQ">
       <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
     </elementImport>
-    <elementImport xmi:id="_FaWPxvKpEe2tzN5ghuZWvQ">
+    <elementImport xmi:id="_EmY2t_K-Ee2tzN5ghuZWvQ">
       <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
     </elementImport>
-    <elementImport xmi:id="_FaW20PKpEe2tzN5ghuZWvQ">
+    <elementImport xmi:id="_EmZdwPK-Ee2tzN5ghuZWvQ">
       <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
     </elementImport>
-    <packagedElement xmi:type="uml:Package" xmi:id="_FaYE8PKpEe2tzN5ghuZWvQ" name="modelo">
-      <packagedElement xmi:type="uml:Class" xmi:id="_Fa0w4PKpEe2tzN5ghuZWvQ" name="Admin">
-        <ownedAttribute xmi:id="_FcSwgPKpEe2tzN5ghuZWvQ" name="usuarioAdmin">
+    <packagedElement xmi:type="uml:Package" xmi:id="_EmaE0PK-Ee2tzN5ghuZWvQ" name="modelo">
+      <packagedElement xmi:type="uml:Class" xmi:id="_EmwDEPK-Ee2tzN5ghuZWvQ" name="Admin">
+        <ownedAttribute xmi:id="_EoGG4PK-Ee2tzN5ghuZWvQ" name="usuarioAdmin">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+<<<<<<< HEAD
           <defaultValue xmi:type="uml:LiteralString" xmi:id="_-tmB4PK-Ee27ZbR8XHZMdw" value="&quot;JorgimDaEsquina123&quot;"/>
+=======
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_EoGt8PK-Ee2tzN5ghuZWvQ" value="&quot;AntonioCarlosNicolodi&quot;"/>
+>>>>>>> main
         </ownedAttribute>
-        <ownedAttribute xmi:id="_FcTXkPKpEe2tzN5ghuZWvQ" name="senhaAdmin">
+        <ownedAttribute xmi:id="_EoHVAPK-Ee2tzN5ghuZWvQ" name="senhaAdmin">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          <defaultValue xmi:type="uml:LiteralString" xmi:id="_FcTXkfKpEe2tzN5ghuZWvQ" value="&quot;123456789&quot;"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_EoHVAfK-Ee2tzN5ghuZWvQ" value="&quot;123456789&quot;"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_Fa2mEPKpEe2tzN5ghuZWvQ" name="Carro">
-        <ownedAttribute xmi:id="_FcT-oPKpEe2tzN5ghuZWvQ" name="modelo">
+      <packagedElement xmi:type="uml:Class" xmi:id="_EmyfUPK-Ee2tzN5ghuZWvQ" name="Carro">
+        <ownedAttribute xmi:id="_EoH8EPK-Ee2tzN5ghuZWvQ" name="modelo">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
-        <ownedAttribute xmi:id="_FcUlsPKpEe2tzN5ghuZWvQ" name="ano">
+        <ownedAttribute xmi:id="_EoH8EfK-Ee2tzN5ghuZWvQ" name="ano">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedAttribute>
-        <ownedAttribute xmi:id="_FcUlsfKpEe2tzN5ghuZWvQ" name="cor">
+        <ownedAttribute xmi:id="_EoIjIPK-Ee2tzN5ghuZWvQ" name="cor">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
-        <ownedAttribute xmi:id="_FcVMwPKpEe2tzN5ghuZWvQ" name="marca">
+        <ownedAttribute xmi:id="_EoIjIfK-Ee2tzN5ghuZWvQ" name="marca">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
-        <ownedAttribute xmi:id="_FcVMwfKpEe2tzN5ghuZWvQ" name="preco" type="_FcKNofKpEe2tzN5ghuZWvQ"/>
+        <ownedAttribute xmi:id="_EoJKMPK-Ee2tzN5ghuZWvQ" name="preco" type="_En-LEfK-Ee2tzN5ghuZWvQ"/>
       </packagedElement>
+<<<<<<< HEAD
       <packagedElement xmi:type="uml:Class" xmi:id="_Fa5CUPKpEe2tzN5ghuZWvQ" name="Funcionario">
         <generalization xmi:id="_FcBqwPKpEe2tzN5ghuZWvQ" general="_FbTSAPKpEe2tzN5ghuZWvQ"/>
         <ownedAttribute xmi:id="_FcWa4PKpEe2tzN5ghuZWvQ" name="usuarioFuncionario">
+=======
+      <packagedElement xmi:type="uml:Class" xmi:id="_Em1ioPK-Ee2tzN5ghuZWvQ" name="Funcionario">
+        <generalization xmi:id="_EnwvsPK-Ee2tzN5ghuZWvQ" general="_EnHPcPK-Ee2tzN5ghuZWvQ"/>
+        <ownedAttribute xmi:id="_EoJxQPK-Ee2tzN5ghuZWvQ" name="matricula">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
-        <ownedAttribute xmi:id="_FcWa4fKpEe2tzN5ghuZWvQ" name="senhaFuncionario">
+        <ownedAttribute xmi:id="_EoJxQfK-Ee2tzN5ghuZWvQ" name="usuarioFuncionario">
+>>>>>>> main
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_EoKYUPK-Ee2tzN5ghuZWvQ" name="senhaFuncionario">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
       </packagedElement>
+<<<<<<< HEAD
       <packagedElement xmi:type="uml:Class" xmi:id="_FbTSAPKpEe2tzN5ghuZWvQ" name="Pessoa" isAbstract="true">
         <ownedAttribute xmi:id="_FcXB8PKpEe2tzN5ghuZWvQ" name="nome">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -134,6 +156,25 @@
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_bGXDsPK-Ee27ZbR8XHZMdw" name="alterar" specification="_bFv_sPK-Ee27ZbR8XHZMdw">
           <ownedParameter xmi:id="_bGXDsfK-Ee27ZbR8XHZMdw" direction="return">
+=======
+      <packagedElement xmi:type="uml:Interface" xmi:id="_Em3-4PK-Ee2tzN5ghuZWvQ" name="ICarroDAO">
+        <ownedOperation xmi:id="_Em5NAPK-Ee2tzN5ghuZWvQ" name="alterar">
+          <ownedParameter xmi:id="_Em5NAfK-Ee2tzN5ghuZWvQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Em50EPK-Ee2tzN5ghuZWvQ" name="excluir">
+          <ownedParameter xmi:id="_Em50EfK-Ee2tzN5ghuZWvQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Em6bIPK-Ee2tzN5ghuZWvQ" name="listarCarros">
+          <ownedParameter xmi:id="_EoAnUPK-Ee2tzN5ghuZWvQ" type="_Enx90PK-Ee2tzN5ghuZWvQ" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_EnzzAPK-Ee2tzN5ghuZWvQ" name="inserir">
+          <ownedParameter xmi:id="_EnzzAfK-Ee2tzN5ghuZWvQ" name="carroCad" type="_EmyfUPK-Ee2tzN5ghuZWvQ"/>
+          <ownedParameter xmi:id="_EnzzAvK-Ee2tzN5ghuZWvQ" direction="return">
+>>>>>>> main
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
           </ownedParameter>
           <language>java</language>
@@ -152,6 +193,7 @@
           </eAnnotations>
           <ownedParameter xmi:id="_bFuKgPK-Ee27ZbR8XHZMdw" type="_bFlnoPK-Ee27ZbR8XHZMdw" direction="return"/>
         </ownedOperation>
+<<<<<<< HEAD
         <ownedOperation xmi:id="_bFuxkPK-Ee27ZbR8XHZMdw" name="excluir" method="_bGWcoPK-Ee27ZbR8XHZMdw">
           <ownedParameter xmi:id="_bFvYoPK-Ee27ZbR8XHZMdw" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
@@ -168,10 +210,31 @@
         <ownedOperation xmi:id="_bGKPYPK-Ee27ZbR8XHZMdw" name="inserir" method="_bGV1kPK-Ee27ZbR8XHZMdw">
           <ownedParameter xmi:id="_bGKPYfK-Ee27ZbR8XHZMdw" name="carroCad" type="_Fa2mEPKpEe2tzN5ghuZWvQ"/>
           <ownedParameter xmi:id="_bGK2cPK-Ee27ZbR8XHZMdw" direction="return">
+=======
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_Em-FgPK-Ee2tzN5ghuZWvQ" name="IFuncionarioDAO">
+        <ownedOperation xmi:id="_Em-skPK-Ee2tzN5ghuZWvQ" name="alterar">
+          <ownedParameter xmi:id="_Em_ToPK-Ee2tzN5ghuZWvQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Em_6sPK-Ee2tzN5ghuZWvQ" name="excluir">
+          <ownedParameter xmi:id="_Em_6sfK-Ee2tzN5ghuZWvQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Em_6svK-Ee2tzN5ghuZWvQ" name="listarFuncionarios">
+          <ownedParameter xmi:id="_EoBOYPK-Ee2tzN5ghuZWvQ" type="_Enx90PK-Ee2tzN5ghuZWvQ" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_En1oMPK-Ee2tzN5ghuZWvQ" name="inserir">
+          <ownedParameter xmi:id="_En1oMfK-Ee2tzN5ghuZWvQ" name="funcionarioCad" type="_Em1ioPK-Ee2tzN5ghuZWvQ"/>
+          <ownedParameter xmi:id="_En1oMvK-Ee2tzN5ghuZWvQ" direction="return">
+>>>>>>> main
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
           </ownedParameter>
         </ownedOperation>
       </packagedElement>
+<<<<<<< HEAD
       <packagedElement xmi:type="uml:Class" xmi:id="_tXYkAPK-Ee27ZbR8XHZMdw" name="FuncionarioDAO">
         <ownedAttribute xmi:id="_tYL1QPK-Ee27ZbR8XHZMdw" name="instancia" isStatic="true" type="_tXYkAPK-Ee27ZbR8XHZMdw" isReadOnly="true" association="_tYbF0PK-Ee27ZbR8XHZMdw"/>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_tYW0YPK-Ee27ZbR8XHZMdw" name="inserir" specification="_tYEggPK-Ee27ZbR8XHZMdw">
@@ -197,6 +260,11 @@
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_tYXbcPK-Ee27ZbR8XHZMdw" name="alterar" specification="_tXfRsPK-Ee27ZbR8XHZMdw">
           <ownedParameter xmi:id="_tYXbcfK-Ee27ZbR8XHZMdw" direction="return">
+=======
+      <packagedElement xmi:type="uml:Interface" xmi:id="_EnCW8PK-Ee2tzN5ghuZWvQ" name="IUsuarioDAO">
+        <ownedOperation xmi:id="_EnC-APK-Ee2tzN5ghuZWvQ" name="alterar">
+          <ownedParameter xmi:id="_EnDlEPK-Ee2tzN5ghuZWvQ" direction="return">
+>>>>>>> main
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
           </ownedParameter>
           <language>java</language>
@@ -215,6 +283,7 @@
           </eAnnotations>
           <ownedParameter xmi:id="_tXdcgPK-Ee27ZbR8XHZMdw" type="_tXYkAPK-Ee27ZbR8XHZMdw" direction="return"/>
         </ownedOperation>
+<<<<<<< HEAD
         <ownedOperation xmi:id="_tXeqoPK-Ee27ZbR8XHZMdw" name="excluir" method="_tYW0Y_K-Ee27ZbR8XHZMdw">
           <ownedParameter xmi:id="_tXeqofK-Ee27ZbR8XHZMdw" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
@@ -231,16 +300,53 @@
         <ownedOperation xmi:id="_tYEggPK-Ee27ZbR8XHZMdw" name="inserir" method="_tYW0YPK-Ee27ZbR8XHZMdw">
           <ownedParameter xmi:id="_tYEggfK-Ee27ZbR8XHZMdw" name="funcionarioCad" type="_Fa5CUPKpEe2tzN5ghuZWvQ"/>
           <ownedParameter xmi:id="_tYEggvK-Ee27ZbR8XHZMdw" direction="return">
+=======
+        <ownedOperation xmi:id="_EnDlEfK-Ee2tzN5ghuZWvQ" name="excluir">
+          <ownedParameter xmi:id="_EnEMIPK-Ee2tzN5ghuZWvQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_EnEMIfK-Ee2tzN5ghuZWvQ" name="listarUsuarios">
+          <ownedParameter xmi:id="_EoB1cPK-Ee2tzN5ghuZWvQ" type="_Enx90PK-Ee2tzN5ghuZWvQ" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_En22UPK-Ee2tzN5ghuZWvQ" name="inserir">
+          <ownedParameter xmi:id="_En3dYPK-Ee2tzN5ghuZWvQ" name="usuarioCad" type="_EnLg4PK-Ee2tzN5ghuZWvQ"/>
+          <ownedParameter xmi:id="_En3dYfK-Ee2tzN5ghuZWvQ" direction="return">
+>>>>>>> main
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
           </ownedParameter>
         </ownedOperation>
       </packagedElement>
+<<<<<<< HEAD
       <packagedElement xmi:type="uml:Class" xmi:id="_tXlYUPK-Ee27ZbR8XHZMdw" name="UsuarioDAO">
         <ownedAttribute xmi:id="_tYQtwPK-Ee27ZbR8XHZMdw" name="instancia" isStatic="true" type="_tXlYUPK-Ee27ZbR8XHZMdw" isReadOnly="true" association="_tYdiEfK-Ee27ZbR8XHZMdw"/>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_tYYCgvK-Ee27ZbR8XHZMdw" name="inserir" specification="_tYHj0PK-Ee27ZbR8XHZMdw">
           <ownedParameter xmi:id="_tYYCg_K-Ee27ZbR8XHZMdw" name="usuarioCad" type="_FbW8YPKpEe2tzN5ghuZWvQ"/>
           <ownedParameter xmi:id="_tYYChPK-Ee27ZbR8XHZMdw" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+=======
+      <packagedElement xmi:type="uml:Class" xmi:id="_EnHPcPK-Ee2tzN5ghuZWvQ" name="Pessoa" isAbstract="true">
+        <ownedAttribute xmi:id="_EoK_YPK-Ee2tzN5ghuZWvQ" name="nome">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_EoK_YfK-Ee2tzN5ghuZWvQ" name="cpf" type="_EoCcgPK-Ee2tzN5ghuZWvQ"/>
+        <ownedAttribute xmi:id="_EoLmcPK-Ee2tzN5ghuZWvQ" name="cep" type="_EoCcgPK-Ee2tzN5ghuZWvQ"/>
+        <ownedAttribute xmi:id="_EoMNgPK-Ee2tzN5ghuZWvQ" name="telefone">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_EnLg4PK-Ee2tzN5ghuZWvQ" name="Usuario">
+        <generalization xmi:id="_En55oPK-Ee2tzN5ghuZWvQ" general="_EnHPcPK-Ee2tzN5ghuZWvQ"/>
+        <ownedAttribute xmi:id="_EoMNgfK-Ee2tzN5ghuZWvQ" name="usuarioCliente">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_EoM0kPK-Ee2tzN5ghuZWvQ" name="senhaCliente">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_EoOCsPK-Ee2tzN5ghuZWvQ" name="toString" specification="_EnNWEPK-Ee2tzN5ghuZWvQ">
+          <ownedParameter xmi:id="_EoOCsfK-Ee2tzN5ghuZWvQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+>>>>>>> main
           </ownedParameter>
           <language>java</language>
           <body>if (listaUsuario != null) {&#xD;
@@ -250,6 +356,7 @@
 		return false;&#xD;
 	</body>
         </ownedBehavior>
+<<<<<<< HEAD
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_tYYpkPK-Ee27ZbR8XHZMdw" name="excluir" specification="_tXppwPK-Ee27ZbR8XHZMdw">
           <ownedParameter xmi:id="_tYYpkfK-Ee27ZbR8XHZMdw" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
@@ -303,18 +410,35 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_tYdiEfK-Ee27ZbR8XHZMdw" name="" memberEnd="_tYdiEvK-Ee27ZbR8XHZMdw _tYQtwPK-Ee27ZbR8XHZMdw">
         <ownedEnd xmi:id="_tYdiEvK-Ee27ZbR8XHZMdw" name="" type="_tXlYUPK-Ee27ZbR8XHZMdw" association="_tYdiEfK-Ee27ZbR8XHZMdw"/>
+=======
+        <ownedOperation xmi:id="_EnNWEPK-Ee2tzN5ghuZWvQ" name="toString" method="_EoOCsPK-Ee2tzN5ghuZWvQ">
+          <ownedParameter xmi:id="_EnNWEfK-Ee2tzN5ghuZWvQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
       </packagedElement>
     </packagedElement>
-    <profileApplication xmi:id="_FVN4IPKpEe2tzN5ghuZWvQ">
-      <eAnnotations xmi:id="_FVN4IfKpEe2tzN5ghuZWvQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <packagedElement xmi:type="uml:Package" xmi:id="_Eme9UPK-Ee2tzN5ghuZWvQ" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_EmfkYPK-Ee2tzN5ghuZWvQ" name="util">
+        <packagedElement xmi:type="uml:Class" xmi:id="_Enx90PK-Ee2tzN5ghuZWvQ" name="ArrayList"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_En-LEPK-Ee2tzN5ghuZWvQ" name="lang">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_En-LEfK-Ee2tzN5ghuZWvQ" name="Double"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_EoCcgPK-Ee2tzN5ghuZWvQ" name="Long"/>
+>>>>>>> main
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_Eg1BQPK-Ee2tzN5ghuZWvQ">
+      <eAnnotations xmi:id="_Eg1BQfK-Ee2tzN5ghuZWvQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
       </eAnnotations>
       <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
     </profileApplication>
   </uml:Model>
-  <UMLLabProfile:TargetLanguage xmi:id="_FVOfMPKpEe2tzN5ghuZWvQ" base_Package="_FMQwcPKpEe2tzN5ghuZWvQ">
+  <UMLLabProfile:TargetLanguage xmi:id="_Eg1BQvK-Ee2tzN5ghuZWvQ" base_Package="_Ebo_QPK-Ee2tzN5ghuZWvQ">
     <languageName>java</languageName>
   </UMLLabProfile:TargetLanguage>
+<<<<<<< HEAD
   <UMLLabProfile:Reference xmi:id="_FcLbwPKpEe2tzN5ghuZWvQ" base_Element="_FcKNofKpEe2tzN5ghuZWvQ"/>
   <UMLLabProfile:Reference xmi:id="_FcQ7UPKpEe2tzN5ghuZWvQ" base_Element="_FcPtMPKpEe2tzN5ghuZWvQ"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="_bFrHMPK-Ee27ZbR8XHZMdw" base_Element="_bFpSAPK-Ee27ZbR8XHZMdw"/>
@@ -371,4 +495,12 @@
   <UMLLabProfile:Reference xmi:id="_tYewMPK-Ee27ZbR8XHZMdw" base_Element="_tYdiEfK-Ee27ZbR8XHZMdw"/>
   <UMLLabProfile:Patch xmi:id="_uEtkEPK-Ee27ZbR8XHZMdw" base_Element="_tXYkAPK-Ee27ZbR8XHZMdw" patchText="@@ -154,22 +154,24 @@&#xA; ancia;%0D%0A&#xA;-public&#xA;+%09private&#xA;  static &#xA;" conflicting="false"/>
   <UMLLabProfile:Patch xmi:id="_uEvZQPK-Ee27ZbR8XHZMdw" base_Element="_tXlYUPK-Ee27ZbR8XHZMdw" patchText="@@ -139,22 +139,24 @@&#xA; ancia;%0D%0A&#xA;-public&#xA;+%09private&#xA;  static &#xA;" conflicting="false"/>
+=======
+  <UMLLabProfile:Generics xmi:id="_Em7pQPK-Ee2tzN5ghuZWvQ" genericsValue="Carro" base_Element="_Em6bIPK-Ee2tzN5ghuZWvQ"/>
+  <UMLLabProfile:Generics xmi:id="_EnAhwPK-Ee2tzN5ghuZWvQ" genericsValue="Funcionario" base_Element="_Em_6svK-Ee2tzN5ghuZWvQ"/>
+  <UMLLabProfile:Generics xmi:id="_EnEzMPK-Ee2tzN5ghuZWvQ" genericsValue="Usuario" base_Element="_EnEMIfK-Ee2tzN5ghuZWvQ"/>
+  <UMLLabProfile:Reference xmi:id="_EnzL8PK-Ee2tzN5ghuZWvQ" base_Element="_Enx90PK-Ee2tzN5ghuZWvQ"/>
+  <UMLLabProfile:Reference xmi:id="_En-yIPK-Ee2tzN5ghuZWvQ" base_Element="_En-LEfK-Ee2tzN5ghuZWvQ"/>
+  <UMLLabProfile:Reference xmi:id="_EoDDkPK-Ee2tzN5ghuZWvQ" base_Element="_EoCcgPK-Ee2tzN5ghuZWvQ"/>
+>>>>>>> main
 </xmi:XMI>
