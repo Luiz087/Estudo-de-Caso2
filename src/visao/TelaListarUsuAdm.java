@@ -91,7 +91,7 @@ public class TelaListarUsuAdm extends JFrame {
 		
 		scrollPane.setViewportView(table);
 		
-		JButton btnNewButton_1_1 = new JButton("Remover Usuário");
+		JButton btnNewButton_1_1 = new JButton("Remover Cliente");
 		btnNewButton_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JOptionPane.showMessageDialog(null, "Usuário removido!");
