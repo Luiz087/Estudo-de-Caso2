@@ -24,6 +24,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JTable;
 import javax.swing.JList;
 import javax.swing.AbstractListModel;
+import javax.swing.ImageIcon;
 
 public class TelaCarrosUsuario extends JFrame {
 
@@ -57,7 +58,6 @@ public class TelaCarrosUsuario extends JFrame {
 	 * Create the frame.
 	 */
 	public TelaCarrosUsuario() {
-		setTitle("Lista de Carros");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1409, 788);
 		contentPane = new JPanel();
@@ -95,6 +95,7 @@ public class TelaCarrosUsuario extends JFrame {
 		scrollPane.setViewportView(table);
 		
 		JLabel lblNewLabel = new JLabel("Modelo:");
+		lblNewLabel.setForeground(new Color(255, 255, 255));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lblNewLabel.setBounds(461, 74, 112, 32);
@@ -113,12 +114,14 @@ public class TelaCarrosUsuario extends JFrame {
 		contentPane.add(textField_1);
 		
 		JLabel lblAno = new JLabel("Ano:");
+		lblAno.setForeground(new Color(255, 255, 255));
 		lblAno.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblAno.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lblAno.setBounds(461, 117, 112, 32);
 		contentPane.add(lblAno);
 		
 		JLabel lblCor = new JLabel("Cor:");
+		lblCor.setForeground(new Color(255, 255, 255));
 		lblCor.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblCor.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lblCor.setBounds(461, 160, 112, 32);
@@ -137,12 +140,14 @@ public class TelaCarrosUsuario extends JFrame {
 		contentPane.add(textField_3);
 		
 		JLabel lblMarca = new JLabel("Marca:");
+		lblMarca.setForeground(new Color(255, 255, 255));
 		lblMarca.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblMarca.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lblMarca.setBounds(461, 203, 112, 32);
 		contentPane.add(lblMarca);
 		
 		JLabel lblPreo = new JLabel("Preço:");
+		lblPreo.setForeground(new Color(255, 255, 255));
 		lblPreo.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblPreo.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lblPreo.setBounds(461, 246, 112, 32);
@@ -173,6 +178,11 @@ public class TelaCarrosUsuario extends JFrame {
 		lblNewLabel_2.setFont(new Font("Segoe UI Black", Font.BOLD, 38));
 		lblNewLabel_2.setBounds(445, 0, 479, 72);
 		contentPane.add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon(TelaCarrosUsuario.class.getResource("/visao/Design sem nome (3).png")));
+		lblNewLabel_1.setBounds(171, 0, 1031, 749);
+		contentPane.add(lblNewLabel_1);
 		
 		for (Usuario user1 : UsuarioDAO.getInstancia().listarUsuarios()) {
 			Object[] usuario = new Object[6];

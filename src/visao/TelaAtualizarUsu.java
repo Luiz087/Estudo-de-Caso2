@@ -16,6 +16,7 @@ import javax.swing.JButton;
 import java.awt.SystemColor;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
 
 public class TelaAtualizarUsu extends JFrame {
 
@@ -164,6 +165,10 @@ public class TelaAtualizarUsu extends JFrame {
 		});
 		btnNewButton_1.setBounds(10, 15, 131, 30);
 		contentPane.add(btnNewButton_1);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon(TelaAtualizarUsu.class.getResource("/visao/Design sem nome (3).png")));
+		lblNewLabel_1.setBounds(193, 0, 1090, 784);
+		contentPane.add(lblNewLabel_1);
 	}
-
 }

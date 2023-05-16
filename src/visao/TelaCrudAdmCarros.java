@@ -18,6 +18,7 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
 
 public class TelaCrudAdmCarros extends JFrame {
 
@@ -34,6 +35,7 @@ public class TelaCrudAdmCarros extends JFrame {
 	private JTextField textField_3;
 	private JTextField textField_4;
 	private JButton btnNewButton;
+	private JLabel lblNewLabel_1;
 
 	/**
 	 * Launch the application.
@@ -55,7 +57,6 @@ public class TelaCrudAdmCarros extends JFrame {
 	 * Create the frame.
 	 */
 	public TelaCrudAdmCarros() {
-		setTitle("Tela do Administrador");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1408, 788);
 		contentPane = new JPanel();
@@ -80,6 +81,7 @@ public class TelaCrudAdmCarros extends JFrame {
 		scrollPane.setViewportView(table);
 		
 		lblNewLabel = new JLabel("Modelo:");
+		lblNewLabel.setForeground(new Color(255, 255, 255));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lblNewLabel.setBounds(478, 74, 112, 32);
@@ -91,12 +93,14 @@ public class TelaCrudAdmCarros extends JFrame {
 		contentPane.add(textField);
 		
 		lblPreo = new JLabel("Preço:");
+		lblPreo.setForeground(new Color(255, 255, 255));
 		lblPreo.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblPreo.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lblPreo.setBounds(478, 246, 112, 32);
 		contentPane.add(lblPreo);
 		
 		lblMarca = new JLabel("Marca:");
+		lblMarca.setForeground(new Color(255, 255, 255));
 		lblMarca.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblMarca.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lblMarca.setBounds(478, 203, 112, 32);
@@ -113,12 +117,14 @@ public class TelaCrudAdmCarros extends JFrame {
 		contentPane.add(textField_2);
 		
 		lblCor = new JLabel("Cor:");
+		lblCor.setForeground(new Color(255, 255, 255));
 		lblCor.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblCor.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lblCor.setBounds(478, 160, 112, 32);
 		contentPane.add(lblCor);
 		
 		lblAno = new JLabel("Ano:");
+		lblAno.setForeground(new Color(255, 255, 255));
 		lblAno.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblAno.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lblAno.setBounds(478, 117, 112, 32);
@@ -182,5 +188,10 @@ public class TelaCrudAdmCarros extends JFrame {
 		});
 		btnNewButton.setBounds(10, 15, 131, 30);
 		contentPane.add(btnNewButton);
+		
+		lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon(TelaCrudAdmCarros.class.getResource("/visao/Design sem nome (3).png")));
+		lblNewLabel_1.setBounds(183, 0, 1045, 749);
+		contentPane.add(lblNewLabel_1);
 	}
 }
