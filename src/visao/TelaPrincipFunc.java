@@ -38,6 +38,7 @@ public class TelaPrincipFunc extends JFrame {
 	 * Create the frame.
 	 */
 	public TelaPrincipFunc() {
+		setTitle("Tela Inicial do Funcionario");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1258, 598);
 		contentPane = new JPanel();
