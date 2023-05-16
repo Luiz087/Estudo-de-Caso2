@@ -18,6 +18,7 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
 
 public class TelaCrudAdminFunc extends JFrame {
 
@@ -67,7 +68,7 @@ public class TelaCrudAdminFunc extends JFrame {
 		contentPane.setLayout(null);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(277, 367, 815, 315);
+		scrollPane.setBounds(277, 368, 815, 315);
 		contentPane.add(scrollPane);
 		
 		table = new JTable();
@@ -81,6 +82,7 @@ public class TelaCrudAdminFunc extends JFrame {
 		scrollPane.setViewportView(table);
 		
 		lblNewLabel = new JLabel("Nome:");
+		lblNewLabel.setForeground(new Color(255, 255, 255));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lblNewLabel.setBounds(420, 74, 170, 32);
@@ -92,12 +94,14 @@ public class TelaCrudAdminFunc extends JFrame {
 		contentPane.add(textField);
 		
 		lblPreo = new JLabel("Telefone:");
+		lblPreo.setForeground(new Color(255, 255, 255));
 		lblPreo.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblPreo.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lblPreo.setBounds(420, 246, 170, 32);
 		contentPane.add(lblPreo);
 		
 		lblMarca = new JLabel("Senha:");
+		lblMarca.setForeground(new Color(255, 255, 255));
 		lblMarca.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblMarca.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lblMarca.setBounds(420, 203, 170, 32);
@@ -114,12 +118,14 @@ public class TelaCrudAdminFunc extends JFrame {
 		contentPane.add(textField_2);
 		
 		lblCor = new JLabel("CPF:");
+		lblCor.setForeground(new Color(255, 255, 255));
 		lblCor.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblCor.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lblCor.setBounds(420, 160, 170, 32);
 		contentPane.add(lblCor);
 		
 		lblAno = new JLabel("Usuário:");
+		lblAno.setForeground(new Color(255, 255, 255));
 		lblAno.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblAno.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lblAno.setBounds(420, 117, 170, 32);
@@ -183,5 +189,10 @@ public class TelaCrudAdminFunc extends JFrame {
 		});
 		btnNewButton.setBounds(10, 15, 131, 30);
 		contentPane.add(btnNewButton);
+		
+		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon(TelaCrudAdminFunc.class.getResource("/visao/Design sem nome (3).png")));
+		lblNewLabel_2.setBounds(178, 0, 1011, 749);
+		contentPane.add(lblNewLabel_2);
 	}
 }
