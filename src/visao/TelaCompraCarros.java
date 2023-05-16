@@ -16,6 +16,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
+import javax.swing.ImageIcon;
 
 public class TelaCompraCarros extends JFrame {
 
@@ -53,7 +54,7 @@ public class TelaCompraCarros extends JFrame {
 	 * Create the frame.
 	 */
 	public TelaCompraCarros() {
-		setTitle("Tela de Compras");
+		setTitle("TELA DE COMPRAS");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1920, 1080);
 		contentPane = new JPanel();
@@ -228,7 +229,7 @@ public class TelaCompraCarros extends JFrame {
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_2.setForeground(new Color(255, 255, 255));
 		lblNewLabel_2.setFont(new Font("Segoe UI Black", Font.BOLD, 38));
-		lblNewLabel_2.setBounds(444, 0, 479, 72);
+		lblNewLabel_2.setBounds(443, 29, 479, 72);
 		contentPane.add(lblNewLabel_2);
 
 		JButton btnNewButton_1 = new JButton("Voltar");
@@ -242,5 +243,10 @@ public class TelaCompraCarros extends JFrame {
 		});
 		btnNewButton_1.setBounds(10, 15, 131, 30);
 		contentPane.add(btnNewButton_1);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(TelaCompraCarros.class.getResource("/visao/Design sem nome (3).png")));
+		lblNewLabel.setBounds(149, 0, 1024, 759);
+		contentPane.add(lblNewLabel);
 	}
 }
