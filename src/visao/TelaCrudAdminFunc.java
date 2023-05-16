@@ -56,6 +56,7 @@ public class TelaCrudAdminFunc extends JFrame {
 	 * Create the frame.
 	 */
 	public TelaCrudAdminFunc() {
+		setTitle("Lista Admin");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1408, 788);
 		contentPane = new JPanel();
