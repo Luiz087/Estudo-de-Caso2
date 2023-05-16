@@ -166,7 +166,6 @@ public class TelaCompraCarros extends JFrame {
 		panel.add(lblNewLabel_1_1_2_1_1);
 
 		textField_5 = new JTextField();
-		textField_5.setEditable(false);
 		textField_5.setColumns(10);
 		textField_5.setBounds(99, 226, 373, 43);
 		panel.add(textField_5);
@@ -178,7 +177,6 @@ public class TelaCompraCarros extends JFrame {
 		panel.add(lblNewLabel_1_1_2_1_1_1);
 
 		textField_6 = new JTextField();
-		textField_6.setEditable(false);
 		textField_6.setColumns(10);
 		textField_6.setBounds(99, 172, 373, 43);
 		panel.add(textField_6);
@@ -190,7 +188,6 @@ public class TelaCompraCarros extends JFrame {
 		panel.add(lblNewLabel_1_1_2_1_1_2);
 
 		textField_7 = new JTextField();
-		textField_7.setEditable(false);
 		textField_7.setColumns(10);
 		textField_7.setBounds(99, 119, 373, 43);
 		panel.add(textField_7);
@@ -202,7 +199,6 @@ public class TelaCompraCarros extends JFrame {
 		panel.add(lblNewLabel_1_1_2_1_1_2_1);
 
 		textField_8 = new JTextField();
-		textField_8.setEditable(false);
 		textField_8.setColumns(10);
 		textField_8.setBounds(99, 66, 373, 44);
 		panel.add(textField_8);
@@ -214,13 +210,11 @@ public class TelaCompraCarros extends JFrame {
 		panel.add(lblNewLabel_1_1_2_1_1_2_1_1);
 
 		textField_9 = new JTextField();
-		textField_9.setEditable(false);
 		textField_9.setColumns(10);
 		textField_9.setBounds(99, 280, 373, 42);
 		panel.add(textField_9);
 
 		textField_10 = new JTextField();
-		textField_10.setEditable(false);
 		textField_10.setColumns(10);
 		textField_10.setBounds(99, 11, 373, 44);
 		panel.add(textField_10);
