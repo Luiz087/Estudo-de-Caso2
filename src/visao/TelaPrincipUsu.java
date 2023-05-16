@@ -71,7 +71,7 @@ public class TelaPrincipUsu extends JFrame {
 			}
 		});
 		btnNewButton_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_1_1_1_1.setBounds(620, 117, 233, 71);
+		btnNewButton_1_1_1_1.setBounds(600, 117, 233, 71);
 		contentPane.add(btnNewButton_1_1_1_1);
 
 		JButton btnNewButton_1_1_1_1_1 = new JButton("Excluir conta");
@@ -85,7 +85,7 @@ public class TelaPrincipUsu extends JFrame {
 			}
 		});
 		btnNewButton_1_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_1_1_1_1_1.setBounds(620, 406, 233, 71);
+		btnNewButton_1_1_1_1_1.setBounds(600, 406, 233, 71);
 		contentPane.add(btnNewButton_1_1_1_1_1);
 
 		JButton btnNewButton_1_1_1_1_2 = new JButton("Alterar Dados");
@@ -98,7 +98,7 @@ public class TelaPrincipUsu extends JFrame {
 			}
 		});
 		btnNewButton_1_1_1_1_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_1_1_1_1_2.setBounds(620, 260, 233, 71);
+		btnNewButton_1_1_1_1_2.setBounds(600, 260, 233, 71);
 		contentPane.add(btnNewButton_1_1_1_1_2);
 		
 		JLabel lblNewLabel = new JLabel("");
