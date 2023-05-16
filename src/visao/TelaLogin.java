@@ -25,14 +25,15 @@ import java.awt.Font;
 import java.awt.SystemColor;
 import javax.swing.ImageIcon;
 import javax.swing.JTable;
+import javax.swing.JPasswordField;
 
 public class TelaLogin extends JFrame {
 
 	protected static final String Usuario = null;
 	private JPanel contentPane;
-	private JTextField textLoginSenha;
 	private JTextField textLoginUsu;
 	private UsuarioDAO usuarioDao = UsuarioDAO.getInstancia();
+	private JPasswordField textSenhaUsu;
 
 	/**
 	 * Launch the application.
@@ -71,6 +72,10 @@ public class TelaLogin extends JFrame {
 		contentPane.add(fundologin);
 		fundologin.setLayout(null);
 		
+		textSenhaUsu = new JPasswordField();
+		textSenhaUsu.setBounds(494, 518, 215, 43);
+		fundologin.add(textSenhaUsu);
+		
 		JLabel lblUsurio = new JLabel("Usuário:");
 		lblUsurio.setBounds(374, 395, 105, 43);
 		lblUsurio.setHorizontalAlignment(SwingConstants.RIGHT);
@@ -89,11 +94,6 @@ public class TelaLogin extends JFrame {
 		textLoginUsu.setBounds(494, 395, 215, 43);
 		fundologin.add(textLoginUsu);
 		textLoginUsu.setColumns(10);
-
-		textLoginSenha = new JTextField();
-		textLoginSenha.setBounds(494, 518, 215, 43);
-		fundologin.add(textLoginSenha);
-		textLoginSenha.setColumns(10);
 
 		JButton btnLoginUsuario = new JButton("ENTRAR");
 		btnLoginUsuario.setBounds(494, 629, 215, 43);
@@ -123,13 +123,13 @@ public class TelaLogin extends JFrame {
 		btnLoginUsuario.setFont(new Font("Tahoma", Font.PLAIN, 18));
 
 		JLabel lblNPConta = new JLabel("Não possui conta?");
-		lblNPConta.setBounds(1196, 646, 169, 14);
+		lblNPConta.setBounds(1196, 649, 169, 14);
 		fundologin.add(lblNPConta);
 		lblNPConta.setForeground(new Color(255, 0, 0));
 		lblNPConta.setHorizontalAlignment(SwingConstants.CENTER);
 
 		JButton btnCriarConta = new JButton("CRIAR CONTA");
-		btnCriarConta.setBounds(1178, 670, 215, 43);
+		btnCriarConta.setBounds(1171, 673, 215, 43);
 		btnCriarConta.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		fundologin.add(btnCriarConta);
 		btnCriarConta.setBackground(SystemColor.info);
@@ -165,7 +165,7 @@ public class TelaLogin extends JFrame {
 		fundologin.add(btnEntrarFunc);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setBounds(47, 64, 1935, 1074);
+		lblNewLabel.setBounds(42, 52, 1935, 1074);
 		lblNewLabel.setIcon(new ImageIcon(TelaLogin.class.getResource("/visao/Design sem nome (5).png")));
 		fundologin.add(lblNewLabel);
 		

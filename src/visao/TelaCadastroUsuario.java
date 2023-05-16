@@ -26,12 +26,12 @@ import java.awt.SystemColor;
 import java.awt.Window.Type;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
+import javax.swing.JPasswordField;
 
 public class TelaCadastroUsuario extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textCadUsu;
-	private JTextField textCadSenha;
 	private UsuarioDAO usuarioDao = UsuarioDAO.getInstancia();
 	private JTextField textCadCpf;
 	private JTextField textCadNome;
@@ -39,6 +39,7 @@ public class TelaCadastroUsuario extends JFrame {
 	private JTextField textCadTel;
 	private JTable table;
 	private DefaultTableModel model;
+	private JPasswordField textCadSenha;
 
 	/**
 	 * Create the frame.
@@ -89,7 +90,7 @@ public class TelaCadastroUsuario extends JFrame {
 		panel.add(lblNewLabel_1);
 
 		JButton btnCadUsuario = new JButton("CADASTRAR");
-		btnCadUsuario.setBounds(740, 415, 312, 77);
+		btnCadUsuario.setBounds(534, 422, 312, 77);
 		panel.add(btnCadUsuario);
 		btnCadUsuario.setBackground(SystemColor.info);
 		btnCadUsuario.addActionListener(new ActionListener() {
@@ -139,78 +140,73 @@ public class TelaCadastroUsuario extends JFrame {
 
 		JLabel lblNewLabel = new JLabel("Usuário:");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblNewLabel.setBounds(742, 76, 105, 49);
+		lblNewLabel.setBounds(484, 83, 105, 49);
 		panel.add(lblNewLabel);
 		lblNewLabel.setForeground(new Color(255, 255, 255));
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 26));
 
 		JLabel lblSenha = new JLabel("Senha:");
 		lblSenha.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblSenha.setBounds(742, 238, 105, 43);
+		lblSenha.setBounds(484, 245, 105, 43);
 		panel.add(lblSenha);
 		lblSenha.setForeground(new Color(255, 255, 255));
 		lblSenha.setFont(new Font("Tahoma", Font.PLAIN, 26));
 
 		JLabel lblNome = new JLabel("Nome:");
 		lblNome.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblNome.setBounds(740, 130, 105, 43);
+		lblNome.setBounds(482, 137, 105, 43);
 		panel.add(lblNome);
 		lblNome.setForeground(new Color(255, 255, 255));
 		lblNome.setFont(new Font("Tahoma", Font.PLAIN, 26));
 
 		JLabel lblCpf = new JLabel("CPF:");
 		lblCpf.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblCpf.setBounds(754, 292, 93, 43);
+		lblCpf.setBounds(496, 299, 93, 43);
 		panel.add(lblCpf);
 		lblCpf.setForeground(new Color(255, 255, 255));
 		lblCpf.setFont(new Font("Tahoma", Font.PLAIN, 26));
 
 		textCadUsu = new JTextField();
-		textCadUsu.setBounds(857, 76, 195, 43);
+		textCadUsu.setBounds(592, 83, 195, 43);
 		panel.add(textCadUsu);
 		textCadUsu.setColumns(10);
 
-		textCadSenha = new JTextField();
-		textCadSenha.setBounds(857, 238, 195, 43);
-		panel.add(textCadSenha);
-		textCadSenha.setColumns(10);
-
 		textCadNome = new JTextField();
-		textCadNome.setBounds(857, 130, 195, 43);
+		textCadNome.setBounds(592, 137, 195, 43);
 		panel.add(textCadNome);
 		textCadNome.setColumns(10);
 
 		JLabel lblTelefone = new JLabel("Telefone:");
 		lblTelefone.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblTelefone.setBounds(718, 346, 129, 43);
+		lblTelefone.setBounds(460, 353, 129, 43);
 		panel.add(lblTelefone);
 		lblTelefone.setForeground(new Color(255, 255, 255));
 		lblTelefone.setFont(new Font("Tahoma", Font.PLAIN, 26));
 
 		textCadTel = new JTextField();
-		textCadTel.setBounds(857, 346, 195, 43);
+		textCadTel.setBounds(592, 353, 195, 43);
 		panel.add(textCadTel);
 		textCadTel.setColumns(10);
 
 		JLabel lblCep = new JLabel("CEP:");
 		lblCep.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblCep.setBounds(742, 184, 105, 43);
+		lblCep.setBounds(484, 191, 105, 43);
 		panel.add(lblCep);
 		lblCep.setForeground(new Color(255, 255, 255));
 		lblCep.setFont(new Font("Tahoma", Font.PLAIN, 26));
 
 		textCadCep = new JTextField();
-		textCadCep.setBounds(857, 184, 195, 43);
+		textCadCep.setBounds(592, 191, 195, 43);
 		panel.add(textCadCep);
 		textCadCep.setColumns(10);
 
 		textCadCpf = new JTextField();
-		textCadCpf.setBounds(857, 292, 195, 43);
+		textCadCpf.setBounds(592, 299, 195, 43);
 		panel.add(textCadCpf);
 		textCadCpf.setColumns(10);
 
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(524, 514, 744, 158);
+		scrollPane.setBounds(318, 521, 744, 158);
 		panel.add(scrollPane);
 
 		table = new JTable();
@@ -222,7 +218,11 @@ public class TelaCadastroUsuario extends JFrame {
 		lblNewLabel_2_5.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_2_5.setForeground(new Color(255, 255, 255));
 		lblNewLabel_2_5.setFont(new Font("Segoe UI Black", Font.BOLD, 38));
-		lblNewLabel_2_5.setBounds(641, -7, 479, 72);
+		lblNewLabel_2_5.setBounds(450, 0, 479, 72);
 		panel.add(lblNewLabel_2_5);
+		
+		textCadSenha = new JPasswordField();
+		textCadSenha.setBounds(592, 245, 195, 43);
+		panel.add(textCadSenha);
 	}
 }
