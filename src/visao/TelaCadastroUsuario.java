@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.text.MaskFormatter;
 
 import controle.UsuarioDAO;
 import modelo.Usuario;
@@ -16,7 +17,10 @@ import javax.swing.JOptionPane;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
+
 import java.awt.event.ActionListener;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.JTable;
@@ -183,7 +187,13 @@ public class TelaCadastroUsuario extends JFrame {
 		lblTelefone.setForeground(new Color(255, 255, 255));
 		lblTelefone.setFont(new Font("Tahoma", Font.PLAIN, 26));
 
-		textCadTel = new JTextField();
+		MaskFormatter mascaraTel = null;
+		 try {
+		      mascaraTel = new MaskFormatter("(##)#####-####");
+		 } catch (ParseException e) {
+		      e.printStackTrace();
+		 }
+		textCadTel = new JFormattedTextField(mascaraTel);
 		textCadTel.setBounds(592, 353, 195, 43);
 		panel.add(textCadTel);
 		textCadTel.setColumns(10);
@@ -194,13 +204,25 @@ public class TelaCadastroUsuario extends JFrame {
 		panel.add(lblCep);
 		lblCep.setForeground(new Color(255, 255, 255));
 		lblCep.setFont(new Font("Tahoma", Font.PLAIN, 26));
-
-		textCadCep = new JTextField();
+		
+		MaskFormatter mascaraCep = null;
+		try {
+			mascaraCep = new MaskFormatter("#####-###");
+		} catch(ParseException e) {
+			e.printStackTrace();
+		}
+		textCadCep = new JFormattedTextField(mascaraCep);
 		textCadCep.setBounds(592, 191, 195, 43);
 		panel.add(textCadCep);
 		textCadCep.setColumns(10);
 
-		textCadCpf = new JTextField();
+		MaskFormatter mascaraCpf = null;
+		try {
+			mascaraCpf = new MaskFormatter("###.###.###-##");
+		} catch(ParseException e) {
+			e.printStackTrace();
+		}
+		textCadCpf = new JFormattedTextField(mascaraCpf);
 		textCadCpf.setBounds(592, 299, 195, 43);
 		panel.add(textCadCpf);
 		textCadCpf.setColumns(10);
