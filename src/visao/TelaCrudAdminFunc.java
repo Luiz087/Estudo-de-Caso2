@@ -28,8 +28,6 @@ public class TelaCrudAdminFunc extends JFrame {
 
 	private JPanel contentPane;
 	private JLabel lblNewLabel;
-	private JTextField textField;
-	private JLabel lblPreo;
 	private JLabel lblMarca;
 	private JTextField textField_1;
 	private JTextField textField_2;
@@ -98,17 +96,6 @@ public class TelaCrudAdminFunc extends JFrame {
 		 } catch (ParseException e) {
 		      e.printStackTrace();
 		 }
-		textField = new JFormattedTextField(mascaraTel);
-		textField.setBounds(600, 246, 203, 32);
-		contentPane.add(textField);
-		textField.setColumns(10);
-		
-		lblPreo = new JLabel("Telefone:");
-		lblPreo.setForeground(new Color(255, 255, 255));
-		lblPreo.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblPreo.setFont(new Font("Tahoma", Font.PLAIN, 26));
-		lblPreo.setBounds(420, 246, 170, 32);
-		contentPane.add(lblPreo);
 		
 		lblMarca = new JLabel("Senha:");
 		lblMarca.setForeground(new Color(255, 255, 255));

@@ -85,7 +85,7 @@ public class TelaListarUsuAdm extends JFrame {
 			new Object[][] {
 			},
 			new String[] {
-				"Usu\u00E1rio", "Nome", "CEP", "CPF", "Telefone"
+				"Usu\u00E1rio", "Nome", "CEP", "CPF"
 			}
 		));
 		

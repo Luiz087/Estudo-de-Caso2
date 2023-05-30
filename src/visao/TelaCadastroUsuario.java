@@ -39,8 +39,6 @@ public class TelaCadastroUsuario extends JFrame {
 	private UsuarioDAO usuarioDao = UsuarioDAO.getInstancia();
 	private JTextField textCadCpf;
 	private JTextField textCadNome;
-	private JTextField textCadCep;
-	private JTextField textCadTel;
 	private JTable table;
 	private DefaultTableModel model;
 	private JPasswordField textCadSenha;
@@ -151,7 +149,7 @@ public class TelaCadastroUsuario extends JFrame {
 
 		JLabel lblSenha = new JLabel("Senha:");
 		lblSenha.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblSenha.setBounds(484, 245, 105, 43);
+		lblSenha.setBounds(484, 191, 105, 43);
 		panel.add(lblSenha);
 		lblSenha.setForeground(new Color(255, 255, 255));
 		lblSenha.setFont(new Font("Tahoma", Font.PLAIN, 26));
@@ -165,7 +163,7 @@ public class TelaCadastroUsuario extends JFrame {
 
 		JLabel lblCpf = new JLabel("CPF:");
 		lblCpf.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblCpf.setBounds(496, 299, 93, 43);
+		lblCpf.setBounds(496, 245, 93, 43);
 		panel.add(lblCpf);
 		lblCpf.setForeground(new Color(255, 255, 255));
 		lblCpf.setFont(new Font("Tahoma", Font.PLAIN, 26));
@@ -180,30 +178,12 @@ public class TelaCadastroUsuario extends JFrame {
 		panel.add(textCadNome);
 		textCadNome.setColumns(10);
 
-		JLabel lblTelefone = new JLabel("Telefone:");
-		lblTelefone.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblTelefone.setBounds(460, 353, 129, 43);
-		panel.add(lblTelefone);
-		lblTelefone.setForeground(new Color(255, 255, 255));
-		lblTelefone.setFont(new Font("Tahoma", Font.PLAIN, 26));
-
 		MaskFormatter mascaraTel = null;
 		 try {
 		      mascaraTel = new MaskFormatter("(##)#####-####");
 		 } catch (ParseException e) {
 		      e.printStackTrace();
 		 }
-		textCadTel = new JFormattedTextField(mascaraTel);
-		textCadTel.setBounds(592, 353, 195, 43);
-		panel.add(textCadTel);
-		textCadTel.setColumns(10);
-
-		JLabel lblCep = new JLabel("CEP:");
-		lblCep.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblCep.setBounds(484, 191, 105, 43);
-		panel.add(lblCep);
-		lblCep.setForeground(new Color(255, 255, 255));
-		lblCep.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		
 		MaskFormatter mascaraCep = null;
 		try {
@@ -211,10 +191,6 @@ public class TelaCadastroUsuario extends JFrame {
 		} catch(ParseException e) {
 			e.printStackTrace();
 		}
-		textCadCep = new JFormattedTextField(mascaraCep);
-		textCadCep.setBounds(592, 191, 195, 43);
-		panel.add(textCadCep);
-		textCadCep.setColumns(10);
 
 		MaskFormatter mascaraCpf = null;
 		try {
@@ -223,7 +199,7 @@ public class TelaCadastroUsuario extends JFrame {
 			e.printStackTrace();
 		}
 		textCadCpf = new JFormattedTextField(mascaraCpf);
-		textCadCpf.setBounds(592, 299, 195, 43);
+		textCadCpf.setBounds(592, 245, 195, 43);
 		panel.add(textCadCpf);
 		textCadCpf.setColumns(10);
 
@@ -244,7 +220,7 @@ public class TelaCadastroUsuario extends JFrame {
 		panel.add(lblNewLabel_2_5);
 		
 		textCadSenha = new JPasswordField();
-		textCadSenha.setBounds(592, 245, 195, 43);
+		textCadSenha.setBounds(592, 191, 195, 43);
 		panel.add(textCadSenha);
 	}
 }

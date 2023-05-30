@@ -84,7 +84,7 @@ public class TelaListarUsuFunc extends JFrame {
 			new Object[][] {
 			},
 			new String[] {
-				"Usu\u00E1rio", "Nome", "CEP", "Telefone"
+				"Usu\u00E1rio", "Nome", "CEP"
 			}
 		));
 		

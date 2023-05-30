@@ -54,7 +54,7 @@ public class TelaPrincipAdmin extends JFrame {
 		lblNewLabel.setForeground(new Color(255, 255, 255));
 		lblNewLabel.setBackground(new Color(255, 255, 255));
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 18));
-		lblNewLabel.setBounds(443, 231, 254, 33);
+		lblNewLabel.setBounds(443, 231, 243, 33);
 		contentPane.add(lblNewLabel);
 
 		JLabel lblFunesDeFuncionrio = new JLabel("Funções de Funcionário");
