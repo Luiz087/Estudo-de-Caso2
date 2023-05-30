@@ -8,8 +8,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.text.MaskFormatter;
 
-import controle.UsuarioDAO;
-import modelo.Usuario;
+/*import controle.UsuarioDAO;
+import modelo.Usuario;*/
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -36,7 +36,7 @@ public class TelaCadastroUsuario extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textCadUsu;
-	private UsuarioDAO usuarioDao = UsuarioDAO.getInstancia();
+	//private UsuarioDAO usuarioDao = UsuarioDAO.getInstancia();
 	private JTextField textCadCpf;
 	private JTextField textCadNome;
 	private JTable table;
@@ -61,10 +61,10 @@ public class TelaCadastroUsuario extends JFrame {
 		model.addColumn("Nome");
 		model.addColumn("CPF");
 
-		for (Usuario obj : UsuarioDAO.getInstancia().listarUsuarios()) {
+		/*for (Usuario obj : UsuarioDAO.getInstancia().listarUsuarios()) {
 			Object[] rowData = { obj.getNome(), obj.getCpf() };
 			model.addRow(rowData);
-		}
+		}*/
 
 		JButton btnVoltarTelaLogin = new JButton("Voltar");
 		btnVoltarTelaLogin.setBackground(SystemColor.info);
@@ -97,7 +97,7 @@ public class TelaCadastroUsuario extends JFrame {
 		btnCadUsuario.setBackground(SystemColor.info);
 		btnCadUsuario.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Usuario user = new Usuario();
+				/*Usuario user = new Usuario();
 
 				String usuarioCad = textCadUsu.getText();
 				String senhaCad = textCadSenha.getText();
@@ -135,7 +135,7 @@ public class TelaCadastroUsuario extends JFrame {
 				} catch (Exception ex) {
 					ex.printStackTrace();
 					JOptionPane.showMessageDialog(null, "Ocorreu um erro. Tente novamente!");
-				}
+				}*/
 			}
 		});
 		btnCadUsuario.setFont(new Font("Tahoma", Font.PLAIN, 18));

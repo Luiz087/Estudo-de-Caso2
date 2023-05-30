@@ -7,8 +7,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
-import controle.UsuarioDAO;
-import modelo.Usuario;
+/*import controle.UsuarioDAO;
+import modelo.Usuario;*/
 
 import java.awt.Color;
 import javax.swing.JTextField;
@@ -185,13 +185,13 @@ public class TelaCarrosUsuario extends JFrame {
 		lblNewLabel_1.setBounds(171, 0, 1031, 749);
 		contentPane.add(lblNewLabel_1);
 		
-		for (Usuario user1 : UsuarioDAO.getInstancia().listarUsuarios()) {
+		/*for (Usuario user1 : UsuarioDAO.getInstancia().listarUsuarios()) {
 			Object[] usuario = new Object[6];
 			usuario[0] = user1.getNome();
 			usuario[1] = user1.getCpf();
 
 			model.addRow(usuario);
 
-		}
+		}*/
 	}
 }

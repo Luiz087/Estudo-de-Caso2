@@ -6,9 +6,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import controle.UsuarioDAO;
+import controle.FuncionarioDAO;
 import modelo.Admin;
-import modelo.Usuario;
+import modelo.Funcionario;
 
 import javax.swing.JComboBox;
 import javax.swing.JList;
@@ -26,14 +26,13 @@ import java.awt.SystemColor;
 import javax.swing.ImageIcon;
 import javax.swing.JTable;
 import javax.swing.JPasswordField;
-import javax.swing.border.LineBorder;
 
 public class TelaLogin extends JFrame {
 
 	protected static final String Usuario = null;
 	private JPanel contentPane;
 	private JTextField textLoginUsu;
-	private UsuarioDAO usuarioDao = UsuarioDAO.getInstancia();
+	private FuncionarioDAO funcionarioDAO = FuncionarioDAO.getInstancia();
 	private JPasswordField textSenhaUsu;
 
 	/**
@@ -68,15 +67,15 @@ public class TelaLogin extends JFrame {
 		contentPane.setLayout(null);
 
 		JPanel fundologin = new JPanel();
-		fundologin.setBackground(new Color(41, 124, 122));
+		fundologin.setBackground(new Color(53, 157, 155));
 		fundologin.setBounds(-106, -198, 1582, 963);
 		contentPane.add(fundologin);
 		fundologin.setLayout(null);
-		
+
 		textSenhaUsu = new JPasswordField();
 		textSenhaUsu.setBounds(494, 518, 215, 43);
 		fundologin.add(textSenhaUsu);
-		
+
 		JLabel lblUsurio = new JLabel("Usuário:");
 		lblUsurio.setBounds(374, 395, 105, 43);
 		lblUsurio.setHorizontalAlignment(SwingConstants.RIGHT);
@@ -101,24 +100,34 @@ public class TelaLogin extends JFrame {
 		fundologin.add(btnLoginUsuario);
 		btnLoginUsuario.setBackground(SystemColor.info);
 		btnLoginUsuario.addActionListener(new ActionListener() {
+			@SuppressWarnings("unlikely-arg-type")
 			public void actionPerformed(ActionEvent e) {
-				/*
-				 * Admin adm = new Admin(); String usuarioLogin = textLoginUsu.getText(); String
-				 * usuarioSenha = textLoginSenha.getText(); String usuAdm =
-				 * adm.getUsuarioAdmin(); String senhaAdm = adm.getUsuarioAdmin();
-				 * 
-				 * for (Usuario user : usuarioDao.listarUsuarios()) { if
-				 * (user.getUsuarioCliente().equals(usuarioLogin) &&
-				 * user.getSenhaCliente().equals(usuarioSenha)) { TelaCarrosUsuario
-				 * telaCarrosUsu = new TelaCarrosUsuario(); dispose();
-				 * telaCarrosUsu.setExtendedState(JFrame.MAXIMIZED_BOTH);
-				 * telaCarrosUsu.setVisible(true); } else { JOptionPane.showMessageDialog(null,
-				 * "Usuário não encontrado!"); } }
-				 */
-				TelaPrincipUsu telaPrinciUsu = new TelaPrincipUsu();
-				dispose();
-				telaPrinciUsu.setExtendedState(JFrame.MAXIMIZED_BOTH);
-				telaPrinciUsu.setVisible(true);
+
+				Admin adm = new Admin();
+				Funcionario func = new Funcionario();
+				String usuarioLogin = textLoginUsu.getText();
+				char[] usuarioSenha = textSenhaUsu.getPassword();
+				String usuAdm = adm.getUsuarioAdmin();
+				String senAdm = adm.getSenhaAdmin();
+
+				if (usuAdm.equals(usuarioLogin) && senAdm.equals(usuarioSenha)) {
+					TelaPrincipAdmin telaAdmin = new TelaPrincipAdmin();
+					dispose();
+					telaAdmin.setExtendedState(JFrame.MAXIMIZED_BOTH);
+					telaAdmin.setVisible(true);
+				} else {
+					for (Funcionario func1 : funcionarioDAO.listarFuncionarios()) {
+						if (func1.getUsuarioFuncionario().equals(usuarioLogin)
+								&& func1.getSenhaFuncionario().equals(usuarioSenha)) {
+							TelaPrincipFunc telaFunc = new TelaPrincipFunc();
+							dispose();
+							telaFunc.setExtendedState(JFrame.MAXIMIZED_BOTH);
+							telaFunc.setVisible(true);
+						} else {
+							JOptionPane.showMessageDialog(null, "Usuário não encontrado!");
+						}
+					}
+				}
 			}
 		});
 		btnLoginUsuario.setFont(new Font("Tahoma", Font.PLAIN, 18));
@@ -164,22 +173,33 @@ public class TelaLogin extends JFrame {
 			}
 		});
 		fundologin.add(btnEntrarFunc);
-		
+
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setBounds(143, 62, 1935, 1074);
+		lblNewLabel.setBounds(42, 52, 1935, 1074);
 		lblNewLabel.setIcon(new ImageIcon(TelaLogin.class.getResource("/visao/Design sem nome (5).png")));
 		fundologin.add(lblNewLabel);
-		
+
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setBounds(83, 198, 987, 754);
 		lblNewLabel_1.setIcon(new ImageIcon(TelaLogin.class.getResource("/visao/Design sem nome (3).png")));
 		fundologin.add(lblNewLabel_1);
 		btnCriarConta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				TelaCadastroUsuario telaCadUsu = new TelaCadastroUsuario();
-				dispose();
-				telaCadUsu.setExtendedState(JFrame.MAXIMIZED_BOTH);
-				telaCadUsu.setVisible(true);
+				Admin adm = new Admin();
+				String usuAdm = adm.getUsuarioAdmin();
+				String senAdm = adm.getSenhaAdmin();
+				
+				String loginAdm = JOptionPane.showInputDialog("Login Administrador: ");
+				String senhaAdm = JOptionPane.showInputDialog("Senha Administrador: ");
+				
+				if (loginAdm.equals(usuAdm) && senhaAdm.equals(senAdm)) {
+					TelaCadastroUsuario telaCadUsu = new TelaCadastroUsuario();
+					dispose();
+					telaCadUsu.setExtendedState(JFrame.MAXIMIZED_BOTH);
+					telaCadUsu.setVisible(true);
+				} else {
+					JOptionPane.showMessageDialog(null, "Necessário login de administrador!");
+				}
 			}
 		});
 
