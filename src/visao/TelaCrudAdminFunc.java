@@ -14,9 +14,13 @@ import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.text.MaskFormatter;
+
 import java.awt.Color;
 import java.awt.event.ActionListener;
+import java.text.ParseException;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 
@@ -88,10 +92,16 @@ public class TelaCrudAdminFunc extends JFrame {
 		lblNewLabel.setBounds(420, 74, 170, 32);
 		contentPane.add(lblNewLabel);
 		
-		textField = new JTextField();
-		textField.setColumns(10);
+		MaskFormatter mascaraTel = null;
+		 try {
+		      mascaraTel = new MaskFormatter("(##)#####-####");
+		 } catch (ParseException e) {
+		      e.printStackTrace();
+		 }
+		textField = new JFormattedTextField(mascaraTel);
 		textField.setBounds(600, 246, 203, 32);
 		contentPane.add(textField);
+		textField.setColumns(10);
 		
 		lblPreo = new JLabel("Telefone:");
 		lblPreo.setForeground(new Color(255, 255, 255));
@@ -112,10 +122,16 @@ public class TelaCrudAdminFunc extends JFrame {
 		textField_1.setBounds(600, 203, 203, 32);
 		contentPane.add(textField_1);
 		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
+		MaskFormatter mascaraCpf = null;
+		try {
+			mascaraCpf = new MaskFormatter("###.###.###-##");
+		} catch(ParseException e) {
+			e.printStackTrace();
+		}
+		textField_2 = new JFormattedTextField(mascaraCpf);
 		textField_2.setBounds(600, 160, 203, 32);
 		contentPane.add(textField_2);
+		textField_2.setColumns(10);
 		
 		lblCor = new JLabel("CPF:");
 		lblCor.setForeground(new Color(255, 255, 255));

@@ -14,9 +14,13 @@ import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.text.MaskFormatter;
+
 import java.awt.Color;
 import java.awt.event.ActionListener;
+import java.text.ParseException;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 
@@ -130,10 +134,16 @@ public class TelaCrudAdmCarros extends JFrame {
 		lblAno.setBounds(478, 117, 112, 32);
 		contentPane.add(lblAno);
 		
-		textField_3 = new JTextField();
-		textField_3.setColumns(10);
+		MaskFormatter mascaraAno = null;
+		 try {
+		      mascaraAno = new MaskFormatter("#### / ####");
+		 } catch (ParseException e) {
+		      e.printStackTrace();
+		 }
+		textField_3 = new JFormattedTextField(mascaraAno);
 		textField_3.setBounds(600, 117, 203, 32);
 		contentPane.add(textField_3);
+		textField_3.setColumns(10);
 		
 		textField_4 = new JTextField();
 		textField_4.setColumns(10);

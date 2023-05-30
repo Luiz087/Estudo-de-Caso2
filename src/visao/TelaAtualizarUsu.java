@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.text.MaskFormatter;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
@@ -13,8 +14,11 @@ import java.awt.Color;
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
+
 import java.awt.SystemColor;
 import java.awt.event.ActionListener;
+import java.text.ParseException;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 
@@ -90,10 +94,16 @@ public class TelaAtualizarUsu extends JFrame {
 		lblCep.setBounds(457, 189, 120, 43);
 		contentPane.add(lblCep);
 		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
+		MaskFormatter mascaraCep = null;
+		try {
+			mascaraCep = new MaskFormatter("#####-###");
+		} catch(ParseException e) {
+			e.printStackTrace();
+		}
+		textField_2 = new JFormattedTextField(mascaraCep);
 		textField_2.setBounds(587, 189, 195, 43);
 		contentPane.add(textField_2);
+		textField_2.setColumns(10);
 		
 		textField_3 = new JTextField();
 		textField_3.setColumns(10);
@@ -127,10 +137,16 @@ public class TelaAtualizarUsu extends JFrame {
 		lblTelefone.setBounds(457, 351, 120, 43);
 		contentPane.add(lblTelefone);
 		
-		textField_5 = new JTextField();
-		textField_5.setColumns(10);
+		MaskFormatter mascaraTel = null;
+		 try {
+		      mascaraTel = new MaskFormatter("(##)#####-####");
+		 } catch (ParseException e) {
+		      e.printStackTrace();
+		 }
+		 textField_5 = new JFormattedTextField(mascaraTel);
 		textField_5.setBounds(587, 351, 195, 43);
 		contentPane.add(textField_5);
+		textField_5.setColumns(10);
 		
 		JButton btnAtualizar = new JButton("Atualizar");
 		btnAtualizar.addActionListener(new ActionListener() {
