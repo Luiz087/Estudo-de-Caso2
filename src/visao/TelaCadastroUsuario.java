@@ -82,7 +82,7 @@ public class TelaCadastroUsuario extends JFrame {
 		contentPane.add(btnVoltarTelaLogin);
 
 		JPanel panel = new JPanel();
-		panel.setBackground(new Color(0, 0, 160));
+		panel.setBackground(new Color(41, 124, 122));
 		panel.setBounds(0, 0, 1380, 822);
 		contentPane.add(panel);
 		panel.setLayout(null);

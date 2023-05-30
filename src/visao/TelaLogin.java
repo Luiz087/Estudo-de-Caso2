@@ -26,6 +26,7 @@ import java.awt.SystemColor;
 import javax.swing.ImageIcon;
 import javax.swing.JTable;
 import javax.swing.JPasswordField;
+import javax.swing.border.LineBorder;
 
 public class TelaLogin extends JFrame {
 
@@ -60,14 +61,14 @@ public class TelaLogin extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1920, 1080);
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(0, 0, 160));
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setBackground(new Color(53, 157, 155));
+		contentPane.setBorder(new EmptyBorder(0, 0, 0, 0));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
 		JPanel fundologin = new JPanel();
-		fundologin.setBackground(new Color(0, 0, 160));
+		fundologin.setBackground(new Color(41, 124, 122));
 		fundologin.setBounds(-106, -198, 1582, 963);
 		contentPane.add(fundologin);
 		fundologin.setLayout(null);
@@ -165,7 +166,7 @@ public class TelaLogin extends JFrame {
 		fundologin.add(btnEntrarFunc);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setBounds(42, 52, 1935, 1074);
+		lblNewLabel.setBounds(143, 62, 1935, 1074);
 		lblNewLabel.setIcon(new ImageIcon(TelaLogin.class.getResource("/visao/Design sem nome (5).png")));
 		fundologin.add(lblNewLabel);
 		

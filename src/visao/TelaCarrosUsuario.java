@@ -62,7 +62,7 @@ public class TelaCarrosUsuario extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1409, 788);
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(0, 0, 160));
+		contentPane.setBackground(new Color(41, 124, 122));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
