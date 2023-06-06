@@ -76,19 +76,6 @@ public class TelaPrincipAdmin extends JFrame {
 		btnNewButton_1_1_1_2_1_1.setBounds(443, 269, 233, 71);
 		contentPane.add(btnNewButton_1_1_1_2_1_1);
 
-		JButton btnNewButton_1_1_1_2_1_1_1 = new JButton("Listar Clientes");
-		btnNewButton_1_1_1_2_1_1_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				TelaListarUsuAdm telaListUsu = new TelaListarUsuAdm();
-				dispose();
-				telaListUsu.setExtendedState(JFrame.MAXIMIZED_BOTH);
-				telaListUsu.setVisible(true);
-			}
-		});
-		btnNewButton_1_1_1_2_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_1_1_1_2_1_1_1.setBounds(758, 378, 233, 71);
-		contentPane.add(btnNewButton_1_1_1_2_1_1_1);
-
 		JButton btnSair = new JButton("Sair");
 		btnSair.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnSair.addActionListener(new ActionListener() {

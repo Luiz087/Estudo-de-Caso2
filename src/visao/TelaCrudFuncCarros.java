@@ -38,7 +38,6 @@ public class TelaCrudFuncCarros extends JFrame {
 	private JLabel lblAno;
 	private JTextField textField_3;
 	private JTextField textField_4;
-	private JButton btnNewButton;
 	private JLabel lblNewLabel_1;
 
 	/**
@@ -187,18 +186,6 @@ public class TelaCrudFuncCarros extends JFrame {
 		lblNewLabel_2.setFont(new Font("Segoe UI Black", Font.BOLD, 38));
 		lblNewLabel_2.setBounds(445, 0, 479, 72);
 		contentPane.add(lblNewLabel_2);
-		
-		btnNewButton = new JButton("Voltar");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				TelaPrincipFunc telaPrincipiFunc = new TelaPrincipFunc();
-				dispose();
-				telaPrincipiFunc.setExtendedState(JFrame.MAXIMIZED_BOTH);
-				telaPrincipiFunc.setVisible(true);
-			}
-		});
-		btnNewButton.setBounds(10, 15, 131, 30);
-		contentPane.add(btnNewButton);
 		
 		lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon(TelaCrudFuncCarros.class.getResource("/visao/Design sem nome (3).png")));

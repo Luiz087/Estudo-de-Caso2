@@ -7,6 +7,7 @@ public class Funcionario extends Pessoa {
 	private String nome;
 	private Long cpf;
 	private String telefone;
+	
 
 	public String getTelefone() {
 		return telefone;
