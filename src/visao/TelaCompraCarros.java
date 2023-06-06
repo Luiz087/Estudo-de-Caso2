@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.text.MaskFormatter;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
@@ -13,7 +14,10 @@ import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
+
 import java.awt.event.ActionListener;
+import java.text.ParseException;
 import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
 import javax.swing.ImageIcon;
@@ -176,10 +180,16 @@ public class TelaCompraCarros extends JFrame {
 		lblNewLabel_1_1_2_1_1_1.setBounds(36, 172, 169, 43);
 		panel.add(lblNewLabel_1_1_2_1_1_1);
 
-		textField_6 = new JTextField();
-		textField_6.setColumns(10);
+		MaskFormatter mascaraTel = null;
+		 try {
+		      mascaraTel = new MaskFormatter("(##)#####-####");
+		 } catch (ParseException e) {
+		      e.printStackTrace();
+		 }
+		textField_6 = new JFormattedTextField(mascaraTel);
 		textField_6.setBounds(99, 172, 373, 43);
 		panel.add(textField_6);
+		textField_6.setColumns(10);
 
 		JLabel lblNewLabel_1_1_2_1_1_2 = new JLabel("CEP:");
 		lblNewLabel_1_1_2_1_1_2.setForeground(Color.WHITE);
@@ -187,10 +197,16 @@ public class TelaCompraCarros extends JFrame {
 		lblNewLabel_1_1_2_1_1_2.setBounds(36, 119, 70, 42);
 		panel.add(lblNewLabel_1_1_2_1_1_2);
 
-		textField_7 = new JTextField();
-		textField_7.setColumns(10);
+		MaskFormatter mascaraCep = null;
+		try {
+			mascaraCep = new MaskFormatter("#####-###");
+		} catch(ParseException e) {
+			e.printStackTrace();
+		}
+		textField_7 = new JFormattedTextField(mascaraCep);
 		textField_7.setBounds(99, 119, 373, 43);
 		panel.add(textField_7);
+		textField_7.setColumns(10);
 
 		JLabel lblNewLabel_1_1_2_1_1_2_1 = new JLabel("CPF:");
 		lblNewLabel_1_1_2_1_1_2_1.setForeground(Color.WHITE);
@@ -198,10 +214,16 @@ public class TelaCompraCarros extends JFrame {
 		lblNewLabel_1_1_2_1_1_2_1.setBounds(36, 65, 70, 43);
 		panel.add(lblNewLabel_1_1_2_1_1_2_1);
 
-		textField_8 = new JTextField();
-		textField_8.setColumns(10);
+		MaskFormatter mascaraCpf = null;
+		try {
+			mascaraCpf = new MaskFormatter("###.###.###-##");
+		} catch(ParseException e) {
+			e.printStackTrace();
+		}
+		textField_8 = new JFormattedTextField(mascaraCpf);
 		textField_8.setBounds(99, 66, 373, 44);
 		panel.add(textField_8);
+		textField_8.setColumns(10);
 
 		JLabel lblNewLabel_1_1_2_1_1_2_1_1 = new JLabel("Nome:");
 		lblNewLabel_1_1_2_1_1_2_1_1.setForeground(Color.WHITE);
