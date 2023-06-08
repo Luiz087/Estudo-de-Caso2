@@ -30,9 +30,9 @@ import java.awt.event.MouseEvent;
 public class TelaCrudFuncCarros extends JFrame {
 
 	private JPanel contentPane;
-	private JLabel lblNewLabel;
+	private JLabel lblModelo;
 	private JTextField textPreco;
-	private JLabel lblPreo;
+	private JLabel lblPreco;
 	private JLabel lblMarca;
 	private JTextField textMarca;
 	private JTextField textCor;
@@ -74,24 +74,24 @@ public class TelaCrudFuncCarros extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		lblNewLabel = new JLabel("Modelo:");
-		lblNewLabel.setBounds(478, 74, 112, 32);
-		lblNewLabel.setForeground(new Color(255, 255, 255));
-		lblNewLabel.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 26));
-		contentPane.add(lblNewLabel);
+		lblModelo = new JLabel("Modelo:");
+		lblModelo.setBounds(478, 74, 112, 32);
+		lblModelo.setForeground(new Color(255, 255, 255));
+		lblModelo.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblModelo.setFont(new Font("Tahoma", Font.PLAIN, 26));
+		contentPane.add(lblModelo);
 		
 		textPreco = new JTextField();
 		textPreco.setBounds(600, 246, 203, 32);
 		textPreco.setColumns(10);
 		contentPane.add(textPreco);
 		
-		lblPreo = new JLabel("Preço:");
-		lblPreo.setBounds(478, 246, 112, 32);
-		lblPreo.setForeground(new Color(255, 255, 255));
-		lblPreo.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblPreo.setFont(new Font("Tahoma", Font.PLAIN, 26));
-		contentPane.add(lblPreo);
+		lblPreco = new JLabel("Preço:");
+		lblPreco.setBounds(478, 246, 112, 32);
+		lblPreco.setForeground(new Color(255, 255, 255));
+		lblPreco.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblPreco.setFont(new Font("Tahoma", Font.PLAIN, 26));
+		contentPane.add(lblPreco);
 		
 		lblMarca = new JLabel("Marca:");
 		lblMarca.setBounds(478, 203, 112, 32);
