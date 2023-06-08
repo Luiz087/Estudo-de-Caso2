@@ -164,10 +164,10 @@ public class TelaCrudFuncCarros extends JFrame {
 		btnAdd.setBounds(472, 313, 136, 46);
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(textModelo.getText().equals("") || textCor.getText().equals("") || textMarca.getText().equals("") || textPreco.getText().equals("")) {
+				if(textModelo.getText().equals("") || textCor.getText().equals("") || textMarca.getText().equals("") || textPreco.getText().equals("") ||  textAno.getText().equals("")) {
 					JOptionPane.showMessageDialog(null, "Insira todas as colunas!");
 				} else {
-					String data[] = {textModelo.getText(), textCor.getText(), textMarca.getText(), textPreco.getText()};
+					String data[] = {textModelo.getText(), textCor.getText(), textMarca.getText(), textPreco.getText(), textAno.getText()};
 					DefaultTableModel tblModel = (DefaultTableModel)Table1.getModel();
 					tblModel.addRow(data);
 					JOptionPane.showMessageDialog(null, "Carro adicionado com sucesso!");
@@ -231,7 +231,7 @@ public class TelaCrudFuncCarros extends JFrame {
 				String tblCor = tblModel.getValueAt(Table1.getSelectedRow(), 1).toString();
 				String tblMarca = tblModel.getValueAt(Table1.getSelectedRow(), 2).toString();
 				String tblPreco = tblModel.getValueAt(Table1.getSelectedRow(), 3).toString();
-				
+				 
 				textModelo.setText(tblModelo);
 				textCor.setText(tblCor);
 				textMarca.setText(tblMarca);
