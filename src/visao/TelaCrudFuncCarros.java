@@ -238,9 +238,6 @@ public class TelaCrudFuncCarros extends JFrame {
 				textPreco.setText(tblPreco);
 			}
 		});
-		lblNewLabel_1.setBounds(183, 0, 1177, 777);
-		lblNewLabel_1.setIcon(new ImageIcon(TelaCrudFuncCarros.class.getResource("/visao/Design sem nome (3).png")));
-		contentPane.add(lblNewLabel_1);
 		
 		scrollPane = new JScrollPane();
 		scrollPane.setBounds(391, 394, 558, 310);
@@ -255,5 +252,8 @@ public class TelaCrudFuncCarros extends JFrame {
 				"Modelo", "Cor", "Marca", "Preco"
 			}
 		));
+		lblNewLabel_1.setBounds(183, 0, 1177, 777);
+		lblNewLabel_1.setIcon(new ImageIcon(TelaCrudFuncCarros.class.getResource("/visao/Design sem nome (3).png")));
+		contentPane.add(lblNewLabel_1);
 	}
 }
