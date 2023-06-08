@@ -23,22 +23,26 @@ import java.awt.event.ActionListener;
 import java.text.ParseException;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
+import javax.swing.JCheckBox;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class TelaCrudFuncCarros extends JFrame {
 
 	private JPanel contentPane;
-	private JTable table;
 	private JLabel lblNewLabel;
-	private JTextField textField;
+	private JTextField textPreco;
 	private JLabel lblPreo;
 	private JLabel lblMarca;
-	private JTextField textField_1;
-	private JTextField textField_2;
+	private JTextField textMarca;
+	private JTextField textCor;
 	private JLabel lblCor;
 	private JLabel lblAno;
-	private JTextField textField_3;
-	private JTextField textField_4;
+	private JTextField textAno;
+	private JTextField textModelo;
 	private JLabel lblNewLabel_1;
+	private JTable Table1;
+	private JScrollPane scrollPane;
 
 	/**
 	 * Launch the application.
@@ -70,68 +74,54 @@ public class TelaCrudFuncCarros extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(277, 408, 815, 274);
-		contentPane.add(scrollPane);
-		
-		table = new JTable();
-		table.setModel(new DefaultTableModel(
-			new Object[][] {
-			},
-			new String[] {
-				"Modelo", "Ano", "Cor", "Marca", "Pre\u00E7o"
-			}
-		));
-		scrollPane.setViewportView(table);
-		
 		lblNewLabel = new JLabel("Modelo:");
+		lblNewLabel.setBounds(478, 74, 112, 32);
 		lblNewLabel.setForeground(new Color(255, 255, 255));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 26));
-		lblNewLabel.setBounds(478, 74, 112, 32);
 		contentPane.add(lblNewLabel);
 		
-		textField = new JTextField();
-		textField.setColumns(10);
-		textField.setBounds(600, 246, 203, 32);
-		contentPane.add(textField);
+		textPreco = new JTextField();
+		textPreco.setBounds(600, 246, 203, 32);
+		textPreco.setColumns(10);
+		contentPane.add(textPreco);
 		
 		lblPreo = new JLabel("Preço:");
+		lblPreo.setBounds(478, 246, 112, 32);
 		lblPreo.setForeground(new Color(255, 255, 255));
 		lblPreo.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblPreo.setFont(new Font("Tahoma", Font.PLAIN, 26));
-		lblPreo.setBounds(478, 246, 112, 32);
 		contentPane.add(lblPreo);
 		
 		lblMarca = new JLabel("Marca:");
+		lblMarca.setBounds(478, 203, 112, 32);
 		lblMarca.setForeground(new Color(255, 255, 255));
 		lblMarca.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblMarca.setFont(new Font("Tahoma", Font.PLAIN, 26));
-		lblMarca.setBounds(478, 203, 112, 32);
 		contentPane.add(lblMarca);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(600, 203, 203, 32);
-		contentPane.add(textField_1);
+		textMarca = new JTextField();
+		textMarca.setBounds(600, 203, 203, 32);
+		textMarca.setColumns(10);
+		contentPane.add(textMarca);
 		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
-		textField_2.setBounds(600, 160, 203, 32);
-		contentPane.add(textField_2);
+		textCor = new JTextField();
+		textCor.setBounds(600, 160, 203, 32);
+		textCor.setColumns(10);
+		contentPane.add(textCor);
 		
 		lblCor = new JLabel("Cor:");
+		lblCor.setBounds(478, 160, 112, 32);
 		lblCor.setForeground(new Color(255, 255, 255));
 		lblCor.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblCor.setFont(new Font("Tahoma", Font.PLAIN, 26));
-		lblCor.setBounds(478, 160, 112, 32);
 		contentPane.add(lblCor);
 		
 		lblAno = new JLabel("Ano:");
+		lblAno.setBounds(478, 117, 112, 32);
 		lblAno.setForeground(new Color(255, 255, 255));
 		lblAno.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblAno.setFont(new Font("Tahoma", Font.PLAIN, 26));
-		lblAno.setBounds(478, 117, 112, 32);
 		contentPane.add(lblAno);
 		
 		MaskFormatter mascaraAno = null;
@@ -140,56 +130,130 @@ public class TelaCrudFuncCarros extends JFrame {
 		 } catch (ParseException e) {
 		      e.printStackTrace();
 		 }
-		textField_3 = new JFormattedTextField(mascaraAno);
-		textField_3.setBounds(600, 117, 203, 32);
-		contentPane.add(textField_3);
-		textField_3.setColumns(10);
+		textAno = new JFormattedTextField(mascaraAno);
+		textAno.setBounds(600, 117, 203, 32);
+		contentPane.add(textAno);
+		textAno.setColumns(10);
 		
-		textField_4 = new JTextField();
-		textField_4.setColumns(10);
-		textField_4.setBounds(600, 74, 203, 32);
-		contentPane.add(textField_4);
+		textModelo = new JTextField();
+		textModelo.setBounds(600, 74, 203, 32);
+		textModelo.setColumns(10);
+		contentPane.add(textModelo);
 		
-		JButton btnNewButton_1 = new JButton("Remover");
-		btnNewButton_1.addActionListener(new ActionListener() {
+		JButton btnDelete = new JButton("Remover");
+		btnDelete.setBounds(618, 313, 136, 46);
+		btnDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, "Carro removido com sucesso!");
+				DefaultTableModel tblModel = (DefaultTableModel) Table1.getModel();
+				if(Table1.getSelectedRowCount()==1){
+					tblModel.removeRow(Table1.getSelectedRow());
+			}else {
+				if(Table1.getRowCount()==0){
+					JOptionPane.showMessageDialog(null, "Carro removido com sucesso!");
+				}else {
+					JOptionPane.showMessageDialog(null, "Selecione apenas um para deletar!");
+
+				}
+			}
+		}
+		});
+		btnDelete.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		contentPane.add(btnDelete);
+		
+		JButton btnAdd = new JButton("Adicionar");
+		btnAdd.setBounds(472, 313, 136, 46);
+		btnAdd.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(textModelo.getText().equals("") || textCor.getText().equals("") || textMarca.getText().equals("") || textPreco.getText().equals("")) {
+					JOptionPane.showMessageDialog(null, "Insira todas as colunas!");
+				} else {
+					String data[] = {textModelo.getText(), textCor.getText(), textMarca.getText(), textPreco.getText()};
+					DefaultTableModel tblModel = (DefaultTableModel)Table1.getModel();
+					tblModel.addRow(data);
+					JOptionPane.showMessageDialog(null, "Carro adicionado com sucesso!");
+					
+					textModelo.setText("");	
+					textAno.setText("");	
+					textCor.setText("");	
+					textMarca.setText("");	
+					textPreco.setText("");	
+				}				
 			}
 		});
-		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_1.setBounds(618, 313, 136, 46);
-		contentPane.add(btnNewButton_1);
+		btnAdd.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		contentPane.add(btnAdd);
 		
-		JButton btnNewButton_1_1 = new JButton("Adicionar");
-		btnNewButton_1_1.addActionListener(new ActionListener() {
+		JButton btnUpdate = new JButton("Atualizar");
+		btnUpdate.setBounds(764, 313, 136, 46);
+		btnUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, "Carro adicionado com sucesso!");
+				DefaultTableModel tblModel = (DefaultTableModel) Table1.getModel();
+				if(Table1.getSelectedRowCount() == 1) {
+					String Modelo = textModelo.getText();
+					String Ano = textModelo.getText();
+					String Cor = textModelo.getText();
+					String Marca = textModelo.getText();
+					String Preco = textModelo.getText();
+				
+					tblModel.setValueAt(Modelo, Table1.getSelectedRow(), 0);
+					tblModel.setValueAt(Ano, Table1.getSelectedRow(), 1);
+					tblModel.setValueAt(Cor, Table1.getSelectedRow(), 2);
+					tblModel.setValueAt(Marca, Table1.getSelectedRow(), 3);
+					tblModel.setValueAt(Preco, Table1.getSelectedRow(), 4);
+					
+					JOptionPane.showMessageDialog(null, "Carro atualizado com sucesso!");
+
+				} else {
+					if(Table1.getRowCount()== 0) {
+						JOptionPane.showMessageDialog(null, "Tabela imcompleta!");
+					}else {
+						JOptionPane.showMessageDialog(null, "Selecione um carro para atualizar!");
+					}
+				}
 			}
 		});
-		btnNewButton_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_1_1.setBounds(472, 313, 136, 46);
-		contentPane.add(btnNewButton_1_1);
-		
-		JButton btnNewButton_1_2 = new JButton("Atualizar");
-		btnNewButton_1_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, "Carro atualizado com sucesso!");
-			}
-		});
-		btnNewButton_1_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_1_2.setBounds(764, 313, 136, 46);
-		contentPane.add(btnNewButton_1_2);
+		btnUpdate.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		contentPane.add(btnUpdate);
 		
 		JLabel lblNewLabel_2 = new JLabel("Lista de Carros");
+		lblNewLabel_2.setBounds(445, 0, 479, 72);
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_2.setForeground(new Color(255, 255, 255));
 		lblNewLabel_2.setFont(new Font("Segoe UI Black", Font.BOLD, 38));
-		lblNewLabel_2.setBounds(445, 0, 479, 72);
 		contentPane.add(lblNewLabel_2);
 		
 		lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon(TelaCrudFuncCarros.class.getResource("/visao/Design sem nome (3).png")));
+		lblNewLabel_1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				DefaultTableModel tblModel = (DefaultTableModel)Table1.getModel();
+				String tblModelo = tblModel.getValueAt(Table1.getSelectedRow(), 0).toString();
+				String tblCor = tblModel.getValueAt(Table1.getSelectedRow(), 1).toString();
+				String tblMarca = tblModel.getValueAt(Table1.getSelectedRow(), 2).toString();
+				String tblPreco = tblModel.getValueAt(Table1.getSelectedRow(), 3).toString();
+				
+				textModelo.setText(tblModelo);
+				textCor.setText(tblCor);
+				textMarca.setText(tblMarca);
+				textPreco.setText(tblPreco);
+			}
+		});
 		lblNewLabel_1.setBounds(183, 0, 1177, 777);
+		lblNewLabel_1.setIcon(new ImageIcon(TelaCrudFuncCarros.class.getResource("/visao/Design sem nome (3).png")));
 		contentPane.add(lblNewLabel_1);
+		
+		scrollPane = new JScrollPane();
+		scrollPane.setBounds(391, 394, 558, 310);
+		contentPane.add(scrollPane);
+		
+		Table1 = new JTable();
+		scrollPane.setViewportView(Table1);
+		Table1.setModel(new DefaultTableModel(
+			new Object[][] {
+			},
+			new String[] {
+				"Modelo", "Cor", "Marca", "Preco"
+			}
+		));
 	}
 }
