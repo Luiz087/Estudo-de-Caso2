@@ -64,7 +64,8 @@ public class TelaPrincipAdmin extends JFrame {
 		contentPane.add(lblFunesDeFuncionrio);
 
 		JButton btnNewButton_1_1_1_2_1_1 = new JButton("Listar Funcionários");
-		btnNewButton_1_1_1_2_1_1.addActionListener(new ActionListener() {
+		btnNewButton_1_1_1_2_1_1.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(0, 0, 0), 3));
+	       btnNewButton_1_1_1_2_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaCrudAdminFunc telaCrudAdminFunci = new TelaCrudAdminFunc();
 				dispose();
@@ -73,12 +74,18 @@ public class TelaPrincipAdmin extends JFrame {
 			}
 		});
 		btnNewButton_1_1_1_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_1_1_1_2_1_1.setBounds(443, 269, 233, 71);
+		btnNewButton_1_1_1_2_1_1.setBounds(443, 371, 233, 71);
 		contentPane.add(btnNewButton_1_1_1_2_1_1);
 
+
 		JButton btnSair = new JButton("Sair");
+		btnSair.setForeground(new Color(255, 0, 0));
 		btnSair.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnSair.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(0, 0, 0), 3));
+
+		
 		btnSair.addActionListener(new ActionListener() {
+			
 			public void actionPerformed(ActionEvent e) {
 				TelaLogin telaLoginUsu = new TelaLogin();
 				dispose();
@@ -91,6 +98,7 @@ public class TelaPrincipAdmin extends JFrame {
 		contentPane.add(btnSair);
 
 		JButton btnNewButton_1_1_1_1_1 = new JButton("Listar Carro");
+		btnNewButton_1_1_1_1_1.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(0, 0, 0), 3));
 		btnNewButton_1_1_1_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaCrudAdmCarros telaCrudCarros = new TelaCrudAdmCarros();
@@ -100,10 +108,11 @@ public class TelaPrincipAdmin extends JFrame {
 			}
 		});
 		btnNewButton_1_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_1_1_1_1_1.setBounds(758, 269, 233, 71);
+		btnNewButton_1_1_1_1_1.setBounds(745, 275, 233, 71);
 		contentPane.add(btnNewButton_1_1_1_1_1);
 
 		JButton btnNewButton_1_1_1_2_1_1_2 = new JButton("Listar Carros Vendidos");
+		btnNewButton_1_1_1_2_1_1_2.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(0, 0, 0), 3));
 		btnNewButton_1_1_1_2_1_1_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaListarComprasAdm telaCarrosComprados = new TelaListarComprasAdm();
@@ -113,7 +122,7 @@ public class TelaPrincipAdmin extends JFrame {
 			}
 		});
 		btnNewButton_1_1_1_2_1_1_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_1_1_1_2_1_1_2.setBounds(443, 378, 233, 71);
+		btnNewButton_1_1_1_2_1_1_2.setBounds(443, 275, 233, 71);
 		contentPane.add(btnNewButton_1_1_1_2_1_1_2);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
