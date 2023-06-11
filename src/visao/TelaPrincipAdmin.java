@@ -97,7 +97,7 @@ public class TelaPrincipAdmin extends JFrame {
 		btnSair.setBounds(10, 15, 131, 30);
 		contentPane.add(btnSair);
 
-		JButton btnNewButton_1_1_1_1_1 = new JButton("Listar Carro");
+		JButton btnNewButton_1_1_1_1_1 = new JButton("Listar Carros");
 		btnNewButton_1_1_1_1_1.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(0, 0, 0), 3));
 		btnNewButton_1_1_1_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
