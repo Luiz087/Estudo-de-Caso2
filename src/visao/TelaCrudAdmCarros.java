@@ -18,9 +18,13 @@ import javax.swing.JFormattedTextField;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.text.MaskFormatter;
 
+import controle.CarrovendidoDAO;
+import modelo.Carro;
+
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 
@@ -40,6 +44,8 @@ public class TelaCrudAdmCarros extends JFrame {
 	private JTextField textModelo;
 	private JButton btnNewButton;
 	private JLabel lblNewLabel_1;
+	private JButton btnVender;
+	private CarrovendidoDAO vendido;
 
 	/**
 	 * Launch the application.
@@ -61,6 +67,8 @@ public class TelaCrudAdmCarros extends JFrame {
 	 * Create the frame.
 	 */
 	public TelaCrudAdmCarros() {
+		Carro carro = new Carro();
+		ArrayList<Carro> venderCarro = new ArrayList<>();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1408, 788);
 		contentPane = new JPanel();
@@ -136,7 +144,7 @@ public class TelaCrudAdmCarros extends JFrame {
 		
 		MaskFormatter mascaraAno = null;
 		 try {
-		      mascaraAno = new MaskFormatter("#### / ####");
+		      mascaraAno = new MaskFormatter("####");
 		 } catch (ParseException e) {
 		      e.printStackTrace();
 		 }
@@ -167,7 +175,7 @@ public class TelaCrudAdmCarros extends JFrame {
 		}
 		});
 		btnDelete.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnDelete.setBounds(618, 313, 136, 46);
+		btnDelete.setBounds(553, 313, 136, 46);
 		contentPane.add(btnDelete);
 		
 		JButton btnAdd = new JButton("Adicionar");
@@ -190,7 +198,7 @@ public class TelaCrudAdmCarros extends JFrame {
 			}
 		});
 		btnAdd.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnAdd.setBounds(472, 313, 136, 46);
+		btnAdd.setBounds(407, 313, 136, 46);
 		contentPane.add(btnAdd);
 		
 		JButton btnUpdate = new JButton("Atualizar");
@@ -222,7 +230,7 @@ public class TelaCrudAdmCarros extends JFrame {
 			}
 		});
 		btnUpdate.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnUpdate.setBounds(764, 313, 136, 46);
+		btnUpdate.setBounds(699, 313, 136, 46);
 		contentPane.add(btnUpdate);
 		
 		JLabel lblNewLabel_2 = new JLabel("Lista de Carros");
@@ -243,6 +251,51 @@ public class TelaCrudAdmCarros extends JFrame {
 		});
 		btnNewButton.setBounds(10, 15, 131, 30);
 		contentPane.add(btnNewButton);
+		
+		btnVender = new JButton("Vender");
+		btnVender.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
+				if(table.getSelectedRowCount()==1){
+					
+					Carro carro1 = new Carro();
+					
+					int setar = table.getSelectedRow();
+					
+					textModelo.setText(table.getModel().getValueAt(setar, 0).toString());
+					textAno.setText(table.getModel().getValueAt(setar, 1).toString());
+					textCor.setText(table.getModel().getValueAt(setar, 2).toString());
+					textMarca.setText(table.getModel().getValueAt(setar, 3).toString());
+					textPreco.setText(table.getModel().getValueAt(setar, 4).toString());
+					
+					String modelo = textModelo.getText();
+					String ano = textAno.getText();
+					String cor = textCor.getText();
+					String marca = textMarca.getText();
+					String preco = textPreco.getText();
+					
+					carro1.setModelo(modelo);
+					carro1.setAno(Integer.valueOf(ano));
+					carro1.setCor(cor);
+					carro1.setMarca(marca);
+					carro1.setPreco(Double.valueOf(preco));
+					
+					vendido = CarrovendidoDAO.getInstancia();
+					vendido.inserir(carro1);
+					
+					tblModel.removeRow(table.getSelectedRow());
+				}else {
+					if(table.getRowCount()==0){
+						JOptionPane.showMessageDialog(null, "Carro vendido com sucesso!");
+					}else {
+						JOptionPane.showMessageDialog(null, "Selecione apenas carro um para vender!");
+					}
+				}
+			}
+		});
+		btnVender.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnVender.setBounds(845, 313, 136, 46);
+		contentPane.add(btnVender);
 		
 		lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon(TelaCrudAdmCarros.class.getResource("/visao/Design sem nome (3).png")));

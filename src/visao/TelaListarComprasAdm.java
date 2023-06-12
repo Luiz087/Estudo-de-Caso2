@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Font;
@@ -15,6 +16,10 @@ import java.awt.SystemColor;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+
+import controle.CarrovendidoDAO;
+import modelo.Carro;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
@@ -23,11 +28,13 @@ public class TelaListarComprasAdm extends JFrame {
 
 	private JPanel contentPane;
 	private JTable table;
+	private CarrovendidoDAO vendidoDAO;
 
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -44,6 +51,7 @@ public class TelaListarComprasAdm extends JFrame {
 	 * Create the frame.
 	 */
 	public TelaListarComprasAdm() {
+		
 		setTitle("Tela de Listagem de Funcionários");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1386, 1034);
@@ -85,9 +93,28 @@ public class TelaListarComprasAdm extends JFrame {
 			new String[] {
 				"Modelo", "Ano", "Cor", "Marca", "Pre\u00E7o"
 			}
+			
+			
+			
 		));
 		
 		scrollPane.setViewportView(table);
+		
+		
+		
+		try {
+			for (Carro qtdCarro : vendidoDAO.listarCarros()) {
+				String ano = String.valueOf(qtdCarro.getAno());
+				String preco = String.valueOf(qtdCarro.getPreco());
+				
+				String data[] = {qtdCarro.getModelo(), ano, qtdCarro.getCor(), qtdCarro.getMarca(), preco};
+				DefaultTableModel tblModel = (DefaultTableModel)table.getModel();
+				tblModel.addRow(data);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(TelaListarComprasAdm.class.getResource("/visao/Design sem nome (3).png")));

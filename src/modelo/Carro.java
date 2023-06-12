@@ -17,8 +17,8 @@ public class Carro {
 	public Integer getAno() {
 		return ano;
 	}
-	public void setAno(Integer ano) {
-		this.ano = ano;
+	public void setAno(Integer integer) {
+		this.ano = integer;
 	}
 	public String getCor() {
 		return cor;
