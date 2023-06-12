@@ -100,21 +100,15 @@ public class TelaListarComprasAdm extends JFrame {
 		
 		scrollPane.setViewportView(table);
 		
-		
-		
-		try {
-			for (Carro qtdCarro : vendidoDAO.listarCarros()) {
-				String ano = String.valueOf(qtdCarro.getAno());
-				String preco = String.valueOf(qtdCarro.getPreco());
-				
-				String data[] = {qtdCarro.getModelo(), ano, qtdCarro.getCor(), qtdCarro.getMarca(), preco};
-				DefaultTableModel tblModel = (DefaultTableModel)table.getModel();
-				tblModel.addRow(data);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
+		vendidoDAO = CarrovendidoDAO.getInstancia();
+		for (Carro qtdCarro : vendidoDAO.listarCarros()) {
+			String ano = String.valueOf(qtdCarro.getAno());
+			String preco = String.valueOf(qtdCarro.getPreco());
+			
+			String data[] = {qtdCarro.getModelo(), ano, qtdCarro.getCor(), qtdCarro.getMarca(), preco};
+			DefaultTableModel tblModel = (DefaultTableModel)table.getModel();
+			tblModel.addRow(data);
 		}
-		
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(TelaListarComprasAdm.class.getResource("/visao/Design sem nome (3).png")));
