@@ -148,7 +148,7 @@ public class TelaLogin extends JFrame {
 
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setBounds(83, 198, 987, 754);
-		lblNewLabel_1.setIcon(new ImageIcon(TelaLogin.class.getResource("/visao/Design sem nome (3).png")));
+		lblNewLabel_1.setIcon(new ImageIcon(TelaLogin.class.getResource("/visao/logo bem transparente.png")));
 		fundologin.add(lblNewLabel_1);
 
 	}

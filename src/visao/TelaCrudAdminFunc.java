@@ -197,7 +197,7 @@ public class TelaCrudAdminFunc extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon(TelaCrudAdminFunc.class.getResource("/visao/Design sem nome (3).png")));
+		lblNewLabel_2.setIcon(new ImageIcon(TelaCrudAdminFunc.class.getResource("/visao/logo bem transparente.png")));
 		lblNewLabel_2.setBounds(178, 0, 1011, 749);
 		contentPane.add(lblNewLabel_2);
 	}

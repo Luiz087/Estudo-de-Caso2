@@ -291,7 +291,7 @@ public class TelaCrudFuncCarros extends JFrame {
 		
 		lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setBounds(183, 0, 1177, 777);
-		lblNewLabel_1.setIcon(new ImageIcon(TelaCrudFuncCarros.class.getResource("/visao/Design sem nome (3).png")));
+		lblNewLabel_1.setIcon(new ImageIcon(TelaCrudFuncCarros.class.getResource("/visao/logo bem transparente.png")));
 		contentPane.add(lblNewLabel_1);
 	}
 }

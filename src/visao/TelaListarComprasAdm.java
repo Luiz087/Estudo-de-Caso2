@@ -111,7 +111,7 @@ public class TelaListarComprasAdm extends JFrame {
 		}
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(TelaListarComprasAdm.class.getResource("/visao/Design sem nome (3).png")));
+		lblNewLabel.setIcon(new ImageIcon(TelaListarComprasAdm.class.getResource("/visao/logo bem transparente.png")));
 		lblNewLabel.setBounds(187, 0, 1079, 774);
 		contentPane.add(lblNewLabel);
 	}

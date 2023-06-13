@@ -299,7 +299,7 @@ public class TelaCrudAdmCarros extends JFrame {
 		contentPane.add(btnVender);
 
 		lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon(TelaCrudAdmCarros.class.getResource("/visao/Design sem nome (3).png")));
+		lblNewLabel_1.setIcon(new ImageIcon(TelaCrudAdmCarros.class.getResource("/visao/logo bem transparente.png")));
 		lblNewLabel_1.setBounds(183, 0, 1045, 749);
 		contentPane.add(lblNewLabel_1);
 	}

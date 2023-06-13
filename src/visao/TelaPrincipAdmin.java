@@ -101,7 +101,7 @@ public class TelaPrincipAdmin extends JFrame {
 				telaLoginUsu.setVisible(true);
 			}
 		});
-		btnSair.setBackground(SystemColor.info);
+		btnSair.setBackground(new Color(255, 255, 255));
 		btnSair.setBounds(10, 15, 131, 30);
 		contentPane.add(btnSair);
 
@@ -132,7 +132,7 @@ public class TelaPrincipAdmin extends JFrame {
 		contentPane.add(btnNewButton_1_1_1_2_1_1_2);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon(TelaPrincipAdmin.class.getResource("/visao/Design sem nome (3).png")));
+		lblNewLabel_1.setIcon(new ImageIcon(TelaPrincipAdmin.class.getResource("/visao/logo bem transparente.png")));
 		lblNewLabel_1.setBounds(195, 0, 1370, 749);
 		contentPane.add(lblNewLabel_1);
 	}
