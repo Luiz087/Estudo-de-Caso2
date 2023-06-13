@@ -159,6 +159,7 @@ public class TelaCrudAdmCarros extends JFrame {
 		contentPane.add(textModelo);
 		
 		JButton btnDelete = new JButton("Remover");
+		btnDelete.setIcon(new ImageIcon(TelaCrudAdmCarros.class.getResource("/visao/trash-10-xxl (1).png")));
 		btnDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
@@ -175,10 +176,11 @@ public class TelaCrudAdmCarros extends JFrame {
 		}
 		});
 		btnDelete.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnDelete.setBounds(553, 313, 136, 46);
+		btnDelete.setBounds(557, 313, 136, 46);
 		contentPane.add(btnDelete);
 		
 		JButton btnAdd = new JButton("Adicionar");
+		btnAdd.setIcon(new ImageIcon(TelaCrudAdmCarros.class.getResource("/visao/Green-Add-Button-PNG-HD1.png")));
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(textModelo.getText().equals("") ||  textAno.getText().equals("") || textCor.getText().equals("") || textMarca.getText().equals("") || textPreco.getText().equals("") ) {
@@ -198,10 +200,11 @@ public class TelaCrudAdmCarros extends JFrame {
 			}
 		});
 		btnAdd.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnAdd.setBounds(407, 313, 136, 46);
+		btnAdd.setBounds(392, 313, 155, 46);
 		contentPane.add(btnAdd);
 		
 		JButton btnUpdate = new JButton("Atualizar");
+		btnUpdate.setIcon(new ImageIcon(TelaCrudAdmCarros.class.getResource("/visao/NicePng_refresh-icon-png_2047577 (1).png")));
 		btnUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
@@ -230,7 +233,7 @@ public class TelaCrudAdmCarros extends JFrame {
 			}
 		});
 		btnUpdate.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnUpdate.setBounds(699, 313, 136, 46);
+		btnUpdate.setBounds(703, 313, 145, 46);
 		contentPane.add(btnUpdate);
 		
 		JLabel lblNewLabel_2 = new JLabel("Lista de Carros");
@@ -253,6 +256,7 @@ public class TelaCrudAdmCarros extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		btnVender = new JButton("Vender");
+		btnVender.setIcon(new ImageIcon(TelaCrudAdmCarros.class.getResource("/visao/—Pngtree—pack cash icon cartoon style_5208194 (1).png")));
 		btnVender.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
@@ -294,7 +298,7 @@ public class TelaCrudAdmCarros extends JFrame {
 			}
 		});
 		btnVender.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnVender.setBounds(845, 313, 136, 46);
+		btnVender.setBounds(858, 313, 136, 46);
 		contentPane.add(btnVender);
 		
 		lblNewLabel_1 = new JLabel("");

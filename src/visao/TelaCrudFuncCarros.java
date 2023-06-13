@@ -146,6 +146,7 @@ public class TelaCrudFuncCarros extends JFrame {
 		contentPane.add(textModelo);
 		
 		JButton btnDelete = new JButton("Remover");
+		btnDelete.setIcon(new ImageIcon(TelaCrudFuncCarros.class.getResource("/visao/trash-10-xxl (1).png")));
 		btnDelete.setBounds(531, 312, 136, 46);
 		btnDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -165,7 +166,8 @@ public class TelaCrudFuncCarros extends JFrame {
 		contentPane.add(btnDelete);
 		
 		JButton btnAdd = new JButton("Adicionar");
-		btnAdd.setBounds(385, 312, 136, 46);
+		btnAdd.setIcon(new ImageIcon(TelaCrudFuncCarros.class.getResource("/visao/Green-Add-Button-PNG-HD1.png")));
+		btnAdd.setBounds(375, 312, 146, 46);
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(textModelo.getText().equals("") ||  textAno.getText().equals("") || textCor.getText().equals("") || textMarca.getText().equals("") || textPreco.getText().equals("")) {
@@ -188,6 +190,7 @@ public class TelaCrudFuncCarros extends JFrame {
 		contentPane.add(btnAdd);
 		
 		JButton btnUpdate = new JButton("Atualizar");
+		btnUpdate.setIcon(new ImageIcon(TelaCrudFuncCarros.class.getResource("/visao/NicePng_refresh-icon-png_2047577 (1).png")));
 		btnUpdate.setBounds(677, 312, 136, 46);
 		btnUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -241,6 +244,7 @@ public class TelaCrudFuncCarros extends JFrame {
 		));
 		
 		JButton btnVender = new JButton("Vender");
+		btnVender.setIcon(new ImageIcon(TelaCrudFuncCarros.class.getResource("/visao/—Pngtree—pack cash icon cartoon style_5208194 (1).png")));
 		btnVender.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				DefaultTableModel tblModel = (DefaultTableModel) Table1.getModel();

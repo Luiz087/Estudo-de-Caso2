@@ -101,7 +101,7 @@ public class TelaLogin extends JFrame {
 		JButton btnLoginUsuario = new JButton("ENTRAR");
 		btnLoginUsuario.setBounds(494, 629, 215, 43);
 		fundologin.add(btnLoginUsuario);
-		btnLoginUsuario.setBackground(SystemColor.info);
+		btnLoginUsuario.setBackground(new Color(255, 255, 255));
 		btnLoginUsuario.addActionListener(new ActionListener() {
 			@SuppressWarnings("unlikely-arg-type")
 			public void actionPerformed(ActionEvent e) {

@@ -145,6 +145,7 @@ public class TelaCrudAdminFunc extends JFrame {
 		contentPane.add(textField_4);
 		
 		JButton btnNewButton_1 = new JButton("Remover");
+		btnNewButton_1.setIcon(new ImageIcon(TelaCrudAdminFunc.class.getResource("/visao/trash-10-xxl (1).png")));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JOptionPane.showMessageDialog(null, "Funcionário removido com sucesso!");
@@ -155,16 +156,18 @@ public class TelaCrudAdminFunc extends JFrame {
 		contentPane.add(btnNewButton_1);
 		
 		JButton btnNewButton_1_1 = new JButton("Adicionar");
+		btnNewButton_1_1.setIcon(new ImageIcon(TelaCrudAdminFunc.class.getResource("/visao/Green-Add-Button-PNG-HD1.png")));
 		btnNewButton_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JOptionPane.showMessageDialog(null, "Funcionário adicionado com sucesso!");
 			}
 		});
 		btnNewButton_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_1_1.setBounds(471, 289, 136, 46);
+		btnNewButton_1_1.setBounds(457, 289, 150, 46);
 		contentPane.add(btnNewButton_1_1);
 		
 		JButton btnNewButton_1_2 = new JButton("Atualizar");
+		btnNewButton_1_2.setIcon(new ImageIcon(TelaCrudAdminFunc.class.getResource("/visao/NicePng_refresh-icon-png_2047577 (1).png")));
 		btnNewButton_1_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JOptionPane.showMessageDialog(null, "Funcionário atualizado com sucesso!");
