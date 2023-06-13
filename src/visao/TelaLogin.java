@@ -123,7 +123,6 @@ public class TelaLogin extends JFrame {
 					telaAdmin.setExtendedState(JFrame.MAXIMIZED_BOTH);
 					telaAdmin.setVisible(true);
 				} else {
-
 					Funcionario fun = funcionarioDAO.efetuarLogin(usuarioLogin, strSenha);
 					if (fun != null) {
 						// existe

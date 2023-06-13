@@ -244,7 +244,6 @@ public class TelaCrudFuncCarros extends JFrame {
 		));
 		
 		JButton btnVender = new JButton("Vender");
-		btnVender.setIcon(new ImageIcon(TelaCrudFuncCarros.class.getResource("/visao/—Pngtree—pack cash icon cartoon style_5208194 (1).png")));
 		btnVender.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				DefaultTableModel tblModel = (DefaultTableModel) Table1.getModel();

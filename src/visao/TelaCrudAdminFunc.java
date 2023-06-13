@@ -18,18 +18,21 @@ import javax.swing.JFormattedTextField;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.text.MaskFormatter;
 
+import controle.FuncionarioDAO;
+import modelo.Funcionario;
+
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.text.ParseException;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
+import javax.swing.JPasswordField;
 
 public class TelaCrudAdminFunc extends JFrame {
 
 	private JPanel contentPane;
 	private JLabel lblNewLabel;
 	private JLabel lblMarca;
-	private JTextField textSenha;
 	private JTextField textCPF;
 	private JLabel lblCor;
 	private JLabel lblAno;
@@ -38,6 +41,8 @@ public class TelaCrudAdminFunc extends JFrame {
 	private JTable table;
 	private JLabel lblNewLabel_1;
 	private JButton btnNewButton;
+	private JPasswordField textSenha;
+	private FuncionarioDAO funcDAO;
 
 	/**
 	 * Launch the application.
@@ -75,7 +80,7 @@ public class TelaCrudAdminFunc extends JFrame {
 
 		table = new JTable();
 		table.setModel(new DefaultTableModel(new Object[][] {},
-				new String[] { "Nome", "Usu\u00E1rio", "CPF", "Senha"}));
+				new String[] { "Nome", "Usu\u00E1rio"}));
 		scrollPane.setViewportView(table);
 
 		lblNewLabel = new JLabel("Nome:");
@@ -98,11 +103,6 @@ public class TelaCrudAdminFunc extends JFrame {
 		lblMarca.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lblMarca.setBounds(420, 203, 170, 32);
 		contentPane.add(lblMarca);
-
-		textSenha = new JTextField();
-		textSenha.setColumns(10);
-		textSenha.setBounds(600, 203, 203, 32);
-		contentPane.add(textSenha);
 
 		MaskFormatter mascaraCpf = null;
 		try {
@@ -140,6 +140,7 @@ public class TelaCrudAdminFunc extends JFrame {
 		contentPane.add(textNome);
 
 		JButton btnDelete = new JButton("Remover");
+		btnDelete.setIcon(new ImageIcon(TelaCrudAdminFunc.class.getResource("/visao/trash-10-xxl (1).png")));
 		btnDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
@@ -156,33 +157,52 @@ public class TelaCrudAdminFunc extends JFrame {
 			}
 		});
 		btnDelete.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnDelete.setBounds(617, 289, 136, 46);
+		btnDelete.setBounds(617, 288, 161, 46);
 		contentPane.add(btnDelete);
 
 		JButton btnADD = new JButton("Adicionar");
+		btnADD.setIcon(new ImageIcon(TelaCrudAdminFunc.class.getResource("/visao/Green-Add-Button-PNG-HD1.png")));
 		btnADD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Funcionario func1 = new Funcionario();
+				
+				char[] usuarioSenha = textSenha.getPassword();
+				String strSenha = "";
+				if (usuarioSenha != null && usuarioSenha.length > 0) {
+					strSenha = String.valueOf(usuarioSenha);
+				}
+				
 				if (textNome.getText().equals("") || textUser.getText().equals("") || textCPF.getText().equals("")
-						|| textSenha.getText().equals("")) {
+						|| strSenha.equals("")) {
 					JOptionPane.showMessageDialog(null, "Insira todas as colunas!");
 				} else {
-					String data[] = { textNome.getText(), textUser.getText(), textCPF.getText(), textSenha.getText() };
+					String data[] = { textNome.getText(), textUser.getText() };
 					DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
 					tblModel.addRow(data);
 					JOptionPane.showMessageDialog(null, "Funcionário adicionado com sucesso!");
 
+					func1.setNome(textNome.getText());
+					func1.setSenhaFuncionario(strSenha);
+					func1.setCpf(Long.valueOf(textCPF.getText()));
+					func1.setUsuarioFuncionario(textUser.getText());
+					
+					funcDAO.inserir(func1);
+					
 					textNome.setText("");
 					textUser.setText("");
 					textCPF.setText("");
 					textSenha.setText("");
+					
+					
 				}
 			}
 		});
 		btnADD.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnADD.setBounds(471, 289, 136, 46);
+		btnADD.setBounds(461, 288, 146, 46);
 		contentPane.add(btnADD);
 
 		JButton btnUpdate = new JButton("Atualizar");
+		btnUpdate.setIcon(new ImageIcon(TelaCrudAdminFunc.class.getResource("/visao/NicePng_refresh-icon-png_2047577 (1).png")));
 		btnUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
@@ -190,12 +210,16 @@ public class TelaCrudAdminFunc extends JFrame {
 					String Nome = textNome.getText();
 					String Usuario = textUser.getText();
 					String CPF = textCPF.getText();
-					String Senha = textSenha.getText();
+					char[] funcSenha = textSenha.getPassword();
+					String strSenha = "";
+					if (funcSenha != null && funcSenha.length > 0) {
+						strSenha = String.valueOf(funcSenha);
+					}
 
 					tblModel.setValueAt(Nome, table.getSelectedRow(), 0);
 					tblModel.setValueAt(Usuario, table.getSelectedRow(), 1);
 					tblModel.setValueAt(CPF, table.getSelectedRow(), 2);
-					tblModel.setValueAt(Senha, table.getSelectedRow(), 3);
+					tblModel.setValueAt(strSenha, table.getSelectedRow(), 3);
 
 					JOptionPane.showMessageDialog(null, "Funcionario atualizado com sucesso!");
 
@@ -209,7 +233,7 @@ public class TelaCrudAdminFunc extends JFrame {
 			}
 		});
 		btnUpdate.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnUpdate.setBounds(763, 289, 136, 46);
+		btnUpdate.setBounds(788, 288, 136, 46);
 		contentPane.add(btnUpdate);
 
 		lblNewLabel_1 = new JLabel("Lista de Funcionários");
@@ -230,10 +254,14 @@ public class TelaCrudAdminFunc extends JFrame {
 		});
 		btnNewButton.setBounds(10, 15, 131, 30);
 		contentPane.add(btnNewButton);
-
-		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon(TelaCrudAdminFunc.class.getResource("/visao/logo bem transparente.png")));
-		lblNewLabel_2.setBounds(178, 0, 1011, 749);
-		contentPane.add(lblNewLabel_2);
+		
+		textSenha = new JPasswordField();
+		textSenha.setBounds(600, 209, 203, 32);
+		contentPane.add(textSenha);
+		
+				JLabel lblNewLabel_2 = new JLabel("");
+				lblNewLabel_2.setIcon(new ImageIcon(TelaCrudAdminFunc.class.getResource("/visao/logo bem transparente.png")));
+				lblNewLabel_2.setBounds(178, 0, 1011, 749);
+				contentPane.add(lblNewLabel_2);
 	}
 }
