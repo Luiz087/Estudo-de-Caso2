@@ -49,6 +49,16 @@ public class TelaPrincipAdmin extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setIcon(new ImageIcon(TelaPrincipAdmin.class.getResource("/visao/v (1).png")));
+		lblNewLabel_3.setBounds(798, 70, 150, 150);
+		contentPane.add(lblNewLabel_3);
+		
+		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon(TelaPrincipAdmin.class.getResource("/visao/2942813 (3).png")));
+		lblNewLabel_2.setBounds(483, 70, 166, 150);
+		contentPane.add(lblNewLabel_2);
 
 		JLabel lblNewLabel = new JLabel("Funções de Administrador");
 		lblNewLabel.setForeground(new Color(255, 255, 255));
@@ -57,14 +67,13 @@ public class TelaPrincipAdmin extends JFrame {
 		lblNewLabel.setBounds(443, 231, 243, 33);
 		contentPane.add(lblNewLabel);
 
-		JLabel lblFunesDeFuncionrio = new JLabel("Funções de Funcionário");
+		JLabel lblFunesDeFuncionrio = new JLabel("Função de Funcionário");
 		lblFunesDeFuncionrio.setForeground(Color.WHITE);
 		lblFunesDeFuncionrio.setFont(new Font("Tahoma", Font.BOLD, 18));
-		lblFunesDeFuncionrio.setBounds(758, 236, 228, 22);
+		lblFunesDeFuncionrio.setBounds(750, 236, 228, 22);
 		contentPane.add(lblFunesDeFuncionrio);
 
 		JButton btnNewButton_1_1_1_2_1_1 = new JButton("Listar Funcionários");
-		btnNewButton_1_1_1_2_1_1.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(0, 0, 0), 3));
 	       btnNewButton_1_1_1_2_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaCrudAdminFunc telaCrudAdminFunci = new TelaCrudAdminFunc();
@@ -79,9 +88,8 @@ public class TelaPrincipAdmin extends JFrame {
 
 
 		JButton btnSair = new JButton("Sair");
-		btnSair.setForeground(new Color(255, 0, 0));
+		btnSair.setForeground(new Color(0, 0, 0));
 		btnSair.setFont(new Font("Tahoma", Font.BOLD, 11));
-		btnSair.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(0, 0, 0), 3));
 
 		
 		btnSair.addActionListener(new ActionListener() {
@@ -98,7 +106,6 @@ public class TelaPrincipAdmin extends JFrame {
 		contentPane.add(btnSair);
 
 		JButton btnNewButton_1_1_1_1_1 = new JButton("Listar Carros");
-		btnNewButton_1_1_1_1_1.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(0, 0, 0), 3));
 		btnNewButton_1_1_1_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaCrudAdmCarros telaCrudCarros = new TelaCrudAdmCarros();
@@ -112,7 +119,6 @@ public class TelaPrincipAdmin extends JFrame {
 		contentPane.add(btnNewButton_1_1_1_1_1);
 
 		JButton btnNewButton_1_1_1_2_1_1_2 = new JButton("Listar Carros Vendidos");
-		btnNewButton_1_1_1_2_1_1_2.setBorder(javax.swing.BorderFactory.createLineBorder(new Color(0, 0, 0), 3));
 		btnNewButton_1_1_1_2_1_1_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaListarComprasAdm telaCarrosComprados = new TelaListarComprasAdm();
