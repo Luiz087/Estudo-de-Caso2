@@ -100,13 +100,13 @@ public class TelaListarComprasAdm extends JFrame {
 		
 		scrollPane.setViewportView(table);
 		
-		vendidoDAO = CarrovendidoDAO.getInstancia();
+		vendidoDAO =  CarrovendidoDAO.getInstancia();
+		DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
 		for (Carro qtdCarro : vendidoDAO.listarCarros()) {
 			String ano = String.valueOf(qtdCarro.getAno());
 			String preco = String.valueOf(qtdCarro.getPreco());
 			
 			String data[] = {qtdCarro.getModelo(), ano, qtdCarro.getCor(), qtdCarro.getMarca(), preco};
-			DefaultTableModel tblModel = (DefaultTableModel)table.getModel();
 			tblModel.addRow(data);
 		}
 		

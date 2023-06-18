@@ -11,7 +11,6 @@ public class CarroDAO {
 	private static ArrayList<Carro> listaCarro;
 
 	public static CarroDAO getInstancia() {
-
 		if (instancia == null) {
 			instancia = new CarroDAO();
 			listaCarro = new ArrayList<>();
