@@ -23,6 +23,8 @@ import modelo.Funcionario;
 
 import java.awt.Color;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.text.ParseException;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
@@ -79,6 +81,14 @@ public class TelaCrudAdminFunc extends JFrame {
 		contentPane.add(scrollPane);
 
 		table = new JTable();
+		table.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				int setar = table.getSelectedRow();
+				textNome.setText(table.getModel().getValueAt(setar, 0).toString());
+				textUser.setText(table.getModel().getValueAt(setar, 1).toString());
+			}
+		});
 		table.setModel(new DefaultTableModel(new Object[][] {},
 				new String[] { "Nome", "Usu\u00E1rio"}));
 		scrollPane.setViewportView(table);
@@ -160,9 +170,8 @@ public class TelaCrudAdminFunc extends JFrame {
 				DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
 				if (table.getSelectedRowCount() == 1) {
 					int setar = table.getSelectedRow();
-					Funcionario func = new Funcionario();
-					Long cpfFunc = (Long.valueOf((table.getModel().getValueAt(setar, 1).toString())));
-					funcDAO.excluir(cpfFunc);
+					String usuario = ((table.getModel().getValueAt(setar, 1).toString()));
+					funcDAO.excluir(usuario);
 					
 					tblModel.removeRow(table.getSelectedRow());
 					JOptionPane.showMessageDialog(null, "Funcionario removido com sucesso!");
@@ -222,27 +231,37 @@ public class TelaCrudAdminFunc extends JFrame {
 		contentPane.add(btnADD);
 
 		JButton btnUpdate = new JButton("Atualizar");
+		btnUpdate.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				textCPF.setEditable(false);
+				textSenha.setEditable(false);
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				textCPF.setEditable(true);
+				textSenha.setEditable(true);
+			}
+		});
 		btnUpdate.setIcon(new ImageIcon(TelaCrudAdminFunc.class.getResource("/visao/NicePng_refresh-icon-png_2047577 (1).png")));
 		btnUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
+				Funcionario func1 = new Funcionario();
 				if (table.getSelectedRowCount() == 1) {
 					String Nome = textNome.getText();
 					String Usuario = textUser.getText();
-					String CPF = textCPF.getText();
+					Long cpf = Long.valueOf(textCPF.getText());
 					char[] funcSenha = textSenha.getPassword();
 					String strSenha = "";
-					if (funcSenha != null && funcSenha.length > 0) {
+					if (funcSenha != null) {
 						strSenha = String.valueOf(funcSenha);
 					}
 
 					tblModel.setValueAt(Nome, table.getSelectedRow(), 0);
 					tblModel.setValueAt(Usuario, table.getSelectedRow(), 1);
-					tblModel.setValueAt(CPF, table.getSelectedRow(), 2);
-					tblModel.setValueAt(strSenha, table.getSelectedRow(), 3);
-
-					JOptionPane.showMessageDialog(null, "Funcionario atualizado com sucesso!");
 					
+					funcDAO.alterar(Nome, Usuario, cpf);					
 					
 
 				} else {

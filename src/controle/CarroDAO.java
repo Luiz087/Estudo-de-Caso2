@@ -41,7 +41,17 @@ public class CarroDAO {
 		return false;
 	}
 	
-	public boolean alterar() {
+	public boolean alterar(String modelo1, Integer ano1, String cor1, String marca1, Double preco1) {
+		for (Carro carro : CarroDAO.listarCarros()) {
+			if (modelo1 == carro.getModelo() && ano1 == carro.getAno() && cor1 == carro.getCor() && marca1 == carro.getMarca() && preco1 == carro.getPreco()) {
+				carro.setAno(ano1);
+				carro.setCor(cor1);
+				carro.setMarca(marca1);
+				carro.setModelo(modelo1);
+				carro.setPreco(preco1);
+				return true;
+			}
+		}
 		return false;
 	}
 

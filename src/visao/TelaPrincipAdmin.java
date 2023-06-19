@@ -49,11 +49,6 @@ public class TelaPrincipAdmin extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon(TelaPrincipAdmin.class.getResource("/visao/sair (1).png")));
-		lblNewLabel_1.setBounds(20, 15, 30, 30);
-		contentPane.add(lblNewLabel_1);
 
 		JLabel lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon(TelaPrincipAdmin.class.getResource("/visao/v (1).png")));
@@ -90,23 +85,6 @@ public class TelaPrincipAdmin extends JFrame {
 		btnNewButton_1_1_1_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnNewButton_1_1_1_2_1_1.setBounds(443, 371, 233, 71);
 		contentPane.add(btnNewButton_1_1_1_2_1_1);
-
-		JButton btnSair = new JButton("Sair");
-		btnSair.setForeground(new Color(0, 0, 0));
-		btnSair.setFont(new Font("Tahoma", Font.BOLD, 11));
-
-		btnSair.addActionListener(new ActionListener() {
-
-			public void actionPerformed(ActionEvent e) {
-				TelaLogin telaLoginUsu = new TelaLogin();
-				dispose();
-				telaLoginUsu.setExtendedState(JFrame.MAXIMIZED_BOTH);
-				telaLoginUsu.setVisible(true);
-			}
-		});
-		btnSair.setBackground(new Color(255, 255, 255));
-		btnSair.setBounds(10, 15, 131, 30);
-		contentPane.add(btnSair);
 
 		JButton btnNewButton_1_1_1_1_1 = new JButton("Listar Carros");
 		btnNewButton_1_1_1_1_1.addActionListener(new ActionListener() {
@@ -146,5 +124,13 @@ public class TelaPrincipAdmin extends JFrame {
 		btnNewButton_1_1_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnNewButton_1_1_1_1_1_1.setBounds(745, 371, 233, 71);
 		contentPane.add(btnNewButton_1_1_1_1_1_1);
+		
+		JButton btnSair = new JButton("Sair");
+		btnSair.setIcon(new ImageIcon(TelaPrincipAdmin.class.getResource("/visao/1828490 (1).png")));
+		btnSair.setForeground(Color.BLACK);
+		btnSair.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnSair.setBackground(Color.WHITE);
+		btnSair.setBounds(10, 15, 106, 39);
+		contentPane.add(btnSair);
 	}
 }

@@ -18,6 +18,7 @@ import javax.swing.JFormattedTextField;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.text.MaskFormatter;
 
+import controle.CarroDAO;
 import controle.CarrovendidoDAO;
 import modelo.Carro;
 
@@ -46,8 +47,8 @@ public class TelaCrudFuncCarros extends JFrame {
 	private JTextField textModelo;
 	private JTable Table1;
 	private JScrollPane scrollPane;
-	private static CarrovendidoDAO vendido;
 	private JButton btnSair;
+	private CarroDAO carroDAO = CarroDAO.getInstancia();
 
 	/**
 	 * Launch the application.
@@ -159,10 +160,21 @@ public class TelaCrudFuncCarros extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				DefaultTableModel tblModel = (DefaultTableModel) Table1.getModel();
 				if(Table1.getSelectedRowCount()==1){
+					int setar = Table1.getSelectedRow();
+					String Modelo = Table1.getModel().getValueAt(setar, 0).toString();
+					Integer Ano = Integer.valueOf(Table1.getModel().getValueAt(setar, 1).toString());
+					String Cor = Table1.getModel().getValueAt(setar, 2).toString();
+					String Marca = Table1.getModel().getValueAt(setar, 3).toString();
+					Double Preco = Double.valueOf(Table1.getModel().getValueAt(setar, 4).toString());
+					
+					carroDAO.excluir(Modelo, Ano, Cor, Marca, Preco);
+					
 					tblModel.removeRow(Table1.getSelectedRow());
+					JOptionPane.showMessageDialog(null, "Carro removido com sucesso!");
+
 				}else {
 					if(Table1.getRowCount()==0){
-						JOptionPane.showMessageDialog(null, "Carro removido com sucesso!");
+						JOptionPane.showMessageDialog(null, "Selecione um carro!");
 					}else {
 						JOptionPane.showMessageDialog(null, "Selecione apenas um para deletar!");
 					}
@@ -177,20 +189,37 @@ public class TelaCrudFuncCarros extends JFrame {
 		btnAdd.setBounds(472, 312, 146, 46);
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(textModelo.getText().equals("") ||  textAno.getText().equals("") || textCor.getText().equals("") || textMarca.getText().equals("") || textPreco.getText().equals("")) {
+				DefaultTableModel tblModel = (DefaultTableModel) Table1.getModel();
+				if (textModelo.getText().equals("") || textAno.getText().equals("") || textCor.getText().equals("")
+						|| textMarca.getText().equals("") || textPreco.getText().equals("")) {
 					JOptionPane.showMessageDialog(null, "Insira todas as colunas!");
 				} else {
-					String data[] = {textModelo.getText() , textAno.getText(), textCor.getText(), textMarca.getText(), textPreco.getText()};
-					DefaultTableModel tblModel = (DefaultTableModel)Table1.getModel();
+					String data[] = { textModelo.getText(), textAno.getText(), textCor.getText(), textMarca.getText(),
+							textPreco.getText() };
 					tblModel.addRow(data);
 					JOptionPane.showMessageDialog(null, "Carro adicionado com sucesso!");
-					
-					textModelo.setText("");	
-					textAno.setText("");	
-					textCor.setText("");	
-					textMarca.setText("");	
-					textPreco.setText("");	
-				}				
+
+					Integer ano = Integer.valueOf(textAno.getText());
+					Double preco = Double.valueOf(textPreco.getText());
+					Carro carro1 = new Carro();
+					carro1.setCor(textAno.getText());
+					carro1.setMarca(textMarca.getText());
+					carro1.setModelo(textModelo.getText());
+					carro1.setAno(ano);
+					carro1.setPreco(preco);
+
+					textModelo.setText("");
+					textAno.setText("");
+					textCor.setText("");
+					textMarca.setText("");
+					textPreco.setText("");
+					if (carroDAO == null) {
+						carroDAO = CarroDAO.getInstancia();
+						carroDAO.inserir(carro1);
+					} else {
+						carroDAO.inserir(carro1);
+					}
+				}			
 			}
 		});
 		btnAdd.setFont(new Font("Tahoma", Font.PLAIN, 18));
@@ -215,8 +244,16 @@ public class TelaCrudFuncCarros extends JFrame {
 					tblModel.setValueAt(Marca, Table1.getSelectedRow(), 3);
 					tblModel.setValueAt(Preco, Table1.getSelectedRow(), 4);
 					
+					int setar = Table1.getSelectedRow();
+					String Modelo1 = Table1.getModel().getValueAt(setar, 0).toString();
+					Integer Ano1 = Integer.valueOf(Table1.getModel().getValueAt(setar, 1).toString());
+					String Cor1 = Table1.getModel().getValueAt(setar, 2).toString();
+					String Marca1 = Table1.getModel().getValueAt(setar, 3).toString();
+					Double Preco1 = Double.valueOf(Table1.getModel().getValueAt(setar, 4).toString());
+					
+					carroDAO.alterar(Modelo1, Ano1, Cor1, Marca1, Preco1);
+					
 					JOptionPane.showMessageDialog(null, "Carro atualizado com sucesso!");
-
 				} else {
 					if(Table1.getRowCount()== 0) {
 						JOptionPane.showMessageDialog(null, "Tabela imcompleta!");
@@ -249,6 +286,17 @@ public class TelaCrudFuncCarros extends JFrame {
 				"Modelo", "Ano",  "Cor", "Marca", "Preco"
 			}
 		));
+		if (carroDAO == null) {
+			carroDAO = CarroDAO.getInstancia();
+		}
+		for (Carro qtdCarro : CarroDAO.listarCarros()) {
+			DefaultTableModel tblModel = (DefaultTableModel) Table1.getModel();
+			String ano = String.valueOf(qtdCarro.getAno());
+			String preco = String.valueOf(qtdCarro.getPreco());
+
+			String data[] = { qtdCarro.getModelo(), ano, qtdCarro.getCor(), qtdCarro.getMarca(), preco };
+			tblModel.addRow(data);
+		}
 		
 		
 		JButton btnVender = new JButton("Vender");
@@ -266,6 +314,7 @@ public class TelaCrudFuncCarros extends JFrame {
 		contentPane.add(btnVender);
 		
 		btnSair = new JButton("Sair");
+		btnSair.setIcon(new ImageIcon(TelaCrudFuncCarros.class.getResource("/visao/1828490 (1).png")));
 		btnSair.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaLogin login = new TelaLogin();
@@ -277,7 +326,7 @@ public class TelaCrudFuncCarros extends JFrame {
 		btnSair.setForeground(Color.BLACK);
 		btnSair.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnSair.setBackground(Color.WHITE);
-		btnSair.setBounds(10, 15, 131, 30);
+		btnSair.setBounds(10, 15, 106, 39);
 		contentPane.add(btnSair);
 
 	}

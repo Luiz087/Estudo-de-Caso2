@@ -47,24 +47,31 @@ public class FuncionarioDAO {
 		return false;
 	}
 
-	public boolean excluir(Long cpf) {
+	public boolean excluir(String usuario) {
 		for (Funcionario funcionario : listaFuncionario) {
-			if (funcionario.getCpf().equals(cpf)) {
+			if (funcionario.getUsuarioFuncionario().equals(usuario)) {
 				listaFuncionario.remove(funcionario);
-				JOptionPane.showMessageDialog(null, "Funcionário removido!");
 				return true;
 			}
 		}
-		JOptionPane.showMessageDialog(null, "Funcionário não encontrado!");
 		return false;
 	}
 
-	public boolean alterar() {
+	public boolean alterar(String nome, String usuario, Long cpf) {
+		for (Funcionario funcionario : listaFuncionario) {
+			if (funcionario.getCpf().equals(cpf)) {
+				funcionario.setNome(nome);
+				funcionario.setUsuarioFuncionario(usuario);
+				JOptionPane.showMessageDialog(null, "Funcionário atualizado!");
+				return true;
+			}
+		}
 		return false;
 	}
 
 	public ArrayList<Funcionario> listarFuncionarios() {
 		return listaFuncionario;
 	}
+
 
 }

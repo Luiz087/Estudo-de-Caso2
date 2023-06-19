@@ -31,10 +31,6 @@ public class CarrovendidoDAO {
 		}
 		return false;
 	}
-	
-	public boolean excluir() {
-		return false;
-	}
 
 	public ArrayList<Carro> listarCarros() {
 		return listaCarroVendido;

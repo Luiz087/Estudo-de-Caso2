@@ -2,8 +2,8 @@ package modelo;
 
 public class Admin {
 	
-	private String usuarioAdmin = "JorgimDaEsquina123";
-	private String senhaAdmin = "123456789";
+	private String usuarioAdmin = "JorgimReiDelas";
+	private String senhaAdmin = "123";
 	
 	public String getUsuarioAdmin() {
 		return usuarioAdmin;

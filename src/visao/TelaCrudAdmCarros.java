@@ -44,10 +44,7 @@ public class TelaCrudAdmCarros extends JFrame {
 	private JTextField textAno;
 	private JTextField textModelo;
 	private JButton btnNewButton;
-	private JButton btnVender;
-	private CarrovendidoDAO vendido;
-	private CarroDAO carroDAO;
-	private JButton btnNewButton_1;
+	private CarroDAO carroDAO = CarroDAO.getInstancia();
 
 	/**
 	 * Launch the application.
@@ -87,7 +84,17 @@ public class TelaCrudAdmCarros extends JFrame {
 		table.setModel(new DefaultTableModel(new Object[][] {},
 				new String[] { "Modelo", "Ano", "Cor", "Marca", "Pre\u00E7o" }));
 		scrollPane.setViewportView(table);
-		
+		if (carroDAO == null) {
+			carroDAO = CarroDAO.getInstancia();
+		}
+		for (Carro qtdCarro : CarroDAO.listarCarros()) {
+			DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
+			String ano = String.valueOf(qtdCarro.getAno());
+			String preco = String.valueOf(qtdCarro.getPreco());
+
+			String data[] = { qtdCarro.getModelo(), ano, qtdCarro.getCor(), qtdCarro.getMarca(), preco };
+			tblModel.addRow(data);
+		}
 
 
 		lblNewLabel = new JLabel("Modelo:");
@@ -168,28 +175,36 @@ public class TelaCrudAdmCarros extends JFrame {
 		btnDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
-				if (table.getSelectedRowCount() == 1) {
+				if(table.getSelectedRowCount()==1){
+					int setar = table.getSelectedRow();
+					String Modelo = table.getModel().getValueAt(setar, 0).toString();
+					Integer Ano = Integer.valueOf(table.getModel().getValueAt(setar, 1).toString());
+					String Cor = table.getModel().getValueAt(setar, 2).toString();
+					String Marca = table.getModel().getValueAt(setar, 3).toString();
+					Double Preco = Double.valueOf(table.getModel().getValueAt(setar, 4).toString());
+					
+					carroDAO.excluir(Modelo, Ano, Cor, Marca, Preco);
+					
 					tblModel.removeRow(table.getSelectedRow());
 					JOptionPane.showMessageDialog(null, "Carro removido com sucesso!");
-					
-				} else {
-					if (table.getRowCount() == 0) {
-						JOptionPane.showMessageDialog(null, "Nenhum carro selecionado!");
-					} else {
+
+				}else {
+					if(table.getRowCount()==0){
+						JOptionPane.showMessageDialog(null, "Selecione um carro!");
+					}else {
 						JOptionPane.showMessageDialog(null, "Selecione apenas um para deletar!");
 					}
 				}
 			}
 		});
 		btnDelete.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnDelete.setBounds(553, 313, 136, 46);
+		btnDelete.setBounds(632, 315, 136, 46);
 		contentPane.add(btnDelete);
 
 		JButton btnAdd = new JButton("Adicionar");
 		btnAdd.setIcon(new ImageIcon(TelaCrudAdmCarros.class.getResource("/visao/Green-Add-Button-PNG-HD1.png")));
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
 				DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
 				if (textModelo.getText().equals("") || textAno.getText().equals("") || textCor.getText().equals("")
 						|| textMarca.getText().equals("") || textPreco.getText().equals("")) {
@@ -225,7 +240,7 @@ public class TelaCrudAdmCarros extends JFrame {
 			}
 		});
 		btnAdd.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnAdd.setBounds(388, 313, 155, 46);
+		btnAdd.setBounds(467, 315, 155, 46);
 		contentPane.add(btnAdd);
 
 		JButton btnUpdate = new JButton("Atualizar");
@@ -240,15 +255,23 @@ public class TelaCrudAdmCarros extends JFrame {
 					String Cor = textCor.getText();
 					String Marca = textMarca.getText();
 					String Preco = textPreco.getText();
-
+				
 					tblModel.setValueAt(Modelo, table.getSelectedRow(), 0);
 					tblModel.setValueAt(Ano, table.getSelectedRow(), 1);
 					tblModel.setValueAt(Cor, table.getSelectedRow(), 2);
 					tblModel.setValueAt(Marca, table.getSelectedRow(), 3);
 					tblModel.setValueAt(Preco, table.getSelectedRow(), 4);
-
+					
+					int setar = table.getSelectedRow();
+					String Modelo1 = table.getModel().getValueAt(setar, 0).toString();
+					Integer Ano1 = Integer.valueOf(table.getModel().getValueAt(setar, 1).toString());
+					String Cor1 = table.getModel().getValueAt(setar, 2).toString();
+					String Marca1 = table.getModel().getValueAt(setar, 3).toString();
+					Double Preco1 = Double.valueOf(table.getModel().getValueAt(setar, 4).toString());
+					
+					carroDAO.alterar(Modelo1, Ano1, Cor1, Marca1, Preco1);
+					
 					JOptionPane.showMessageDialog(null, "Carro atualizado com sucesso!");
-
 				} else {
 					if (table.getRowCount() == 0) {
 						JOptionPane.showMessageDialog(null, "Tabela imcompleta!");
@@ -259,7 +282,7 @@ public class TelaCrudAdmCarros extends JFrame {
 			}
 		});
 		btnUpdate.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnUpdate.setBounds(699, 313, 136, 46);
+		btnUpdate.setBounds(778, 315, 136, 46);
 		contentPane.add(btnUpdate);
 
 		JLabel lblNewLabel_2 = new JLabel("Lista de Carros");
@@ -281,37 +304,6 @@ public class TelaCrudAdmCarros extends JFrame {
 		});
 		btnNewButton.setBounds(10, 15, 131, 30);
 		contentPane.add(btnNewButton);
-
-		btnNewButton_1 = new JButton("");
-		btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
-
-				if (carroDAO == null) {
-					carroDAO = CarroDAO.getInstancia();
-					for (Carro carro : carroDAO.listarCarros()) {
-						String data[] = { carro.getModelo(), carro.getAno().toString(), carro.getCor(),
-								carro.getMarca(), carro.getPreco().toString() };
-						tblModel.addRow(data);
-					}
-				} else {
-
-					if (carroDAO.listarCarros().isEmpty()) {
-						JOptionPane.showMessageDialog(null, "Nenhum carro cadastrado!");
-					} else {
-						for (Carro carro : carroDAO.listarCarros()) {
-							String data[] = { carro.getModelo(), carro.getAno().toString(), carro.getCor(),
-									carro.getMarca(), carro.getPreco().toString() };
-							tblModel.addRow(data);
-						}
-					}
-				}
-			}
-		});
-		btnNewButton_1.setIcon(
-				new ImageIcon(TelaCrudAdmCarros.class.getResource("/visao/NicePng_refresh-icon-png_2047577 (1).png")));
-		btnNewButton_1.setBounds(221, 411, 46, 46);
-		contentPane.add(btnNewButton_1);
 		
 		JButton btnVender = new JButton("Vender");
 		btnVender.addActionListener(new ActionListener() {
