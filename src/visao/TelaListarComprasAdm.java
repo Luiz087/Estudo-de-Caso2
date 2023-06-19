@@ -61,6 +61,11 @@ public class TelaListarComprasAdm extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon(TelaListarComprasAdm.class.getResource("/visao/voltar (1).png")));
+		lblNewLabel_1.setBounds(23, 15, 50, 30);
+		contentPane.add(lblNewLabel_1);
 
 		JLabel lblNewLabel_2_5 = new JLabel("Lista de Comprados");
 		lblNewLabel_2_5.setHorizontalAlignment(SwingConstants.CENTER);
@@ -93,6 +98,11 @@ public class TelaListarComprasAdm extends JFrame {
 				));
 
 		scrollPane.setViewportView(table);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(TelaListarComprasAdm.class.getResource("/visao/vendido (1).png")));
+		lblNewLabel.setBounds(1112, 251, 300, 313);
+		contentPane.add(lblNewLabel);
 		if (vendidoDAO == null) {
 			vendidoDAO = CarrovendidoDAO.getInstancia();
 		}
@@ -104,10 +114,5 @@ public class TelaListarComprasAdm extends JFrame {
 			String data[] = { qtdCarro.getModelo(), ano, qtdCarro.getCor(), qtdCarro.getMarca(), preco };
 			tblModel.addRow(data);
 		}
-
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(TelaListarComprasAdm.class.getResource("/visao/logo bem transparente.png")));
-		lblNewLabel.setBounds(187, 0, 1079, 774);
-		contentPane.add(lblNewLabel);
 	}
 }
