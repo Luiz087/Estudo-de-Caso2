@@ -74,6 +74,11 @@ public class TelaLogin extends JFrame {
 		fundologin.setBounds(-106, -198, 1582, 963);
 		contentPane.add(fundologin);
 		fundologin.setLayout(null);
+		
+		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon(TelaLogin.class.getResource("/visao/bemvindoo (1).png")));
+		lblNewLabel_2.setBounds(317, 187, 547, 221);
+		fundologin.add(lblNewLabel_2);
 
 		textSenhaUsu = new JPasswordField();
 		textSenhaUsu.setBounds(494, 518, 215, 43);
@@ -138,17 +143,6 @@ public class TelaLogin extends JFrame {
 			}
 		});
 		btnLoginUsuario.setFont(new Font("Tahoma", Font.PLAIN, 18));
-
-		JLabel lblBemVindo = new JLabel("BEM VINDO A GSP");
-		lblBemVindo.setBounds(374, 258, 596, 92);
-		lblBemVindo.setForeground(Color.WHITE);
-		lblBemVindo.setFont(new Font("Segoe UI Black", Font.BOLD, 40));
-		fundologin.add(lblBemVindo);
-
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setBounds(83, 198, 987, 754);
-		lblNewLabel_1.setIcon(new ImageIcon(TelaLogin.class.getResource("/visao/logo bem transparente.png")));
-		fundologin.add(lblNewLabel_1);
 
 	}
 }

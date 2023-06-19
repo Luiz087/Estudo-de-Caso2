@@ -219,7 +219,7 @@ public class TelaCompraCarros extends JFrame {
 				telaComprados.setVisible(true);
 			}
 		});
-		btnVendidos.setBackground(new Color(0, 255, 0));
+		btnVendidos.setBackground(new Color(255, 255, 255));
 		btnVendidos.setBounds(1229, 15, 131, 30);
 		contentPane.add(btnVendidos);
 
