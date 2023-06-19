@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="controle.CarrovendidoDAO" project="Estudo-de-Caso2" 
     file="/Estudo-de-Caso2/src/controle/CarrovendidoDAO.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1035" y="258"/>    
+    <position height="-1" width="-1" x="392" y="260"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <interface id="4" language="java" name="modelo.ICarroDAO" project="Estudo-de-Caso2" 
     file="/Estudo-de-Caso2/src/modelo/ICarroDAO.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="885" y="459"/>    
+    <position height="-1" width="-1" x="372" y="472"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -39,7 +39,7 @@
   </interface>  
   <interface id="5" language="java" name="modelo.IFuncionarioDAO" project="Estudo-de-Caso2" 
     file="/Estudo-de-Caso2/src/modelo/IFuncionarioDAO.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1256" y="509"/>    
+    <position height="-1" width="-1" x="907" y="507"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -57,7 +57,7 @@
   </class>  
   <class id="7" language="java" name="modelo.Funcionario" project="Estudo-de-Caso2" 
     file="/Estudo-de-Caso2/src/modelo/Funcionario.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="687" y="407"/>    
+    <position height="-1" width="-1" x="643" y="398"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -66,77 +66,14 @@
   </class>  
   <class id="8" language="java" name="modelo.Admin" project="Estudo-de-Caso2" 
     file="/Estudo-de-Caso2/src/modelo/Admin.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1285" y="335"/>    
+    <position height="-1" width="-1" x="905" y="285"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="visao.TelaCrudAdmCarros" project="Estudo-de-Caso2" 
-    file="/Estudo-de-Caso2/src/visao/TelaCrudAdmCarros.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="320" y="416"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="10" language="java" name="visao.TelaCrudFuncCarros" project="Estudo-de-Caso2" 
-    file="/Estudo-de-Caso2/src/visao/TelaCrudFuncCarros.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="502" y="405"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="11" language="java" name="visao.TelaCrudAdminFunc" project="Estudo-de-Caso2" 
-    file="/Estudo-de-Caso2/src/visao/TelaCrudAdminFunc.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="872" y="160"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="12" language="java" name="visao.TelaCompraCarrosFunc" project="Estudo-de-Caso2" 
-    file="/Estudo-de-Caso2/src/visao/TelaCompraCarrosFunc.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1056" y="471"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="13" language="java" name="visao.TelaListarComprasAdm" project="Estudo-de-Caso2" 
-    file="/Estudo-de-Caso2/src/visao/TelaListarComprasAdm.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1072" y="71"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="14" language="java" name="visao.TelaLogin" project="Estudo-de-Caso2" 
-    file="/Estudo-de-Caso2/src/visao/TelaLogin.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1283" y="84"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="15" language="java" name="visao.TelaCompraCarros" project="Estudo-de-Caso2" 
-    file="/Estudo-de-Caso2/src/visao/TelaCompraCarros.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="225" width="131" x="1494" y="79"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="16" language="java" name="visao.TelaPrincipAdmin" project="Estudo-de-Caso2" 
+  <class id="9" language="java" name="visao.TelaPrincipAdmin" project="Estudo-de-Caso2" 
     file="/Estudo-de-Caso2/src/visao/TelaPrincipAdmin.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="117" width="123" x="1665" y="79"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -145,124 +82,52 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="17">    
+  <association id="10">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="18" name="instancia"/>      
-      <multiplicity id="19" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="20">    
-    <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="21" name="carroDAO"/>      
-      <multiplicity id="22" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="23">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="24" name="funcDAO"/>      
-      <multiplicity id="25" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="26">    
-    <end type="SOURCE" refId="14" navigable="false">      
-      <attribute id="27" name="funcionarioDAO"/>      
-      <multiplicity id="28" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="29">    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="30" name="vendido"/>      
-      <multiplicity id="31" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="32">    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="33" name="vendidoDAO"/>      
-      <multiplicity id="34" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="35">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="36" name="instancia"/>      
-      <multiplicity id="37" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="38">    
-    <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="39" name="vendido"/>      
-      <multiplicity id="40" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="41">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="42" name="carroDAO"/>      
-      <multiplicity id="43" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="44">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="45" name="listaFuncionario"/>      
-      <multiplicity id="46" minimum="0" maximum="2147483647"/>    
+      <attribute id="11" name="listaFuncionario"/>      
+      <multiplicity id="12" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="47">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="48" name="carroDAO"/>      
-      <multiplicity id="49" minimum="0" maximum="1"/>    
+  <association id="13">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="14" name="instancia"/>      
+      <multiplicity id="15" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
+    <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="50">    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="51" name="carroDAO"/>      
-      <multiplicity id="52" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="53">    
+  <association id="16">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="54" name="listaCarroVendido"/>      
-      <multiplicity id="55" minimum="0" maximum="2147483647"/>    
+      <attribute id="17" name="listaCarroVendido"/>      
+      <multiplicity id="18" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="56">    
+  <association id="19">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="57" name="instancia"/>      
-      <multiplicity id="58" minimum="0" maximum="1"/>    
+      <attribute id="20" name="instancia"/>      
+      <multiplicity id="21" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="59">    
+  <association id="22">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="60" name="listaCarro"/>      
-      <multiplicity id="61" minimum="0" maximum="2147483647"/>    
+      <attribute id="23" name="listaCarro"/>      
+      <multiplicity id="24" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="25">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="26" name="instancia"/>      
+      <multiplicity id="27" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
