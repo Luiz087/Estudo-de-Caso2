@@ -67,11 +67,6 @@ public class TelaCompraCarros extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon(TelaCompraCarros.class.getResource("/visao/voltar (1).png")));
-		lblNewLabel_1.setBounds(10, 9, 46, 32);
-		contentPane.add(lblNewLabel_1);
 
 		textModelo = new JTextField();
 		textModelo.setEditable(false);
@@ -234,6 +229,7 @@ public class TelaCompraCarros extends JFrame {
 		}
 
 		JButton btnNewButton_1 = new JButton("Voltar");
+		btnNewButton_1.setIcon(new ImageIcon(TelaCompraCarros.class.getResource("/visao/voltar (1).png")));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaPrincipAdmin telaPrincipiAdm = new TelaPrincipAdmin();
@@ -246,6 +242,7 @@ public class TelaCompraCarros extends JFrame {
 		contentPane.add(btnNewButton_1);
 
 		JButton btnVendidos = new JButton("Vendidos");
+		btnVendidos.setIcon(new ImageIcon(TelaCompraCarros.class.getResource("/visao/2648295 (1).png")));
 		btnVendidos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaListarComprasAdm telaComprados = new TelaListarComprasAdm();
@@ -255,7 +252,7 @@ public class TelaCompraCarros extends JFrame {
 			}
 		});
 		btnVendidos.setBackground(new Color(255, 255, 255));
-		btnVendidos.setBounds(1229, 15, 131, 30);
+		btnVendidos.setBounds(1214, 15, 146, 30);
 		contentPane.add(btnVendidos);
 		carroDAO = CarroDAO.getInstancia();
 	}

@@ -44,15 +44,10 @@ public class TelaCrudAdmCarros extends JFrame {
 	private JTextField textAno;
 	private JTextField textModelo;
 	private JButton btnNewButton;
-<<<<<<< HEAD
-	private JLabel lblNewLabel_1;
-=======
 	private JButton btnVender;
->>>>>>> main
 	private CarrovendidoDAO vendido;
 	private CarroDAO carroDAO;
 	private JButton btnNewButton_1;
-	private JLabel lblNewLabel_3;
 
 	/**
 	 * Launch the application.
@@ -83,11 +78,6 @@ public class TelaCrudAdmCarros extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
-		lblNewLabel_3 = new JLabel("");
-		lblNewLabel_3.setIcon(new ImageIcon(TelaCrudAdmCarros.class.getResource("/visao/voltar (1).png")));
-		lblNewLabel_3.setBounds(10, 13, 52, 32);
-		contentPane.add(lblNewLabel_3);
 
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(277, 408, 815, 274);
@@ -280,6 +270,7 @@ public class TelaCrudAdmCarros extends JFrame {
 		contentPane.add(lblNewLabel_2);
 
 		btnNewButton = new JButton("Voltar");
+		btnNewButton.setIcon(new ImageIcon(TelaCrudAdmCarros.class.getResource("/visao/voltar (1).png")));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaPrincipAdmin telaPrincipiAdm = new TelaPrincipAdmin();
@@ -321,12 +312,6 @@ public class TelaCrudAdmCarros extends JFrame {
 				new ImageIcon(TelaCrudAdmCarros.class.getResource("/visao/NicePng_refresh-icon-png_2047577 (1).png")));
 		btnNewButton_1.setBounds(221, 411, 46, 46);
 		contentPane.add(btnNewButton_1);
-<<<<<<< HEAD
-
-		lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon(TelaCrudAdmCarros.class.getResource("/visao/logo bem transparente.png")));
-		lblNewLabel_1.setBounds(183, 0, 1045, 749);
-		contentPane.add(lblNewLabel_1);
 		
 		JButton btnVender = new JButton("Vender");
 		btnVender.addActionListener(new ActionListener() {
@@ -340,7 +325,6 @@ public class TelaCrudAdmCarros extends JFrame {
 		btnVender.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnVender.setBounds(1246, 19, 136, 46);
 		contentPane.add(btnVender);
-=======
->>>>>>> main
+
 	}
 }

@@ -43,7 +43,6 @@ public class TelaCrudAdminFunc extends JFrame {
 	private JButton btnNewButton;
 	private JPasswordField textSenha;
 	private FuncionarioDAO funcDAO;
-	private JLabel lblNewLabel_3;
 
 	/**
 	 * Launch the application.
@@ -74,11 +73,6 @@ public class TelaCrudAdminFunc extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
-		lblNewLabel_3 = new JLabel("");
-		lblNewLabel_3.setIcon(new ImageIcon(TelaCrudAdminFunc.class.getResource("/visao/voltar (1).png")));
-		lblNewLabel_3.setBounds(10, 13, 46, 32);
-		contentPane.add(lblNewLabel_3);
 
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(277, 368, 815, 315);
@@ -272,6 +266,7 @@ public class TelaCrudAdminFunc extends JFrame {
 		contentPane.add(lblNewLabel_1);
 
 		btnNewButton = new JButton("Voltar");
+		btnNewButton.setIcon(new ImageIcon(TelaCrudAdminFunc.class.getResource("/visao/voltar (1).png")));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaPrincipAdmin telaPrincipiAdm = new TelaPrincipAdmin();

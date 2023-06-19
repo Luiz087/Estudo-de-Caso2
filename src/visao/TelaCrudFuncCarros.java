@@ -44,7 +44,6 @@ public class TelaCrudFuncCarros extends JFrame {
 	private JLabel lblAno;
 	private JTextField textAno;
 	private JTextField textModelo;
-	private JLabel lblNewLabel_1;
 	private JTable Table1;
 	private JScrollPane scrollPane;
 	private static CarrovendidoDAO vendido;
@@ -253,6 +252,7 @@ public class TelaCrudFuncCarros extends JFrame {
 		
 		
 		JButton btnVender = new JButton("Vender");
+		btnVender.setIcon(new ImageIcon(TelaCrudFuncCarros.class.getResource("/visao/2648295 (1).png")));
 		btnVender.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaCompraCarrosFunc telaCompraCarros = new TelaCompraCarrosFunc();
@@ -262,13 +262,8 @@ public class TelaCrudFuncCarros extends JFrame {
 			}
 		});
 		btnVender.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnVender.setBounds(1246, 21, 136, 46);
+		btnVender.setBounds(1228, 21, 154, 46);
 		contentPane.add(btnVender);
-		
-		lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setBounds(183, 0, 1177, 777);
-		lblNewLabel_1.setIcon(new ImageIcon(TelaCrudFuncCarros.class.getResource("/visao/logo bem transparente.png")));
-		contentPane.add(lblNewLabel_1);
 		
 		btnSair = new JButton("Sair");
 		btnSair.addActionListener(new ActionListener() {
@@ -284,5 +279,6 @@ public class TelaCrudFuncCarros extends JFrame {
 		btnSair.setBackground(Color.WHITE);
 		btnSair.setBounds(10, 15, 131, 30);
 		contentPane.add(btnSair);
+
 	}
 }

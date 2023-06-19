@@ -61,11 +61,6 @@ public class TelaListarComprasAdm extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon(TelaListarComprasAdm.class.getResource("/visao/voltar (1).png")));
-		lblNewLabel_1.setBounds(23, 15, 50, 30);
-		contentPane.add(lblNewLabel_1);
 
 		JLabel lblNewLabel_2_5 = new JLabel("Lista de Comprados");
 		lblNewLabel_2_5.setHorizontalAlignment(SwingConstants.CENTER);
@@ -75,6 +70,7 @@ public class TelaListarComprasAdm extends JFrame {
 		contentPane.add(lblNewLabel_2_5);
 
 		JButton btnVoltarTelaLogin = new JButton("Voltar");
+		btnVoltarTelaLogin.setIcon(new ImageIcon(TelaListarComprasAdm.class.getResource("/visao/voltar (1).png")));
 		btnVoltarTelaLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaCompraCarros telaCompras = new TelaCompraCarros();
