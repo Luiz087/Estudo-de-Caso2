@@ -88,6 +88,8 @@ public class TelaCrudAdmCarros extends JFrame {
 		table.setModel(new DefaultTableModel(new Object[][] {},
 				new String[] { "Modelo", "Ano", "Cor", "Marca", "Pre\u00E7o" }));
 		scrollPane.setViewportView(table);
+		
+
 
 		lblNewLabel = new JLabel("Modelo:");
 		lblNewLabel.setForeground(new Color(255, 255, 255));

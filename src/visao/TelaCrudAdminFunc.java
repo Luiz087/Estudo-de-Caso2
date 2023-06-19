@@ -85,7 +85,7 @@ public class TelaCrudAdminFunc extends JFrame {
 		funcDAO = FuncionarioDAO.getInstancia();
 		if(funcDAO.listarFuncionarios().isEmpty()) {
 			table.setModel(new DefaultTableModel(new Object[][] {},
-					new String[] { "Nome", "Usu\u00E1rio", "Nenhum funcionário cadastrado!","Nenhum funcionário cadastrado!"}));
+					new String[] { "Nome", "Usu\u00E1rio"}));
 		} else {
 			for (Funcionario func : funcDAO.listarFuncionarios()) {
 				DefaultTableModel tblModel = (DefaultTableModel) table.getModel();

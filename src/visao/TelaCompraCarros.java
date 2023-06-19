@@ -24,6 +24,8 @@ import javax.swing.JScrollPane;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class TelaCompraCarros extends JFrame {
 
@@ -194,9 +196,21 @@ public class TelaCompraCarros extends JFrame {
 		contentPane.add(scrollPane);
 
 		table = new JTable();
+		table.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				int setar = table.getSelectedRow();
+				textModelo.setText(table.getModel().getValueAt(setar, 0).toString());
+				textAno.setText(table.getModel().getValueAt(setar, 1).toString());
+				textCor.setText(table.getModel().getValueAt(setar, 2).toString());
+				textMarca.setText(table.getModel().getValueAt(setar, 3).toString());
+				textPreco.setText(table.getModel().getValueAt(setar, 4).toString());
+			}
+		});
 		table.setModel(new DefaultTableModel(new Object[][] {},
 				new String[] { "Modelo", "Ano", "Cor", "Marca", "Pre\u00E7o" }));
 		scrollPane.setViewportView(table);
+		
 
 		JButton btnNewButton_1 = new JButton("Voltar");
 		btnNewButton_1.addActionListener(new ActionListener() {
