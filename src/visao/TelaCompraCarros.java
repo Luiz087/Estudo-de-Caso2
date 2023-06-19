@@ -67,6 +67,11 @@ public class TelaCompraCarros extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon(TelaCompraCarros.class.getResource("/visao/voltar (1).png")));
+		lblNewLabel_1.setBounds(10, 9, 46, 32);
+		contentPane.add(lblNewLabel_1);
 
 		textModelo = new JTextField();
 		textModelo.setEditable(false);

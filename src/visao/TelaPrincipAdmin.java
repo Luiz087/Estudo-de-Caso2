@@ -49,6 +49,11 @@ public class TelaPrincipAdmin extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon(TelaPrincipAdmin.class.getResource("/visao/sair (1).png")));
+		lblNewLabel_1.setBounds(20, 15, 30, 30);
+		contentPane.add(lblNewLabel_1);
 
 		JLabel lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon(TelaPrincipAdmin.class.getResource("/visao/v (1).png")));
@@ -141,10 +146,5 @@ public class TelaPrincipAdmin extends JFrame {
 		btnNewButton_1_1_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnNewButton_1_1_1_1_1_1.setBounds(745, 371, 233, 71);
 		contentPane.add(btnNewButton_1_1_1_1_1_1);
-
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon(TelaPrincipAdmin.class.getResource("/visao/logo bem transparente.png")));
-		lblNewLabel_1.setBounds(195, 0, 1370, 749);
-		contentPane.add(lblNewLabel_1);
 	}
 }
