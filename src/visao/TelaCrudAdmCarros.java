@@ -18,6 +18,7 @@ import javax.swing.JFormattedTextField;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.text.MaskFormatter;
 
+import controle.CarroDAO;
 import controle.CarrovendidoDAO;
 import modelo.Carro;
 
@@ -33,7 +34,7 @@ public class TelaCrudAdmCarros extends JFrame {
 	private JPanel contentPane;
 	private JTable table;
 	private JLabel lblNewLabel;
-	private JTextField textPreco;
+	private JFormattedTextField textPreco;
 	private JLabel lblPreo;
 	private JLabel lblMarca;
 	private JTextField textMarca;
@@ -46,6 +47,8 @@ public class TelaCrudAdmCarros extends JFrame {
 	private JLabel lblNewLabel_1;
 	private JButton btnVender;
 	private CarrovendidoDAO vendido;
+	private CarroDAO carroDAO;
+	private JButton btnNewButton_1;
 
 	/**
 	 * Launch the application.
@@ -67,7 +70,6 @@ public class TelaCrudAdmCarros extends JFrame {
 	 * Create the frame.
 	 */
 	public TelaCrudAdmCarros() {
-		Carro carro = new Carro();
 		ArrayList venderCarro = new ArrayList<>();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1408, 788);
@@ -96,7 +98,8 @@ public class TelaCrudAdmCarros extends JFrame {
 
 		MaskFormatter mascaraPreco = null;
 		try {
-			mascaraPreco = new MaskFormatter("##########");
+			mascaraPreco = new MaskFormatter("######");
+			mascaraPreco.setValidCharacters("0123456789");
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
@@ -166,6 +169,7 @@ public class TelaCrudAdmCarros extends JFrame {
 				DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
 				if (table.getSelectedRowCount() == 1) {
 					tblModel.removeRow(table.getSelectedRow());
+					
 				} else {
 					if (table.getRowCount() == 0) {
 						JOptionPane.showMessageDialog(null, "Carro removido com sucesso!");
@@ -184,20 +188,39 @@ public class TelaCrudAdmCarros extends JFrame {
 		btnAdd.setIcon(new ImageIcon(TelaCrudAdmCarros.class.getResource("/visao/Green-Add-Button-PNG-HD1.png")));
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (textModelo.getText().equals("") || textAno.getText().equals("") || textCor.getText().equals("") || textMarca.getText().equals("") || textPreco.getText().equals("")) {
+
+				DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
+				if (textModelo.getText().equals("") || textAno.getText().equals("") || textCor.getText().equals("")
+						|| textMarca.getText().equals("") || textPreco.getText().equals("")) {
 					JOptionPane.showMessageDialog(null, "Insira todas as colunas!");
 				} else {
-					String data[] = { textModelo.getText(), textAno.getText(), textCor.getText(), textMarca.getText(),textPreco.getText() };
-					DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
+					String data[] = { textModelo.getText(), textAno.getText(), textCor.getText(), textMarca.getText(),
+							textPreco.getText() };
 					tblModel.addRow(data);
 					JOptionPane.showMessageDialog(null, "Carro adicionado com sucesso!");
+
+					Integer ano = Integer.valueOf(textAno.getText());
+					Double preco = Double.valueOf(textPreco.getText());
+					Carro carro1 = new Carro();
+					carro1.setCor(textAno.getText());
+					carro1.setMarca(textMarca.getText());
+					carro1.setModelo(textModelo.getText());
+					carro1.setAno(ano);
+					carro1.setPreco(preco);
 
 					textModelo.setText("");
 					textAno.setText("");
 					textCor.setText("");
 					textMarca.setText("");
 					textPreco.setText("");
+					if (carroDAO == null) {
+						carroDAO = CarroDAO.getInstancia();
+						carroDAO.inserir(carro1);
+					} else {
+						carroDAO.inserir(carro1);
+					}
 				}
+
 			}
 		});
 		btnAdd.setFont(new Font("Tahoma", Font.PLAIN, 18));
@@ -205,7 +228,8 @@ public class TelaCrudAdmCarros extends JFrame {
 		contentPane.add(btnAdd);
 
 		JButton btnUpdate = new JButton("Atualizar");
-		btnUpdate.setIcon(new ImageIcon(TelaCrudAdmCarros.class.getResource("/visao/NicePng_refresh-icon-png_2047577 (1).png")));
+		btnUpdate.setIcon(
+				new ImageIcon(TelaCrudAdmCarros.class.getResource("/visao/NicePng_refresh-icon-png_2047577 (1).png")));
 		btnUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
@@ -300,6 +324,37 @@ public class TelaCrudAdmCarros extends JFrame {
 		btnVender.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnVender.setBounds(845, 313, 136, 46);
 		contentPane.add(btnVender);
+
+		btnNewButton_1 = new JButton("");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
+
+				if (carroDAO == null) {
+					carroDAO = CarroDAO.getInstancia();
+					for (Carro carro : carroDAO.listarCarros()) {
+						String data[] = { carro.getModelo(), carro.getAno().toString(), carro.getCor(),
+								carro.getMarca(), carro.getPreco().toString() };
+						tblModel.addRow(data);
+					}
+				} else {
+
+					if (carroDAO.listarCarros().isEmpty()) {
+						JOptionPane.showMessageDialog(null, "Nenhum carro cadastrado!");
+					} else {
+						for (Carro carro : carroDAO.listarCarros()) {
+							String data[] = { carro.getModelo(), carro.getAno().toString(), carro.getCor(),
+									carro.getMarca(), carro.getPreco().toString() };
+							tblModel.addRow(data);
+						}
+					}
+				}
+			}
+		});
+		btnNewButton_1.setIcon(
+				new ImageIcon(TelaCrudAdmCarros.class.getResource("/visao/NicePng_refresh-icon-png_2047577 (1).png")));
+		btnNewButton_1.setBounds(221, 411, 46, 46);
+		contentPane.add(btnNewButton_1);
 
 		lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon(TelaCrudAdmCarros.class.getResource("/visao/logo bem transparente.png")));

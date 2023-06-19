@@ -35,7 +35,7 @@ public class TelaCompraCarros extends JFrame {
 	private JTextField textPreco;
 	private JTable table;
 	private CarrovendidoDAO vendido;
-	private CarroDAO qtdCarro;
+	private CarroDAO carroDAO;
 
 	/**
 	 * Launch the application.
@@ -65,125 +65,180 @@ public class TelaCompraCarros extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		textModelo = new JTextField();
 		textModelo.setEditable(false);
 		textModelo.setBounds(583, 74, 203, 32);
 		contentPane.add(textModelo);
 		textModelo.setColumns(10);
-		
+
 		JLabel lblNewLabel_2 = new JLabel("Disponíveis para venda");
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_2.setForeground(Color.WHITE);
 		lblNewLabel_2.setFont(new Font("Segoe UI Black", Font.BOLD, 38));
 		lblNewLabel_2.setBounds(445, 0, 479, 72);
 		contentPane.add(lblNewLabel_2);
-		
+
 		textAno = new JTextField();
 		textAno.setEditable(false);
 		textAno.setColumns(10);
 		textAno.setBounds(583, 115, 203, 32);
 		contentPane.add(textAno);
-		
+
 		textCor = new JTextField();
 		textCor.setEditable(false);
 		textCor.setColumns(10);
 		textCor.setBounds(583, 158, 203, 32);
 		contentPane.add(textCor);
-		
+
 		textMarca = new JTextField();
 		textMarca.setEditable(false);
 		textMarca.setColumns(10);
 		textMarca.setBounds(583, 201, 203, 32);
 		contentPane.add(textMarca);
-		
+
 		JButton btnNewButton = new JButton("Vender");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
+				if (table.getSelectedRowCount() == 1) {
+
+					Carro carro1 = new Carro();
+
+					int setar = table.getSelectedRow();
+
+					textModelo.setText(table.getModel().getValueAt(setar, 0).toString());
+					textAno.setText(table.getModel().getValueAt(setar, 1).toString());
+					textCor.setText(table.getModel().getValueAt(setar, 2).toString());
+					textMarca.setText(table.getModel().getValueAt(setar, 3).toString());
+					textPreco.setText(table.getModel().getValueAt(setar, 4).toString());
+
+					String modelo = textModelo.getText();
+					String ano = textAno.getText();
+					String cor = textCor.getText();
+					String marca = textMarca.getText();
+					String preco = textPreco.getText();
+
+					carro1.setModelo(modelo);
+					carro1.setAno(Integer.valueOf(ano));
+					carro1.setCor(cor);
+					carro1.setMarca(marca);
+					carro1.setPreco(Double.valueOf(preco));
+
+					if (vendido == null) {
+						vendido = CarrovendidoDAO.getInstancia();
+						vendido.inserir(carro1);
+					} else {
+						vendido.inserir(carro1);
+					}
+					carroDAO.excluir(modelo, Integer.valueOf(ano), cor, marca, Double.valueOf(preco));
+
+					tblModel.removeRow(table.getSelectedRow());
+
+				} else {
+					if (table.getRowCount() == 0) {
+						JOptionPane.showMessageDialog(null, "Carro vendido com sucesso!");
+					} else {
+						JOptionPane.showMessageDialog(null, "Selecione apenas carro um para vender!");
+					}
+				}
 			}
 		});
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnNewButton.setBounds(607, 634, 155, 46);
 		contentPane.add(btnNewButton);
-		
+
 		textPreco = new JTextField();
 		textPreco.setEditable(false);
 		textPreco.setColumns(10);
 		textPreco.setBounds(583, 244, 203, 32);
 		contentPane.add(textPreco);
-		
+
 		JLabel lblPreo = new JLabel("Preço:");
 		lblPreo.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblPreo.setForeground(Color.WHITE);
 		lblPreo.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lblPreo.setBounds(461, 246, 112, 32);
 		contentPane.add(lblPreo);
-		
+
 		JLabel lblNewLabel = new JLabel("Modelo:");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lblNewLabel.setBounds(461, 74, 112, 32);
 		contentPane.add(lblNewLabel);
-		
+
 		JLabel lblAno = new JLabel("Ano:");
 		lblAno.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblAno.setForeground(Color.WHITE);
 		lblAno.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lblAno.setBounds(461, 117, 112, 32);
 		contentPane.add(lblAno);
-		
+
 		JLabel lblCor = new JLabel("Cor:");
 		lblCor.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblCor.setForeground(Color.WHITE);
 		lblCor.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lblCor.setBounds(461, 160, 112, 32);
 		contentPane.add(lblCor);
-		
+
 		JLabel lblMarca = new JLabel("Marca:");
 		lblMarca.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblMarca.setForeground(Color.WHITE);
 		lblMarca.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lblMarca.setBounds(461, 203, 112, 32);
 		contentPane.add(lblMarca);
-		
+
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(277, 309, 815, 274);
 		contentPane.add(scrollPane);
-		
+
 		table = new JTable();
 		table.setModel(new DefaultTableModel(new Object[][] {},
 				new String[] { "Modelo", "Ano", "Cor", "Marca", "Pre\u00E7o" }));
 		scrollPane.setViewportView(table);
-		
+
 		JButton btnNewButton_1 = new JButton("Voltar");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				TelaPrincipAdmin telaPrincipiAdm = new TelaPrincipAdmin();
+				dispose();
+				telaPrincipiAdm.setExtendedState(JFrame.MAXIMIZED_BOTH);
+				telaPrincipiAdm.setVisible(true);
 			}
 		});
 		btnNewButton_1.setBounds(10, 11, 131, 30);
 		contentPane.add(btnNewButton_1);
-		
+
 		JButton btnVendidos = new JButton("Vendidos");
+		btnVendidos.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaListarComprasAdm telaComprados = new TelaListarComprasAdm();
+				dispose();
+				telaComprados.setExtendedState(JFrame.MAXIMIZED_BOTH);
+				telaComprados.setVisible(true);
+			}
+		});
 		btnVendidos.setBackground(new Color(0, 255, 0));
 		btnVendidos.setBounds(1229, 15, 131, 30);
 		contentPane.add(btnVendidos);
-		
+
 		JButton btnNewButton_2 = new JButton("");
-		qtdCarro = CarroDAO.getInstancia();
+		carroDAO = CarroDAO.getInstancia();
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
-				for (Carro carro : qtdCarro.listarCarros()) {
+				for (Carro carro : carroDAO.listarCarros()) {
 					String ano = String.valueOf(carro.getAno());
 					String preco = String.valueOf(carro.getPreco());
-					
-					String data[] = {carro.getModelo(), ano, carro.getCor(), carro.getMarca(), preco};
+
+					String data[] = { carro.getModelo(), ano, carro.getCor(), carro.getMarca(), preco };
 					tblModel.addRow(data);
 				}
 			}
 		});
-		btnNewButton_2.setIcon(new ImageIcon(TelaCompraCarros.class.getResource("/visao/NicePng_refresh-icon-png_2047577 (1).png")));
+		btnNewButton_2.setIcon(
+				new ImageIcon(TelaCompraCarros.class.getResource("/visao/NicePng_refresh-icon-png_2047577 (1).png")));
 		btnNewButton_2.setBounds(221, 310, 46, 46);
 		contentPane.add(btnNewButton_2);
 	}

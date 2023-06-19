@@ -35,8 +35,8 @@ public class Carro {
 	public Double getPreco() {
 		return preco;
 	}
-	public void setPreco(Double preco) {
-		this.preco = preco;
+	public void setPreco(Double preco2) {
+		this.preco = preco2;
 	}
 	
 }

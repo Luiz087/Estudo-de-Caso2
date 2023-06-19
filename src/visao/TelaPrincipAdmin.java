@@ -49,12 +49,12 @@ public class TelaPrincipAdmin extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		JLabel lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon(TelaPrincipAdmin.class.getResource("/visao/v (1).png")));
 		lblNewLabel_3.setBounds(798, 70, 150, 150);
 		contentPane.add(lblNewLabel_3);
-		
+
 		JLabel lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon(TelaPrincipAdmin.class.getResource("/visao/2942813 (3).png")));
 		lblNewLabel_2.setBounds(483, 70, 166, 150);
@@ -74,7 +74,7 @@ public class TelaPrincipAdmin extends JFrame {
 		contentPane.add(lblFunesDeFuncionrio);
 
 		JButton btnNewButton_1_1_1_2_1_1 = new JButton("Listar Funcionários");
-	       btnNewButton_1_1_1_2_1_1.addActionListener(new ActionListener() {
+		btnNewButton_1_1_1_2_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaCrudAdminFunc telaCrudAdminFunci = new TelaCrudAdminFunc();
 				dispose();
@@ -86,14 +86,12 @@ public class TelaPrincipAdmin extends JFrame {
 		btnNewButton_1_1_1_2_1_1.setBounds(443, 371, 233, 71);
 		contentPane.add(btnNewButton_1_1_1_2_1_1);
 
-
 		JButton btnSair = new JButton("Sair");
 		btnSair.setForeground(new Color(0, 0, 0));
 		btnSair.setFont(new Font("Tahoma", Font.BOLD, 11));
 
-		
 		btnSair.addActionListener(new ActionListener() {
-			
+
 			public void actionPerformed(ActionEvent e) {
 				TelaLogin telaLoginUsu = new TelaLogin();
 				dispose();
@@ -130,7 +128,20 @@ public class TelaPrincipAdmin extends JFrame {
 		btnNewButton_1_1_1_2_1_1_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnNewButton_1_1_1_2_1_1_2.setBounds(443, 275, 233, 71);
 		contentPane.add(btnNewButton_1_1_1_2_1_1_2);
-		
+
+		JButton btnNewButton_1_1_1_1_1_1 = new JButton("Vender Carros");
+		btnNewButton_1_1_1_1_1_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaCompraCarros telaCarrosComprador = new TelaCompraCarros();
+				dispose();
+				telaCarrosComprador.setExtendedState(JFrame.MAXIMIZED_BOTH);
+				telaCarrosComprador.setVisible(true);
+			}
+		});
+		btnNewButton_1_1_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnNewButton_1_1_1_1_1_1.setBounds(745, 371, 233, 71);
+		contentPane.add(btnNewButton_1_1_1_1_1_1);
+
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon(TelaPrincipAdmin.class.getResource("/visao/logo bem transparente.png")));
 		lblNewLabel_1.setBounds(195, 0, 1370, 749);

@@ -31,7 +31,13 @@ public class CarroDAO {
 		return false;
 	}
 	
-	public boolean excluir() {
+	public boolean excluir(String textModelo, Integer textAno, String textCor, String textMarca, Double textPreco) {
+		for (Carro carro : CarroDAO.listarCarros()) {
+			if (textModelo == carro.getModelo() && textAno == carro.getAno() && textCor == carro.getCor() && textMarca == carro.getMarca() && textPreco == carro.getPreco()) {
+				listaCarro.remove(carro);
+				return true;
+			}
+		}
 		return false;
 	}
 	
@@ -39,7 +45,7 @@ public class CarroDAO {
 		return false;
 	}
 
-	public ArrayList<Carro> listarCarros() {
+	public static ArrayList<Carro> listarCarros() {
 		return listaCarro;
 	}
 	

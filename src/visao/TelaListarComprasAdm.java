@@ -34,7 +34,7 @@ public class TelaListarComprasAdm extends JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		
+
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -51,7 +51,7 @@ public class TelaListarComprasAdm extends JFrame {
 	 * Create the frame.
 	 */
 	public TelaListarComprasAdm() {
-		
+
 		setTitle("Tela de Listagem de Funcionários");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1386, 1034);
@@ -61,55 +61,50 @@ public class TelaListarComprasAdm extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		JLabel lblNewLabel_2_5 = new JLabel("Lista de Comprados");
 		lblNewLabel_2_5.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_2_5.setForeground(new Color(255, 255, 255));
 		lblNewLabel_2_5.setFont(new Font("Segoe UI Black", Font.BOLD, 38));
 		lblNewLabel_2_5.setBounds(445, 0, 479, 72);
 		contentPane.add(lblNewLabel_2_5);
-		
+
 		JButton btnVoltarTelaLogin = new JButton("Voltar");
 		btnVoltarTelaLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				TelaPrincipAdmin telaPrincipiAdm = new TelaPrincipAdmin();
+				TelaCompraCarros telaCompras = new TelaCompraCarros();
 				dispose();
-				telaPrincipiAdm.setExtendedState(JFrame.MAXIMIZED_BOTH);
-				telaPrincipiAdm.setVisible(true);
+				telaCompras.setExtendedState(JFrame.MAXIMIZED_BOTH);
+				telaCompras.setVisible(true);
 			}
 		});
 		btnVoltarTelaLogin.setBackground(SystemColor.info);
 		btnVoltarTelaLogin.setBounds(10, 15, 131, 30);
 		contentPane.add(btnVoltarTelaLogin);
-		
+
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(245, 72, 880, 577);
 		contentPane.add(scrollPane);
-		
+
 		table = new JTable();
-		table.setModel(new DefaultTableModel(
-			new Object[][] {
-			},
-			new String[] {
-				"Modelo", "Ano", "Cor", "Marca", "Pre\u00E7o"
-			}
-			
-			
-			
-		));
-		
+		table.setModel(
+				new DefaultTableModel(new Object[][] {}, new String[] { "Modelo", "Ano", "Cor", "Marca", "Pre\u00E7o" }
+
+				));
+
 		scrollPane.setViewportView(table);
-		
-		vendidoDAO =  CarrovendidoDAO.getInstancia();
-		DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
+		if (vendidoDAO == null) {
+			vendidoDAO = CarrovendidoDAO.getInstancia();
+		}
 		for (Carro qtdCarro : vendidoDAO.listarCarros()) {
+			DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
 			String ano = String.valueOf(qtdCarro.getAno());
 			String preco = String.valueOf(qtdCarro.getPreco());
-			
-			String data[] = {qtdCarro.getModelo(), ano, qtdCarro.getCor(), qtdCarro.getMarca(), preco};
+
+			String data[] = { qtdCarro.getModelo(), ano, qtdCarro.getCor(), qtdCarro.getMarca(), preco };
 			tblModel.addRow(data);
 		}
-		
+
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(TelaListarComprasAdm.class.getResource("/visao/logo bem transparente.png")));
 		lblNewLabel.setBounds(187, 0, 1079, 774);
