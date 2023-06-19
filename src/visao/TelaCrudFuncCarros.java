@@ -48,6 +48,7 @@ public class TelaCrudFuncCarros extends JFrame {
 	private JTable Table1;
 	private JScrollPane scrollPane;
 	private static CarrovendidoDAO vendido;
+	private JButton btnSair;
 
 	/**
 	 * Launch the application.
@@ -86,10 +87,17 @@ public class TelaCrudFuncCarros extends JFrame {
 		lblModelo.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		contentPane.add(lblModelo);
 		
-		textPreco = new JTextField();
+		MaskFormatter mascaraPreco = null;
+		try {
+			mascaraPreco = new MaskFormatter("######");
+			mascaraPreco.setValidCharacters("0123456789");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		textPreco = new JFormattedTextField(mascaraPreco);
 		textPreco.setBounds(600, 246, 203, 32);
-		textPreco.setColumns(10);
 		contentPane.add(textPreco);
+		textPreco.setColumns(10);
 		
 		lblPreco = new JLabel("Preço:");
 		lblPreco.setBounds(478, 246, 112, 32);
@@ -147,7 +155,7 @@ public class TelaCrudFuncCarros extends JFrame {
 		
 		JButton btnDelete = new JButton("Remover");
 		btnDelete.setIcon(new ImageIcon(TelaCrudFuncCarros.class.getResource("/visao/trash-10-xxl (1).png")));
-		btnDelete.setBounds(774, 312, 136, 46);
+		btnDelete.setBounds(774, 312, 150, 46);
 		btnDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				DefaultTableModel tblModel = (DefaultTableModel) Table1.getModel();
@@ -247,7 +255,7 @@ public class TelaCrudFuncCarros extends JFrame {
 		JButton btnVender = new JButton("Vender");
 		btnVender.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				TelaCompraCarros telaCompraCarros = new TelaCompraCarros();
+				TelaCompraCarrosFunc telaCompraCarros = new TelaCompraCarrosFunc();
 				dispose();
 				telaCompraCarros.setExtendedState(JFrame.MAXIMIZED_BOTH);
 				telaCompraCarros.setVisible(true);
@@ -261,5 +269,20 @@ public class TelaCrudFuncCarros extends JFrame {
 		lblNewLabel_1.setBounds(183, 0, 1177, 777);
 		lblNewLabel_1.setIcon(new ImageIcon(TelaCrudFuncCarros.class.getResource("/visao/logo bem transparente.png")));
 		contentPane.add(lblNewLabel_1);
+		
+		btnSair = new JButton("Sair");
+		btnSair.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaLogin login = new TelaLogin();
+				dispose();
+				login.setExtendedState(JFrame.MAXIMIZED_BOTH);
+				login.setVisible(true);
+			}
+		});
+		btnSair.setForeground(Color.BLACK);
+		btnSair.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnSair.setBackground(Color.WHITE);
+		btnSair.setBounds(10, 15, 131, 30);
+		contentPane.add(btnSair);
 	}
 }

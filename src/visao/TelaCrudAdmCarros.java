@@ -45,7 +45,6 @@ public class TelaCrudAdmCarros extends JFrame {
 	private JTextField textModelo;
 	private JButton btnNewButton;
 	private JLabel lblNewLabel_1;
-	private JButton btnVender;
 	private CarrovendidoDAO vendido;
 	private CarroDAO carroDAO;
 	private JButton btnNewButton_1;
@@ -282,51 +281,6 @@ public class TelaCrudAdmCarros extends JFrame {
 		btnNewButton.setBounds(10, 15, 131, 30);
 		contentPane.add(btnNewButton);
 
-		btnVender = new JButton("Vender");
-		btnVender.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
-				if (table.getSelectedRowCount() == 1) {
-
-					Carro carro1 = new Carro();
-
-					int setar = table.getSelectedRow();
-
-					textModelo.setText(table.getModel().getValueAt(setar, 0).toString());
-					textAno.setText(table.getModel().getValueAt(setar, 1).toString());
-					textCor.setText(table.getModel().getValueAt(setar, 2).toString());
-					textMarca.setText(table.getModel().getValueAt(setar, 3).toString());
-					textPreco.setText(table.getModel().getValueAt(setar, 4).toString());
-
-					String modelo = textModelo.getText();
-					String ano = textAno.getText();
-					String cor = textCor.getText();
-					String marca = textMarca.getText();
-					String preco = textPreco.getText();
-
-					carro1.setModelo(modelo);
-					carro1.setAno(Integer.valueOf(ano));
-					carro1.setCor(cor);
-					carro1.setMarca(marca);
-					carro1.setPreco(Double.valueOf(preco));
-
-					vendido = CarrovendidoDAO.getInstancia();
-					vendido.inserir(carro1);
-
-					tblModel.removeRow(table.getSelectedRow());
-				} else {
-					if (table.getRowCount() == 0) {
-						JOptionPane.showMessageDialog(null, "Carro vendido com sucesso!");
-					} else {
-						JOptionPane.showMessageDialog(null, "Selecione apenas carro um para vender!");
-					}
-				}
-			}
-		});
-		btnVender.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnVender.setBounds(845, 313, 136, 46);
-		contentPane.add(btnVender);
-
 		btnNewButton_1 = new JButton("");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -362,5 +316,18 @@ public class TelaCrudAdmCarros extends JFrame {
 		lblNewLabel_1.setIcon(new ImageIcon(TelaCrudAdmCarros.class.getResource("/visao/logo bem transparente.png")));
 		lblNewLabel_1.setBounds(183, 0, 1045, 749);
 		contentPane.add(lblNewLabel_1);
+		
+		JButton btnVender = new JButton("Vender");
+		btnVender.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaCompraCarros telaCompraCarros = new TelaCompraCarros();
+				dispose();
+				telaCompraCarros.setExtendedState(JFrame.MAXIMIZED_BOTH);
+				telaCompraCarros.setVisible(true);
+			}
+		});
+		btnVender.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnVender.setBounds(1246, 19, 136, 46);
+		contentPane.add(btnVender);
 	}
 }

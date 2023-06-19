@@ -27,7 +27,7 @@ import javax.swing.ImageIcon;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class TelaCompraCarros extends JFrame {
+public class TelaCompraCarrosFunc extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textModelo;
@@ -46,7 +46,7 @@ public class TelaCompraCarros extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TelaCompraCarros frame = new TelaCompraCarros();
+					TelaCompraCarrosFunc frame = new TelaCompraCarrosFunc();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -58,7 +58,7 @@ public class TelaCompraCarros extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public TelaCompraCarros() {
+	public TelaCompraCarrosFunc() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1386, 1083);
 		contentPane = new JPanel();
@@ -239,19 +239,6 @@ public class TelaCompraCarros extends JFrame {
 		});
 		btnNewButton_1.setBounds(10, 11, 131, 30);
 		contentPane.add(btnNewButton_1);
-
-		JButton btnVendidos = new JButton("Vendidos");
-		btnVendidos.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				TelaListarComprasAdm telaComprados = new TelaListarComprasAdm();
-				dispose();
-				telaComprados.setExtendedState(JFrame.MAXIMIZED_BOTH);
-				telaComprados.setVisible(true);
-			}
-		});
-		btnVendidos.setBackground(new Color(255, 255, 255));
-		btnVendidos.setBounds(1229, 15, 131, 30);
-		contentPane.add(btnVendidos);
 		carroDAO = CarroDAO.getInstancia();
 	}
 }
