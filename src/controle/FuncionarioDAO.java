@@ -2,6 +2,8 @@ package controle;
 
 import java.util.ArrayList;
 
+import javax.swing.JOptionPane;
+
 import modelo.Funcionario;
 
 public class FuncionarioDAO {
@@ -45,7 +47,15 @@ public class FuncionarioDAO {
 		return false;
 	}
 
-	public boolean excluir() {
+	public boolean excluir(Long cpf) {
+		for (Funcionario funcionario : listaFuncionario) {
+			if (funcionario.getCpf().equals(cpf)) {
+				listaFuncionario.remove(funcionario);
+				JOptionPane.showMessageDialog(null, "Funcionário removido!");
+				return true;
+			}
+		}
+		JOptionPane.showMessageDialog(null, "Funcionário não encontrado!");
 		return false;
 	}
 

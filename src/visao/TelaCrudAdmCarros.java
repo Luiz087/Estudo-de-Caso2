@@ -169,13 +169,13 @@ public class TelaCrudAdmCarros extends JFrame {
 				DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
 				if (table.getSelectedRowCount() == 1) {
 					tblModel.removeRow(table.getSelectedRow());
+					JOptionPane.showMessageDialog(null, "Carro removido com sucesso!");
 					
 				} else {
 					if (table.getRowCount() == 0) {
-						JOptionPane.showMessageDialog(null, "Carro removido com sucesso!");
+						JOptionPane.showMessageDialog(null, "Nenhum carro selecionado!");
 					} else {
 						JOptionPane.showMessageDialog(null, "Selecione apenas um para deletar!");
-
 					}
 				}
 			}

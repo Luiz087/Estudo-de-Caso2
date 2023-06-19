@@ -82,6 +82,20 @@ public class TelaCrudAdminFunc extends JFrame {
 		table.setModel(new DefaultTableModel(new Object[][] {},
 				new String[] { "Nome", "Usu\u00E1rio"}));
 		scrollPane.setViewportView(table);
+		funcDAO = FuncionarioDAO.getInstancia();
+		if(funcDAO.listarFuncionarios().isEmpty()) {
+			table.setModel(new DefaultTableModel(new Object[][] {},
+					new String[] { "Nome", "Usu\u00E1rio", "Nenhum funcionário cadastrado!","Nenhum funcionário cadastrado!"}));
+		} else {
+			for (Funcionario func : funcDAO.listarFuncionarios()) {
+				DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
+				String nome = String.valueOf(func.getNome());
+				String usuario = String.valueOf(func.getUsuarioFuncionario());
+
+				String data[] = { nome, usuario };
+				tblModel.addRow(data);
+			}
+		}
 
 		lblNewLabel = new JLabel("Nome:");
 		lblNewLabel.setForeground(new Color(255, 255, 255));
@@ -106,7 +120,7 @@ public class TelaCrudAdminFunc extends JFrame {
 
 		MaskFormatter mascaraCpf = null;
 		try {
-			mascaraCpf = new MaskFormatter("###.###.###-##");
+			mascaraCpf = new MaskFormatter("###########");
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
@@ -145,13 +159,18 @@ public class TelaCrudAdminFunc extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
 				if (table.getSelectedRowCount() == 1) {
+					int setar = table.getSelectedRow();
+					Funcionario func = new Funcionario();
+					Long cpfFunc = (Long.valueOf((table.getModel().getValueAt(setar, 1).toString())));
+					funcDAO.excluir(cpfFunc);
+					
 					tblModel.removeRow(table.getSelectedRow());
+					JOptionPane.showMessageDialog(null, "Funcionario removido com sucesso!");
 				} else {
 					if (table.getRowCount() == 0) {
-						JOptionPane.showMessageDialog(null, "Funcionario removido com sucesso!");
+						JOptionPane.showMessageDialog(null, "Selecione um funcionário!");
 					} else {
 						JOptionPane.showMessageDialog(null, "Selecione apenas um para deletar!");
-
 					}
 				}
 			}
@@ -186,6 +205,7 @@ public class TelaCrudAdminFunc extends JFrame {
 					func1.setCpf(Long.valueOf(textCPF.getText()));
 					func1.setUsuarioFuncionario(textUser.getText());
 					
+					funcDAO = FuncionarioDAO.getInstancia();
 					funcDAO.inserir(func1);
 					
 					textNome.setText("");
@@ -222,6 +242,8 @@ public class TelaCrudAdminFunc extends JFrame {
 					tblModel.setValueAt(strSenha, table.getSelectedRow(), 3);
 
 					JOptionPane.showMessageDialog(null, "Funcionario atualizado com sucesso!");
+					
+					
 
 				} else {
 					if (table.getRowCount() == 0) {
