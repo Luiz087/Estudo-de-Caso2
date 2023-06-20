@@ -38,7 +38,7 @@ A implementação local do programa utiliza computadores com sistema macOS e Win
 
 3. DIAGRAMA DE CASOS DE USO
 
-![Diagrama de caso de uso](https://github.com/Luiz087/Estudo-de-Caso2/assets/84669466/53a9432e-d774-4863-863e-fff51dbeea35)
+![Diagrama de caso de uso (1)](https://github.com/Luiz087/Estudo-de-Caso2/assets/84669466/28fc449c-6bf6-4769-9103-0e59bb91c5dc)
 
 
 4. DIAGRAMA DE CLASSES
