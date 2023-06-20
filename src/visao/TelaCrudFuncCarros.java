@@ -31,6 +31,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JCheckBox;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
 
 public class TelaCrudFuncCarros extends JFrame {
 
@@ -43,7 +45,6 @@ public class TelaCrudFuncCarros extends JFrame {
 	private JTextField textCor;
 	private JLabel lblCor;
 	private JLabel lblAno;
-	private JTextField textAno;
 	private JTextField textModelo;
 	private JTable Table1;
 	private JScrollPane scrollPane;
@@ -137,16 +138,17 @@ public class TelaCrudFuncCarros extends JFrame {
 		lblAno.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		contentPane.add(lblAno);
 		
+		JComboBox comboAno = new JComboBox();
+		comboAno.setModel(new DefaultComboBoxModel(new String[] {"", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970", "1969", "1968", "1967", "1966", "1965", "1964", "1963", "1962", "1961", "1960", "1959", "1958", "1957", "1956", "1955", "1954", "1953", "1952", "1951", "1950", "1949", "1948", "1947", "1946", "1945", "1944", "1943", "1942", "1941", "1940", "1939", "1938", "1937", "1936", "1935", "1934", "1933", "1932", "1931", "1930", "1929", "1928", "1927", "1926", "1925", "1924", "1923", "1922", "1921", "1920", "1919", "1918", "1917", "1916", "1915", "1914", "1913", "1912", "1911", "1910", "1909", "1908", "1907", "1906", "1905", "1904", "1903", "1902", "1901", "1900"}));
+		comboAno.setBounds(600, 117, 203, 32);
+		contentPane.add(comboAno);
+		
 		MaskFormatter mascaraAno = null;
 		 try {
 		      mascaraAno = new MaskFormatter("####");
 		 } catch (ParseException e) {
 		      e.printStackTrace();
 		 }
-		textAno = new JFormattedTextField(mascaraAno);
-		textAno.setBounds(600, 117, 203, 32);
-		contentPane.add(textAno);
-		textAno.setColumns(10);
 		
 		textModelo = new JTextField();
 		textModelo.setBounds(600, 74, 203, 32);
@@ -189,27 +191,28 @@ public class TelaCrudFuncCarros extends JFrame {
 		btnAdd.setBounds(472, 312, 146, 46);
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String anoc = (String) comboAno.getSelectedItem();
 				DefaultTableModel tblModel = (DefaultTableModel) Table1.getModel();
-				if (textModelo.getText().equals("") || textAno.getText().equals("") || textCor.getText().equals("")
+				if (textModelo.getText().equals("") || anoc.equals("") || textCor.getText().equals("")
 						|| textMarca.getText().equals("") || textPreco.getText().equals("")) {
 					JOptionPane.showMessageDialog(null, "Insira todas as colunas!");
 				} else {
-					String data[] = { textModelo.getText(), textAno.getText(), textCor.getText(), textMarca.getText(),
+					String data[] = { textModelo.getText(), (String) comboAno.getSelectedItem(), textCor.getText(), textMarca.getText(),
 							textPreco.getText() };
 					tblModel.addRow(data);
 					JOptionPane.showMessageDialog(null, "Carro adicionado com sucesso!");
 
-					Integer ano = Integer.valueOf(textAno.getText());
+					Integer ano = Integer.valueOf((String) comboAno.getSelectedItem());
 					Double preco = Double.valueOf(textPreco.getText());
 					Carro carro1 = new Carro();
-					carro1.setCor(textAno.getText());
+					carro1.setCor((String) comboAno.getSelectedItem());
 					carro1.setMarca(textMarca.getText());
 					carro1.setModelo(textModelo.getText());
 					carro1.setAno(ano);
 					carro1.setPreco(preco);
 
 					textModelo.setText("");
-					textAno.setText("");
+					comboAno.setSelectedItem("");
 					textCor.setText("");
 					textMarca.setText("");
 					textPreco.setText("");
@@ -232,26 +235,19 @@ public class TelaCrudFuncCarros extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				DefaultTableModel tblModel = (DefaultTableModel) Table1.getModel();
 				if(Table1.getSelectedRowCount() == 1) {
-					String Modelo = textModelo.getText();
-					String Ano = textAno.getText();
+					Integer Ano = Integer.valueOf((String) comboAno.getSelectedItem());
 					String Cor = textCor.getText();
-					String Marca = textMarca.getText();
-					String Preco = textPreco.getText();
-				
-					tblModel.setValueAt(Modelo, Table1.getSelectedRow(), 0);
-					tblModel.setValueAt(Ano, Table1.getSelectedRow(), 1);
-					tblModel.setValueAt(Cor, Table1.getSelectedRow(), 2);
-					tblModel.setValueAt(Marca, Table1.getSelectedRow(), 3);
-					tblModel.setValueAt(Preco, Table1.getSelectedRow(), 4);
+					Double Preco = Double.valueOf(textPreco.getText());
 					
 					int setar = Table1.getSelectedRow();
-					String Modelo1 = Table1.getModel().getValueAt(setar, 0).toString();
-					Integer Ano1 = Integer.valueOf(Table1.getModel().getValueAt(setar, 1).toString());
-					String Cor1 = Table1.getModel().getValueAt(setar, 2).toString();
-					String Marca1 = Table1.getModel().getValueAt(setar, 3).toString();
-					Double Preco1 = Double.valueOf(Table1.getModel().getValueAt(setar, 4).toString());
+					String Modelo = Table1.getModel().getValueAt(setar, 0).toString();
+					String Marca = Table1.getModel().getValueAt(setar, 3).toString();
 					
-					carroDAO.alterar(Modelo1, Ano1, Cor1, Marca1, Preco1);
+					tblModel.setValueAt(Ano, Table1.getSelectedRow(), 1);
+					tblModel.setValueAt(Cor, Table1.getSelectedRow(), 2);
+					tblModel.setValueAt(Preco, Table1.getSelectedRow(), 4);
+					
+					carroDAO.alterar(Modelo, Marca, Ano,Cor,Preco);
 					
 					JOptionPane.showMessageDialog(null, "Carro atualizado com sucesso!");
 				} else {
@@ -274,7 +270,7 @@ public class TelaCrudFuncCarros extends JFrame {
 		contentPane.add(lblNewLabel_2);
 		
 		scrollPane = new JScrollPane();
-		scrollPane.setBounds(339, 394, 713, 310);
+		scrollPane.setBounds(351, 394, 713, 310);
 		contentPane.add(scrollPane);
 		
 		Table1 = new JTable();
@@ -300,7 +296,7 @@ public class TelaCrudFuncCarros extends JFrame {
 		
 		
 		JButton btnVender = new JButton("Vender");
-		btnVender.setIcon(new ImageIcon(TelaCrudFuncCarros.class.getResource("/visao/2648295 (1).png")));
+		btnVender.setIcon(new ImageIcon(TelaCrudFuncCarros.class.getResource("/visao/1585258 (1).png")));
 		btnVender.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaCompraCarrosFunc telaCompraCarros = new TelaCompraCarrosFunc();
@@ -310,7 +306,7 @@ public class TelaCrudFuncCarros extends JFrame {
 			}
 		});
 		btnVender.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnVender.setBounds(1228, 21, 154, 46);
+		btnVender.setBounds(1206, 21, 155, 46);
 		contentPane.add(btnVender);
 		
 		btnSair = new JButton("Sair");
@@ -328,6 +324,7 @@ public class TelaCrudFuncCarros extends JFrame {
 		btnSair.setBackground(Color.WHITE);
 		btnSair.setBounds(10, 15, 106, 39);
 		contentPane.add(btnSair);
+		
 
 	}
 }

@@ -18,6 +18,7 @@ import javax.swing.JFormattedTextField;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.text.MaskFormatter;
 
+import controle.CarroDAO;
 import controle.FuncionarioDAO;
 import modelo.Funcionario;
 
@@ -44,7 +45,7 @@ public class TelaCrudAdminFunc extends JFrame {
 	private JLabel lblNewLabel_1;
 	private JButton btnNewButton;
 	private JPasswordField textSenha;
-	private FuncionarioDAO funcDAO;
+	private FuncionarioDAO funcDAO = FuncionarioDAO.getInstancia();
 
 	/**
 	 * Launch the application.
@@ -66,7 +67,7 @@ public class TelaCrudAdminFunc extends JFrame {
 	 * Create the frame.
 	 */
 	public TelaCrudAdminFunc() {
-		setTitle("Lista Admin");
+		setTitle("Lista de Funcionários");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1408, 788);
 		contentPane = new JPanel();
@@ -76,6 +77,17 @@ public class TelaCrudAdminFunc extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
+		JLabel carroCad = new JLabel("Nenhum funcionário cadastrado!");
+		carroCad.setFont(new Font("Tahoma", Font.BOLD, 18));
+		carroCad.setForeground(new Color(255, 0, 0));
+		carroCad.setBounds(536, 340, 298, 27);
+		contentPane.add(carroCad);
+		if(funcDAO.listarFuncionarios().isEmpty()) {
+			carroCad.setVisible(true);
+		} else {
+			carroCad.setVisible(false);
+		}
+		
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(277, 368, 815, 315);
 		contentPane.add(scrollPane);
@@ -89,13 +101,11 @@ public class TelaCrudAdminFunc extends JFrame {
 				textUser.setText(table.getModel().getValueAt(setar, 1).toString());
 			}
 		});
-		table.setModel(new DefaultTableModel(new Object[][] {},
-				new String[] { "Nome", "Usu\u00E1rio"}));
+		table.setModel(new DefaultTableModel(new Object[][] {}, new String[] { "Nome", "Usu\u00E1rio" }));
 		scrollPane.setViewportView(table);
 		funcDAO = FuncionarioDAO.getInstancia();
-		if(funcDAO.listarFuncionarios().isEmpty()) {
-			table.setModel(new DefaultTableModel(new Object[][] {},
-					new String[] { "Nome", "Usu\u00E1rio"}));
+		if (funcDAO.listarFuncionarios().isEmpty()) {
+			table.setModel(new DefaultTableModel(new Object[][] {}, new String[] { "Nome", "Usu\u00E1rio" }));
 		} else {
 			for (Funcionario func : funcDAO.listarFuncionarios()) {
 				DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
@@ -172,7 +182,7 @@ public class TelaCrudAdminFunc extends JFrame {
 					int setar = table.getSelectedRow();
 					String usuario = ((table.getModel().getValueAt(setar, 1).toString()));
 					funcDAO.excluir(usuario);
-					
+
 					tblModel.removeRow(table.getSelectedRow());
 					JOptionPane.showMessageDialog(null, "Funcionario removido com sucesso!");
 				} else {
@@ -193,13 +203,12 @@ public class TelaCrudAdminFunc extends JFrame {
 		btnADD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Funcionario func1 = new Funcionario();
-				
 				char[] usuarioSenha = textSenha.getPassword();
 				String strSenha = "";
 				if (usuarioSenha != null && usuarioSenha.length > 0) {
 					strSenha = String.valueOf(usuarioSenha);
 				}
-				
+
 				if (textNome.getText().equals("") || textUser.getText().equals("") || textCPF.getText().equals("")
 						|| strSenha.equals("")) {
 					JOptionPane.showMessageDialog(null, "Insira todas as colunas!");
@@ -213,16 +222,17 @@ public class TelaCrudAdminFunc extends JFrame {
 					func1.setSenhaFuncionario(strSenha);
 					func1.setCpf(Long.valueOf(textCPF.getText()));
 					func1.setUsuarioFuncionario(textUser.getText());
-					
+
 					funcDAO = FuncionarioDAO.getInstancia();
 					funcDAO.inserir(func1);
-					
+
 					textNome.setText("");
 					textUser.setText("");
 					textCPF.setText("");
 					textSenha.setText("");
 					
-					
+					carroCad.setVisible(false);
+
 				}
 			}
 		});
@@ -237,13 +247,15 @@ public class TelaCrudAdminFunc extends JFrame {
 				textCPF.setEditable(false);
 				textSenha.setEditable(false);
 			}
+
 			@Override
 			public void mouseExited(MouseEvent e) {
 				textCPF.setEditable(true);
 				textSenha.setEditable(true);
 			}
 		});
-		btnUpdate.setIcon(new ImageIcon(TelaCrudAdminFunc.class.getResource("/visao/NicePng_refresh-icon-png_2047577 (1).png")));
+		btnUpdate.setIcon(
+				new ImageIcon(TelaCrudAdminFunc.class.getResource("/visao/NicePng_refresh-icon-png_2047577 (1).png")));
 		btnUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
@@ -251,18 +263,17 @@ public class TelaCrudAdminFunc extends JFrame {
 				if (table.getSelectedRowCount() == 1) {
 					String Nome = textNome.getText();
 					String Usuario = textUser.getText();
-					Long cpf = Long.valueOf(textCPF.getText());
 					char[] funcSenha = textSenha.getPassword();
 					String strSenha = "";
 					if (funcSenha != null) {
 						strSenha = String.valueOf(funcSenha);
 					}
-
+					int setar = table.getSelectedRow();
+					String usuarioAnt = ((table.getModel().getValueAt(setar, 1).toString()));
+					String nomeAnt = ((table.getModel().getValueAt(setar, 0).toString()));
+					funcDAO.alterar(Nome, Usuario, usuarioAnt, nomeAnt);
 					tblModel.setValueAt(Nome, table.getSelectedRow(), 0);
 					tblModel.setValueAt(Usuario, table.getSelectedRow(), 1);
-					
-					funcDAO.alterar(Nome, Usuario, cpf);					
-					
 
 				} else {
 					if (table.getRowCount() == 0) {
@@ -296,7 +307,7 @@ public class TelaCrudAdminFunc extends JFrame {
 		});
 		btnNewButton.setBounds(10, 15, 131, 30);
 		contentPane.add(btnNewButton);
-		
+
 		textSenha = new JPasswordField();
 		textSenha.setBounds(600, 209, 203, 32);
 		contentPane.add(textSenha);

@@ -126,6 +126,14 @@ public class TelaPrincipAdmin extends JFrame {
 		contentPane.add(btnNewButton_1_1_1_1_1_1);
 		
 		JButton btnSair = new JButton("Sair");
+		btnSair.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaLogin login = new TelaLogin();
+				dispose();
+				login.setExtendedState(JFrame.MAXIMIZED_BOTH);
+				login.setVisible(true);
+			}
+		});
 		btnSair.setIcon(new ImageIcon(TelaPrincipAdmin.class.getResource("/visao/1828490 (1).png")));
 		btnSair.setForeground(Color.BLACK);
 		btnSair.setFont(new Font("Tahoma", Font.BOLD, 11));

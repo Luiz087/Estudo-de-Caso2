@@ -2,6 +2,8 @@ package controle;
 
 import java.util.ArrayList;
 
+import javax.swing.JOptionPane;
+
 import modelo.Carro;
 
 
@@ -33,7 +35,7 @@ public class CarroDAO {
 	
 	public boolean excluir(String textModelo, Integer textAno, String textCor, String textMarca, Double textPreco) {
 		for (Carro carro : CarroDAO.listarCarros()) {
-			if (textModelo == carro.getModelo() && textAno == carro.getAno() && textCor == carro.getCor() && textMarca == carro.getMarca() && textPreco == carro.getPreco()) {
+			if (carro.getModelo().equals(textModelo) && carro.getAno().equals(textAno) && carro.getCor().equals(textCor) && carro.getMarca().equals(textMarca) && carro.getPreco().equals(textPreco)) {
 				listaCarro.remove(carro);
 				return true;
 			}
@@ -41,14 +43,12 @@ public class CarroDAO {
 		return false;
 	}
 	
-	public boolean alterar(String modelo1, Integer ano1, String cor1, String marca1, Double preco1) {
-		for (Carro carro : CarroDAO.listarCarros()) {
-			if (modelo1 == carro.getModelo() && ano1 == carro.getAno() && cor1 == carro.getCor() && marca1 == carro.getMarca() && preco1 == carro.getPreco()) {
-				carro.setAno(ano1);
-				carro.setCor(cor1);
-				carro.setMarca(marca1);
-				carro.setModelo(modelo1);
-				carro.setPreco(preco1);
+	public boolean alterar(String Modelo, String Marca, Integer ano, String cor, Double preco) {
+		for (Carro carro : listaCarro) {
+			if (carro.getModelo().equals(Modelo)&&carro.getMarca().equals(Marca)) {
+				carro.setAno(ano);
+				carro.setCor(cor);
+				carro.setPreco(preco);
 				return true;
 			}
 		}

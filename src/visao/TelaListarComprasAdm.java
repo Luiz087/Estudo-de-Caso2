@@ -17,6 +17,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
+import controle.CarroDAO;
 import controle.CarrovendidoDAO;
 import modelo.Carro;
 
@@ -28,7 +29,7 @@ public class TelaListarComprasAdm extends JFrame {
 
 	private JPanel contentPane;
 	private JTable table;
-	private CarrovendidoDAO vendidoDAO;
+	private CarrovendidoDAO vendidoDAO = CarrovendidoDAO.getInstancia();
 
 	/**
 	 * Launch the application.
@@ -52,7 +53,7 @@ public class TelaListarComprasAdm extends JFrame {
 	 */
 	public TelaListarComprasAdm() {
 
-		setTitle("Tela de Listagem de Funcionários");
+		setTitle("Tela de Carros Comprados");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1386, 1034);
 		contentPane = new JPanel();
@@ -62,6 +63,17 @@ public class TelaListarComprasAdm extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
+		JLabel carroCad = new JLabel("Nenhum carro cadastrado!");
+		carroCad.setFont(new Font("Tahoma", Font.BOLD, 18));
+		carroCad.setForeground(new Color(255, 0, 0));
+		carroCad.setBounds(564, 65, 242, 27);
+		contentPane.add(carroCad);
+		if(vendidoDAO.listarCarros().isEmpty()) {
+			carroCad.setVisible(true);
+		} else {
+			carroCad.setVisible(false);
+		}
+		
 		JLabel lblNewLabel_2_5 = new JLabel("Lista de Comprados");
 		lblNewLabel_2_5.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_2_5.setForeground(new Color(255, 255, 255));
@@ -84,7 +96,7 @@ public class TelaListarComprasAdm extends JFrame {
 		contentPane.add(btnVoltarTelaLogin);
 
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(245, 72, 880, 577);
+		scrollPane.setBounds(245, 102, 880, 577);
 		contentPane.add(scrollPane);
 
 		table = new JTable();

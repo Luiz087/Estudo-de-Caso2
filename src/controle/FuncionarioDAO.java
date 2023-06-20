@@ -57,9 +57,9 @@ public class FuncionarioDAO {
 		return false;
 	}
 
-	public boolean alterar(String nome, String usuario, Long cpf) {
+	public boolean alterar(String nome, String usuario, String usuAnt, String nomeAnt) {
 		for (Funcionario funcionario : listaFuncionario) {
-			if (funcionario.getCpf().equals(cpf)) {
+			if (funcionario.getUsuarioFuncionario().equals(usuAnt) && funcionario.getNome().equals(nomeAnt)) {
 				funcionario.setNome(nome);
 				funcionario.setUsuarioFuncionario(usuario);
 				JOptionPane.showMessageDialog(null, "Funcionário atualizado!");
@@ -72,6 +72,5 @@ public class FuncionarioDAO {
 	public ArrayList<Funcionario> listarFuncionarios() {
 		return listaFuncionario;
 	}
-
 
 }

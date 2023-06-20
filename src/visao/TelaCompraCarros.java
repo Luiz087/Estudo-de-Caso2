@@ -59,6 +59,7 @@ public class TelaCompraCarros extends JFrame {
 	 * Create the frame.
 	 */
 	public TelaCompraCarros() {
+		setTitle("Tela de Compra");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1386, 1083);
 		contentPane = new JPanel();
@@ -73,6 +74,8 @@ public class TelaCompraCarros extends JFrame {
 		textModelo.setBounds(583, 74, 203, 32);
 		contentPane.add(textModelo);
 		textModelo.setColumns(10);
+		
+		
 
 		JLabel lblNewLabel_2 = new JLabel("Disponíveis para venda");
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
@@ -100,6 +103,7 @@ public class TelaCompraCarros extends JFrame {
 		contentPane.add(textMarca);
 
 		JButton btnNewButton = new JButton("Vender");
+		btnNewButton.setIcon(new ImageIcon(TelaCompraCarros.class.getResource("/visao/dinheiro-icone (1).png")));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				DefaultTableModel tblModel = (DefaultTableModel) table.getModel();
@@ -198,7 +202,7 @@ public class TelaCompraCarros extends JFrame {
 		contentPane.add(lblMarca);
 
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(277, 309, 815, 274);
+		scrollPane.setBounds(277, 336, 815, 274);
 		contentPane.add(scrollPane);
 
 		table = new JTable();
@@ -240,9 +244,8 @@ public class TelaCompraCarros extends JFrame {
 		});
 		btnNewButton_1.setBounds(10, 11, 131, 30);
 		contentPane.add(btnNewButton_1);
-
+		
 		JButton btnVendidos = new JButton("Vendidos");
-		btnVendidos.setIcon(new ImageIcon(TelaCompraCarros.class.getResource("/visao/2648295 (1).png")));
 		btnVendidos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaListarComprasAdm telaComprados = new TelaListarComprasAdm();
@@ -251,9 +254,22 @@ public class TelaCompraCarros extends JFrame {
 				telaComprados.setVisible(true);
 			}
 		});
-		btnVendidos.setBackground(new Color(255, 255, 255));
-		btnVendidos.setBounds(1214, 15, 146, 30);
+		btnVendidos.setIcon(new ImageIcon(TelaCompraCarros.class.getResource("/visao/2648295 (1).png")));
+		btnVendidos.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnVendidos.setBounds(1195, 15, 165, 46);
 		contentPane.add(btnVendidos);
+		
+		JLabel carroCad = new JLabel("Nenhum carro cadastrado!");
+		carroCad.setFont(new Font("Tahoma", Font.BOLD, 18));
+		carroCad.setForeground(new Color(255, 0, 0));
+		carroCad.setBounds(564, 298, 242, 27);
+		contentPane.add(carroCad);
+		if(CarroDAO.listarCarros().isEmpty()) {
+			carroCad.setVisible(true);
+		} else {
+			carroCad.setVisible(false);
+		}
+		
 		carroDAO = CarroDAO.getInstancia();
 	}
 }
