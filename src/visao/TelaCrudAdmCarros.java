@@ -215,7 +215,7 @@ public class TelaCrudAdmCarros extends JFrame {
 			}
 		});
 		btnDelete.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnDelete.setBounds(631, 336, 136, 46);
+		btnDelete.setBounds(625, 336, 146, 46);
 		contentPane.add(btnDelete);
 
 		JButton btnAdd = new JButton("Adicionar");
@@ -260,7 +260,7 @@ public class TelaCrudAdmCarros extends JFrame {
 			}
 		});
 		btnAdd.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnAdd.setBounds(466, 336, 155, 46);
+		btnAdd.setBounds(460, 336, 155, 46);
 		contentPane.add(btnAdd);
 
 		JButton btnUpdate = new JButton("Atualizar");
@@ -295,7 +295,7 @@ public class TelaCrudAdmCarros extends JFrame {
 			}
 		});
 		btnUpdate.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnUpdate.setBounds(777, 336, 136, 46);
+		btnUpdate.setBounds(781, 336, 136, 46);
 		contentPane.add(btnUpdate);
 
 		JLabel lblNewLabel_2 = new JLabel("Lista de Carros");

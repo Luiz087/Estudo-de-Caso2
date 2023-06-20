@@ -144,10 +144,10 @@ public class TelaCompraCarrosFunc extends JFrame {
 					textCor.setText("");
 					textMarca.setText("");
 					textPreco.setText("");
-
+					JOptionPane.showMessageDialog(null, "Carro vendido com sucesso!");
 				} else {
 					if (table.getRowCount() == 0) {
-						JOptionPane.showMessageDialog(null, "Carro vendido com sucesso!");
+						JOptionPane.showMessageDialog(null, "Selecione um carro para vender!");
 					} else {
 						JOptionPane.showMessageDialog(null, "Selecione apenas carro um para vender!");
 					}
