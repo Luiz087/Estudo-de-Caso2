@@ -1,4 +1,4 @@
-# estudo-de-caso2
+# Estudo de Caso - PDS
 
 Equipe:
 Eric de Oliveira,
