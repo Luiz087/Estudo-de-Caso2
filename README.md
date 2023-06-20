@@ -13,7 +13,8 @@ Luiz Fernando Schmitt.
 
 	📜 1.1. DESCRIÇÃO DO SISTEMA
 
-		Nesta fase inicial, o sistema deve ser capaz de adicionar, excluir, atualizar e listar os veículos cadastrados. Por exemplo, um veículo pode ser um veículo com atributos como modelo, ano de fabricação, 	marca, cor e preço.
+		Nesta fase inicial, o sistema deve ser capaz de adicionar, excluir, atualizar e listar os veículos cadastrados. Por 
+  		exemplo, um veículo pode ser um veículo com atributos como modelo, ano de fabricação, 	marca, cor e preço.
 
 	📌 1.2 OBJETIVOS
 
@@ -30,7 +31,8 @@ Luiz Fernando Schmitt.
  	◉ Funcionário pode efetuar uma venda;
 
   	⌨️ 1.3 TECNOLOGIAS
-		A implementação local do programa utiliza computadores com sistema macOS e Windows, Java Development Kit (JDK) e Java Virtual Machine (JVM) 15.0.3, além da IDE Eclipse da versão 4.12.
+		A implementação local do programa utiliza computadores com sistema macOS e Windows, Java Development Kit (JDK)
+  		e Java Virtual Machine (JVM) 15.0.3, além da IDE Eclipse da versão 4.12.
 
 ➡️ 2. FLUXOGRAMA DE USO
 
