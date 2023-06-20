@@ -74,8 +74,6 @@ public class TelaCompraCarros extends JFrame {
 		textModelo.setBounds(583, 74, 203, 32);
 		contentPane.add(textModelo);
 		textModelo.setColumns(10);
-		
-		
 
 		JLabel lblNewLabel_2 = new JLabel("Disponíveis para venda");
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
@@ -140,16 +138,16 @@ public class TelaCompraCarros extends JFrame {
 					carroDAO.excluir(modelo, Integer.valueOf(ano), cor, marca, Double.valueOf(preco));
 
 					tblModel.removeRow(table.getSelectedRow());
-					
+
 					textModelo.setText("");
 					textAno.setText("");
 					textCor.setText("");
 					textMarca.setText("");
 					textPreco.setText("");
-
+					JOptionPane.showMessageDialog(null, "Carro vendido com sucesso!");
 				} else {
 					if (table.getRowCount() == 0) {
-						JOptionPane.showMessageDialog(null, "Carro vendido com sucesso!");
+						JOptionPane.showMessageDialog(null, "Selecione um carro para vender!");
 					} else {
 						JOptionPane.showMessageDialog(null, "Selecione apenas carro um para vender!");
 					}
@@ -244,7 +242,7 @@ public class TelaCompraCarros extends JFrame {
 		});
 		btnNewButton_1.setBounds(10, 11, 131, 30);
 		contentPane.add(btnNewButton_1);
-		
+
 		JButton btnVendidos = new JButton("Vendidos");
 		btnVendidos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -258,18 +256,18 @@ public class TelaCompraCarros extends JFrame {
 		btnVendidos.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnVendidos.setBounds(1195, 15, 165, 46);
 		contentPane.add(btnVendidos);
-		
+
 		JLabel carroCad = new JLabel("Nenhum carro cadastrado!");
 		carroCad.setFont(new Font("Tahoma", Font.BOLD, 18));
 		carroCad.setForeground(new Color(255, 0, 0));
 		carroCad.setBounds(564, 298, 242, 27);
 		contentPane.add(carroCad);
-		if(CarroDAO.listarCarros().isEmpty()) {
+		if (CarroDAO.listarCarros().isEmpty()) {
 			carroCad.setVisible(true);
 		} else {
 			carroCad.setVisible(false);
 		}
-		
+
 		carroDAO = CarroDAO.getInstancia();
 	}
 }

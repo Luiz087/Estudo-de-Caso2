@@ -6,9 +6,8 @@ import javax.swing.JOptionPane;
 
 import modelo.Carro;
 
-
 public class CarroDAO {
-	
+
 	private static CarroDAO instancia;
 	private static ArrayList<Carro> listaCarro;
 
@@ -32,20 +31,21 @@ public class CarroDAO {
 		}
 		return false;
 	}
-	
+
 	public boolean excluir(String textModelo, Integer textAno, String textCor, String textMarca, Double textPreco) {
 		for (Carro carro : CarroDAO.listarCarros()) {
-			if (carro.getModelo().equals(textModelo) && carro.getAno().equals(textAno) && carro.getCor().equals(textCor) && carro.getMarca().equals(textMarca) && carro.getPreco().equals(textPreco)) {
+			if (carro.getModelo().equals(textModelo) && carro.getAno().equals(textAno) && carro.getCor().equals(textCor)
+					&& carro.getMarca().equals(textMarca) && carro.getPreco().equals(textPreco)) {
 				listaCarro.remove(carro);
 				return true;
 			}
 		}
 		return false;
 	}
-	
+
 	public boolean alterar(String Modelo, String Marca, Integer ano, String cor, Double preco) {
 		for (Carro carro : listaCarro) {
-			if (carro.getModelo().equals(Modelo)&&carro.getMarca().equals(Marca)) {
+			if (carro.getModelo().equals(Modelo) && carro.getMarca().equals(Marca)) {
 				carro.setAno(ano);
 				carro.setCor(cor);
 				carro.setPreco(preco);
@@ -58,7 +58,5 @@ public class CarroDAO {
 	public static ArrayList<Carro> listarCarros() {
 		return listaCarro;
 	}
-	
-	
 
 }

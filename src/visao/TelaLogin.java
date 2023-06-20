@@ -74,7 +74,7 @@ public class TelaLogin extends JFrame {
 		fundologin.setBounds(-106, -198, 1582, 963);
 		contentPane.add(fundologin);
 		fundologin.setLayout(null);
-		
+
 		JLabel lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon(TelaLogin.class.getResource("/visao/bemvindoo (1).png")));
 		lblNewLabel_2.setBounds(317, 187, 547, 221);

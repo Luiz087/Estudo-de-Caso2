@@ -138,7 +138,7 @@ public class TelaCompraCarrosFunc extends JFrame {
 					carroDAO.excluir(modelo, Integer.valueOf(ano), cor, marca, Double.valueOf(preco));
 
 					tblModel.removeRow(table.getSelectedRow());
-					
+
 					textModelo.setText("");
 					textAno.setText("");
 					textCor.setText("");
@@ -242,13 +242,13 @@ public class TelaCompraCarrosFunc extends JFrame {
 		});
 		btnNewButton_1.setBounds(10, 11, 131, 30);
 		contentPane.add(btnNewButton_1);
-		
+
 		JLabel carroCad = new JLabel("Nenhum carro cadastrado!");
 		carroCad.setFont(new Font("Tahoma", Font.BOLD, 18));
 		carroCad.setForeground(new Color(255, 0, 0));
 		carroCad.setBounds(564, 287, 242, 27);
 		contentPane.add(carroCad);
-		if(CarroDAO.listarCarros().isEmpty()) {
+		if (CarroDAO.listarCarros().isEmpty()) {
 			carroCad.setVisible(true);
 		} else {
 			carroCad.setVisible(false);

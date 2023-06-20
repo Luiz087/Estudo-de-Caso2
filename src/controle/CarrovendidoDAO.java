@@ -4,9 +4,8 @@ import java.util.ArrayList;
 
 import modelo.Carro;
 
-
 public class CarrovendidoDAO {
-	
+
 	private static CarrovendidoDAO instancia;
 	private static ArrayList<Carro> listaCarroVendido;
 

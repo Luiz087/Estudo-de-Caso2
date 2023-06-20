@@ -82,12 +82,12 @@ public class TelaCrudAdminFunc extends JFrame {
 		carroCad.setForeground(new Color(255, 0, 0));
 		carroCad.setBounds(536, 340, 298, 27);
 		contentPane.add(carroCad);
-		if(funcDAO.listarFuncionarios().isEmpty()) {
+		if (funcDAO.listarFuncionarios().isEmpty()) {
 			carroCad.setVisible(true);
 		} else {
 			carroCad.setVisible(false);
 		}
-		
+
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(277, 368, 815, 315);
 		contentPane.add(scrollPane);
@@ -230,7 +230,7 @@ public class TelaCrudAdminFunc extends JFrame {
 					textUser.setText("");
 					textCPF.setText("");
 					textSenha.setText("");
-					
+
 					carroCad.setVisible(false);
 
 				}

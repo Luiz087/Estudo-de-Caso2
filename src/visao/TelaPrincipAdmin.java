@@ -124,7 +124,7 @@ public class TelaPrincipAdmin extends JFrame {
 		btnNewButton_1_1_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnNewButton_1_1_1_1_1_1.setBounds(745, 371, 233, 71);
 		contentPane.add(btnNewButton_1_1_1_1_1_1);
-		
+
 		JButton btnSair = new JButton("Sair");
 		btnSair.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

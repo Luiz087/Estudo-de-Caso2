@@ -68,12 +68,12 @@ public class TelaListarComprasAdm extends JFrame {
 		carroCad.setForeground(new Color(255, 0, 0));
 		carroCad.setBounds(564, 65, 242, 27);
 		contentPane.add(carroCad);
-		if(vendidoDAO.listarCarros().isEmpty()) {
+		if (vendidoDAO.listarCarros().isEmpty()) {
 			carroCad.setVisible(true);
 		} else {
 			carroCad.setVisible(false);
 		}
-		
+
 		JLabel lblNewLabel_2_5 = new JLabel("Lista de Comprados");
 		lblNewLabel_2_5.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_2_5.setForeground(new Color(255, 255, 255));
@@ -106,7 +106,7 @@ public class TelaListarComprasAdm extends JFrame {
 				));
 
 		scrollPane.setViewportView(table);
-		
+
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(TelaListarComprasAdm.class.getResource("/visao/vendido (1).png")));
 		lblNewLabel.setBounds(1112, 251, 300, 313);
