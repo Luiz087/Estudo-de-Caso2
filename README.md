@@ -1,8 +1,45 @@
 # estudo-de-caso2
-O objetivo da GSP Automóveis é ser utilizado como um controle de estoque, vendas e funcionários de carros para os usuários da loja. Neste sistema o administrador terá funções como listar carros vendidos, listar funcionários, listar carros e vender carros.
 
-Fluxograma de uso;
-![image](https://github.com/Luiz087/Estudo-de-Caso2/assets/111303908/f5155a0e-59d9-4b8e-9e00-63539561a95b)
+Equipe:
+Eric de Oliveira,
+Gabriel Luiz Rothermel,
+João Lucas Maffezzolli,
+Luís Gabriel Sabel e
+Luiz Fernando Schmitt.
 
-Diagramas de uso;
+1. PROPOSTA GERAL
+
+  O objetivo geral do sistema da GSP Automóveis é ser utilizado como um controle de estoque, vendas e funcionários de carros para os usuários da loja. Neste sistema o administrador terá funções como listar carros vendidos, listar funcionários, listar carros e vender carros.
+
+	1.1. DESCRIÇÃO DO SISTEMA
+
+  Nesta fase inicial, o sistema deve ser capaz de adicionar, excluir, atualizar e listar os veículos cadastrados. Por exemplo, um veículo pode ser um veículo com atributos como modelo, ano de fabricação, marca, cor e preço.
+
+1.2 OBJETIVOS
+
+  O objetivo da GSP Automóveis é proporcionar aos usuários acesso ao melhor atendimento e informações.
+Os objetivos específicos são:
+
+  Permitir a listagem dos veículos cadastrados.
+  Permitir a excluir os veículos cadastrados.
+  Permitir observar as informações dos veículos cadastrados.
+  O usuário pode visualizar as opções de veículos disponíveis;
+  O funcionário e admin podem excluir, atualizar e visualizar as opções disponíveis para os clientes;
+  O administrador pode cadastrar um funcionário no sistema;
+  O funcionário pode cadastrar novos veículos;
+  Funcionário pode efetuar uma venda;
+
+  1.3 TECNOLOGIAS
+A implementação local do programa utiliza computadores com sistema macOS e Windows, Java Development Kit (JDK) e Java Virtual Machine (JVM) 15.0.3, além da IDE Eclipse da versão 4.12.
+
+2. FLUXOGRAMA DE USO
+
+![_Fluxograma](https://github.com/Luiz087/Estudo-de-Caso2/assets/84669466/cfe00c61-d769-48fe-815e-76e5c5f4580a)
+
+3. DIAGRAMA DE CASOS DE USO
+
 ![image](https://github.com/Luiz087/Estudo-de-Caso2/assets/111303908/ca4ec60c-65d7-4ac6-b667-878767f714d2)
+
+4. DIAGRAMA DE CLASSES
+
+![IMG](https://github.com/Luiz087/Estudo-de-Caso2/assets/84669466/31bd3a31-7ca0-482c-93d3-36b8b88638d0)
